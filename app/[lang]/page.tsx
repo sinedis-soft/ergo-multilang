@@ -1,15 +1,19 @@
-import Home from "@/app/components/Home";
-import { LOCALES, Lang } from "@/app/dictionaries/header";
+import { resolveLang } from "@/dictionaries";
+import { HomeHero } from "@/components/sections/home/HomeHero";
+import { HomeProcess } from "@/components/sections/home/HomeProcess";
+import { LeadForm } from "@/components/forms/LeadForm";
+import { SchemaOrg } from "@/components/ui/SchemaOrg";
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+export default async function LocalizedHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang: rawLang } = await params;
-  const lang = (LOCALES as readonly string[]).includes(rawLang)
-    ? (rawLang as Lang)
-    : "ru";
+  const lang = resolveLang(rawLang);
 
-  return <Home lang={lang} />;
+  return (
+    <main>
+      <SchemaOrg />
+      <HomeHero lang={lang} />
+      <HomeProcess lang={lang} />
+      <LeadForm lang={lang} />
+    </main>
+  );
 }

@@ -1,10 +1,36 @@
-import Header from "@/app/components/Header";
-import { LOCALES, Lang } from "@/app/dictionaries/header";
+import type { Metadata } from "next";
+import { getDictionaries, LOCALES, resolveLang } from "@/dictionaries";
+import { buildCanonical, buildLanguageAlternates } from "@/lib/i18n/seo";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteFooter } from "@/components/layout/SiteFooter";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang: rawLang } = await params;
+  const lang = resolveLang(rawLang);
+  const dict = getDictionaries(lang);
+
+  return {
+    title: dict.meta.homeTitle,
+    description: dict.meta.homeDescription,
+    alternates: {
+      canonical: buildCanonical(lang),
+      languages: buildLanguageAlternates(),
+    },
+    openGraph: {
+      title: dict.meta.homeTitle,
+      description: dict.meta.homeDescription,
+      url: buildCanonical(lang),
+      siteName: dict.meta.siteName,
+      locale: lang,
+      type: "website",
+    },
+  };
 }
 
 export default async function LangLayout({
@@ -15,14 +41,17 @@ export default async function LangLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang: rawLang } = await params;
-  const lang = (LOCALES as readonly string[]).includes(rawLang)
-    ? (rawLang as Lang)
-    : "ru";
+  const lang = resolveLang(rawLang);
+  const dict = getDictionaries(lang);
 
   return (
-    <div className="min-h-dvh flex flex-col">
-      <Header lang={lang} active="main" />
+    <>
+      <a href="#main-content" className="skip-link">
+        {dict.header.skipToContent}
+      </a>
+      <SiteHeader lang={lang} />
       {children}
-    </div>
+      <SiteFooter lang={lang} />
+    </>
   );
 }

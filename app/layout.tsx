@@ -1,20 +1,16 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Страховой агент Людмила",
-  description: "Официальные страховые услуги и сопровождение.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  title: "EURO polis",
+  description: "Insurance platform",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru">
-      <body className="min-h-dvh">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
