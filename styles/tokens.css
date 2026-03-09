@@ -1,0 +1,21 @@
+:root {
+  --color-bg: #f4f7fb;
+  --color-surface: #ffffff;
+  --color-surface-glass: rgba(255, 255, 255, 0.78);
+  --color-border: rgba(18, 29, 43, 0.12);
+  --color-text: #16202b;
+  --color-text-muted: #546072;
+
+  --color-brand: #bf1528;
+  --color-brand-strong: #8e0038;
+  --color-accent: #0f94a7;
+
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --shadow-sm: 0 8px 24px rgba(16, 32, 52, 0.08);
+  --shadow-md: 0 20px 44px rgba(16, 32, 52, 0.12);
+
+  --container: 1120px;
+}
