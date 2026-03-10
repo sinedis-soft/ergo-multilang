@@ -5,4 +5,6 @@ export const headerUz: HeaderDictionary = {
   brandTitle: "EURO polis",
   brandSubtitle: "Jismoniy shaxslar va biznes uchun sug'urta",
   primaryCta: "Ariza qoldirish",
+  openMenu: "Menyuni ochish",
+  closeMenu: "Menyuni yopish",
 };

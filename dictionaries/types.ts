@@ -19,6 +19,8 @@ export interface HeaderDictionary {
   brandTitle: string;
   brandSubtitle: string;
   primaryCta: string;
+  openMenu: string;
+  closeMenu: string;
 }
 
 export interface FooterDictionary {
