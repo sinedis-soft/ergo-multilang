@@ -5,4 +5,6 @@ export const headerLv: HeaderDictionary = {
   brandTitle: "EURO polis",
   brandSubtitle: "Apdrošināšana privātpersonām un biznesam",
   primaryCta: "Atstāt pieteikumu",
+  openMenu: "Atvērt izvēlni",
+  closeMenu: "Aizvērt izvēlni",
 };

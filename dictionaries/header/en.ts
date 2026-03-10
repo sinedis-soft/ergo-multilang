@@ -5,4 +5,6 @@ export const headerEn: HeaderDictionary = {
   brandTitle: "EURO polis",
   brandSubtitle: "Insurance for individuals and business",
   primaryCta: "Request a quote",
+  openMenu: "Open menu",
+  closeMenu: "Close menu",
 };

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import type { Lang } from "@/dictionaries/config";
 import { getDictionaries } from "@/dictionaries";
@@ -88,14 +89,16 @@ export function LeadForm({ lang }: { lang: Lang }) {
             <textarea name="message" placeholder={t.fields.message.placeholder} />
           </label>
 
-          <label className="field form-consent">
-            <span>
-              <input type="checkbox" name="consentTerms" required /> {t.consent.terms}
-            </span>
-            <span>
-              <input type="checkbox" name="consentPrivacy" required /> {t.consent.privacy}
-            </span>
-          </label>
+          <div className="field form-consent" role="group" aria-label="consents">
+            <label className="consent-item">
+              <input type="checkbox" name="consentTerms" required />
+              <Link href={`/${lang}/terms`}>{t.consent.terms}</Link>
+            </label>
+            <label className="consent-item">
+              <input type="checkbox" name="consentPrivacy" required />
+              <Link href={`/${lang}/privacy`}>{t.consent.privacy}</Link>
+            </label>
+          </div>
 
           <div className="form-actions">
             <button className="btn btn-primary" type="submit" disabled={status === "loading"}>
