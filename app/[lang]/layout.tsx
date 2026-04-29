@@ -1,4 +1,5 @@
 import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 import { LOCALES, Lang } from "@/app/dictionaries/header";
 
 export const dynamicParams = false;
@@ -23,6 +24,7 @@ export default async function LangLayout({
     <div className="min-h-dvh flex flex-col">
       <Header lang={lang} active="main" />
       {children}
+      <Footer lang={lang} />
     </div>
   );
 }
