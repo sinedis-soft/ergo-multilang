@@ -1053,7 +1053,7 @@ footer{
 
 .coverage__title{
   margin: 0 0 18px 0;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.1;
   letter-spacing: -.4px;
   color: var(--coverage-accent); /* как в примере: заголовок бордовый */
@@ -1165,3 +1165,65 @@ footer{
   gap: 10px;
 }
 
+
+/* Process section style (as requested mock) */
+.process-flow{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 26px;
+}
+
+.process-flow__item{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.process-flow__num{
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: #072547;
+  color: #fff;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.process-flow__title{
+  margin: 0;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -.3px;
+  color: #0a3363;
+}
+
+.process-flow__text{
+  margin: 0;
+  color: var(--text-700);
+  font-size: 20px;
+  line-height: 1.45;
+  max-width: 34ch;
+}
+
+@media (max-width: 1200px){
+  .process-flow__title{ font-size: 24px; }
+  .process-flow__text{ font-size: 17px; }
+}
+
+@media (max-width: 980px){
+  .process-flow{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+@media (max-width: 760px){
+  .process-flow{
+    grid-template-columns: 1fr;
+  }
+}

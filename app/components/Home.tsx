@@ -59,20 +59,12 @@ export default function Home({ lang }: { lang: Lang }) {
             </div>
           </div>
 
-          <div className="grid-4">
+          <div className="process-flow" aria-label={t.process.title}>
             {t.process.steps.map((s, idx) => (
-              <article className="card process-card" key={idx}>
-                <div className="card__body">
-                  <div className="card__top">
-                    <h3 className="card__title">
-                      {idx + 1}. {s.title}
-                    </h3>
-                    <span className="tag tag--blue step-tag">
-                      {`Step ${idx + 1}`}
-                    </span>
-                  </div>
-                  <p className="card__text">{s.text}</p>
-                </div>
+              <article className="process-flow__item" key={idx}>
+                <span className="process-flow__num" aria-hidden="true">{idx + 1}</span>
+                <h3 className="process-flow__title">{s.title}</h3>
+                <p className="process-flow__text">{s.text}</p>
               </article>
             ))}
           </div>
