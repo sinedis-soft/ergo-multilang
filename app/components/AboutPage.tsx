@@ -5,7 +5,9 @@ import LeadForm from "@/app/components/LeadForm";
 export default function AboutPage({ lang, t }: { lang: Lang; t: AboutDictionary }) {
   return (
     <main id="main">
-      <section className="section">
+
+      <section className="section about-hero">
+
         <div className="container">
           <div className="section__hd">
             <div>
