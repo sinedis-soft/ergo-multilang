@@ -59,25 +59,23 @@ const DICT: Record<Lang, CoverageDict> = {
     ],
   },
 
-  lt: {
-    title: "Galiojimo teritorija ir sąlygos",
-    mapAlt: "Šalys, kuriose galioja tarpvalstybinio draudimo sutartis",
-    mapCaption: "Galiojančios šalys pažymėtos firminės spalvos akcentu",
+  lv: {
+    title: "Darbības teritorija un nosacījumi",
+    mapAlt: "Pārrobežu apdrošināšanas līguma darbības valstis",
+    mapCaption: " ",
     items: [
       {
-        title: "Galiojimo teritorija",
+        title: "Darbības teritorija",
         text:
-          "Polisas galioja žemėlapyje pažymėtose šalyse. Visas sąrašas pateikiamas pagal užklausą.",
-        note:
-          "Svarbu: sąlygos gali skirtis priklausomai nuo transporto priemonės registracijos šalies.",
+          "Polise ir derīga valstīs, kas norādītas kartē. A - Austrija, B - Beļģija, BG - Bulgārija, CY - Kipra, CZ - Čehija, D - Vācija, DK - Dānija, E - Spānija, EST - Igaunija, F - Francija, FIN - Somija, GR - Grieķija, H - Ungārija, HR - Horvātija, I - Itālija, IRL - Īrija, IS - Islande, L - Luksemburga, LT - Lietuva, LV - Latvija, M - Malta, N - Norvēģija, NL - Nīderlande, P - Portugāle, PL - Polija, RO - Rumānija, S - Zviedrija, SK - Slovākija, SLO - Slovēnija, CH - Šveice.",
       },
       {
-        title: "Transporto priemonių tipai",
-        text: "Lengvieji automobiliai, motociklai, krovininis transportas, priekabos, autobusai.",
+        title: "Transportlīdzekļu veidi",
+        text: "Vieglie automobiļi, motocikli, kravas transports, piekabes, autobusi.",
       },
       {
-        title: "Galiojimo trukmė",
-        text: "Minimali trukmė — 1 mėnuo. Maksimali — 1 metai.",
+        title: "Darbības termiņš",
+        text: "Minimālais termiņš — 1 mēnesis. Maksimālais — 1 gads.",
       },
     ],
   },

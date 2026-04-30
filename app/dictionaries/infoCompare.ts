@@ -63,7 +63,7 @@ export const infoCompareDictionary: Record<Lang, InfoCompareDictionary> = {
   },
 
   // Временно fallback на RU
-  lt: undefined as unknown as InfoCompareDictionary,
+  lv: undefined as unknown as InfoCompareDictionary,
   en: undefined as unknown as InfoCompareDictionary,
   uz: undefined as unknown as InfoCompareDictionary,
   kg: undefined as unknown as InfoCompareDictionary,

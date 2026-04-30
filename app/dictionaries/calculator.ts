@@ -56,7 +56,41 @@ export const calculatorDictionary: Record<Lang, CalculatorDictionary> = {
     note: " ",
   },
 
-  lt: undefined as unknown as CalculatorDictionary,
+  lv: {
+    title: "Apdrošināšanas izmaksu kalkulators",
+    badge: "~ 1 minūte",
+    intro: "Izvēlieties apdrošināšanas termiņu un transportlīdzekļa tipu.",
+
+    fields: {
+      vehicle: {
+        label: "Transportlīdzekļa tips",
+        options: [
+          { value: "car", label: "Vieglie automobiļi" },
+          { value: "van", label: "Autobusi" },
+          { value: "truck", label: "Kravas automobiļi" },
+          { value: "trailer", label: "Piekabes" },
+          { value: "special", label: "Speciālā tehnika" },
+        ],
+      },
+      term: {
+        label: "Apdrošināšanas termiņš",
+        options: [
+          { value: "30", label: "1 mēnesis" },
+          { value: "60", label: "2 mēneši" },
+          { value: "90", label: "3 mēneši" },
+          { value: "180", label: "6 mēneši" },
+          { value: "365", label: "12 mēneši" },
+        ],
+      },
+    },
+
+    button: "Aprēķināt",
+    resultTitle: "Aptuvenā cena",
+    resultHint: " ",
+    note: " ",
+  },
+
+
   en: undefined as unknown as CalculatorDictionary,
   uz: undefined as unknown as CalculatorDictionary,
   kg: undefined as unknown as CalculatorDictionary,

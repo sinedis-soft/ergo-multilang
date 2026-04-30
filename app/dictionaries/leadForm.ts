@@ -222,13 +222,13 @@ const en: LeadFormDictionary = {
 };
 
 // temporary
-const lt: LeadFormDictionary = { ...en, title: "Draudimo paraiška" };
+const lv: LeadFormDictionary = { ...en, title: "Draudimo paraiška" };
 const uz: LeadFormDictionary = { ...en, title: "Polis uchun ariza" };
 const kg: LeadFormDictionary = { ...en, title: "Полиске арыз" };
 
 export function getLeadFormDictionary(lang: Lang): LeadFormDictionary {
   if (lang === "ru") return ru;
-  if (lang === "lt") return lt;
+  if (lang === "lv") return lv;
   if (lang === "uz") return uz;
   if (lang === "kg") return kg;
   return en;

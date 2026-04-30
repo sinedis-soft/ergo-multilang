@@ -1,6 +1,6 @@
 // app/dictionaries/header.ts
 
-export const LOCALES = ["ru", "lt", "en", "uz", "kg"] as const;
+export const LOCALES = ["ru", "lv", "en", "uz", "kg"] as const;
 export type Lang = (typeof LOCALES)[number];
 
 export interface HeaderDictionary {
@@ -37,19 +37,19 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     menu: "Меню",
   },
 
-  lt: {
+  lv: {
     brandTitle: "EURO polis",
-    brandSub: "Draudimas privatiems ir verslui",
-    topContacts: "Kontaktai",
-    topLangLabel: "Kalba",
+    brandSub: "Apdrošināšana privātpersonām un uzņēmumiem",
+    topContacts: "Kontakti",
+    topLangLabel: "Valoda",
     nav: {
-      main: "Pradžia",
-      about: "Apie mus",
-      contacts: "Kontaktai",
+      main: "Sākumlapa",
+      about: "Par mums",
+      contacts: "Kontakti",
     },
-    ctaCalc: "Skaičiuoklė",
-    ctaBuy: "Pirkti polisą",
-    menu: "Meniu",
+    ctaCalc: "Kalkulators",
+    ctaBuy: "Iegādāties polisi",
+    menu: "Izvēlne",
   },
 
   en: {
