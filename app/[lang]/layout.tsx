@@ -22,7 +22,7 @@ export default async function LangLayout({
 
   return (
     <div className="min-h-dvh flex flex-col">
-      <Header lang={lang} active="main" />
+      <Header lang={lang} />
       {children}
       <Footer lang={lang} />
     </div>
