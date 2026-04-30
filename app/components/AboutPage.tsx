@@ -1,6 +1,7 @@
 import type { Lang } from "@/app/dictionaries/header";
 import type { AboutDictionary } from "@/app/dictionaries/about";
 import LeadForm from "@/app/components/LeadForm";
+import { keepShortWords } from "@/app/utils/typography";
 
 export default function AboutPage({ lang, t }: { lang: Lang; t: AboutDictionary }) {
   return (
@@ -9,8 +10,8 @@ export default function AboutPage({ lang, t }: { lang: Lang; t: AboutDictionary 
         <div className="container">
           <div className="section__hd">
             <div>
-              <h1 className="section__title">{t.hero.title}</h1>
-              <p className="section__desc">{t.hero.subtitle}</p>
+              <h1 className="section__title">{keepShortWords(t.hero.title)}</h1>
+              <p className="section__desc">{keepShortWords(t.hero.subtitle)}</p>
             </div>
           </div>
 
@@ -18,7 +19,7 @@ export default function AboutPage({ lang, t }: { lang: Lang; t: AboutDictionary 
             {t.cards.map((card, idx) => (
               <article className="card" key={idx}>
                 <div className="card__body">
-                  <h3 className="card__title">{card.title}</h3>
+                  <h3 className="card__title">{keepShortWords(card.title)}</h3>
                   <p className="card__text">{card.text}</p>
                 </div>
               </article>
@@ -31,7 +32,7 @@ export default function AboutPage({ lang, t }: { lang: Lang; t: AboutDictionary 
         <div className="container">
           <div className="panel">
             <div className="panel__body">
-              <h2 className="section__title" style={{ marginBottom: 12 }}>{t.company.title}</h2>
+              <h2 className="section__title" style={{ marginBottom: 12 }}>{keepShortWords(t.company.title)}</h2>
               {t.company.lines.map((line, idx) => (
                 <p key={idx} className="section__desc" style={{ margin: "0 0 10px" }}>
                   {line}
