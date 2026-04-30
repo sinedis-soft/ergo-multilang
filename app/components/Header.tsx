@@ -1,6 +1,9 @@
+"use client";
+
 // app/components/Header.tsx
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { headerDictionary, LOCALES, Lang } from "@/app/dictionaries/header";
 
 function withLang(lang: Lang, path: string) {
@@ -9,10 +12,24 @@ function withLang(lang: Lang, path: string) {
 
 type Active = "main" | "about" | "contacts";
 
+
+function detectActiveFromPath(pathname: string | null, lang: Lang): Active {
+  const base = `/${lang}`;
+
+  if (!pathname || pathname === base || pathname === `${base}/`) return "main";
+  if (pathname.startsWith(`${base}/about`)) return "about";
+  if (pathname.startsWith(`${base}/contacts`)) return "contacts";
+
+  return "main";
+}
+
 export default function Header({ lang, active }: { lang: Lang; active?: Active }) {
   const t = headerDictionary[lang];
+  const pathname = usePathname();
   const toggleId = "nav-toggle";
   const drawerId = "mobile-drawer";
+
+  const resolvedActive = active ?? detectActiveFromPath(pathname, lang);
 
   const navItems = [
     { id: "main", label: t.nav.main, href: "/" },
@@ -73,7 +90,7 @@ export default function Header({ lang, active }: { lang: Lang; active?: Active }
                 <Link
                   key={item.id}
                   href={withLang(lang, item.href)}
-                  className={item.id === active ? "active" : undefined}
+                  className={item.id === resolvedActive ? "active" : undefined}
                 >
                   {item.label}
                 </Link>
@@ -109,7 +126,7 @@ export default function Header({ lang, active }: { lang: Lang; active?: Active }
                   <Link
                     key={item.id}
                     href={withLang(lang, item.href)}
-                    className={item.id === active ? "active" : undefined}
+                    className={item.id === resolvedActive ? "active" : undefined}
                   >
                     {item.label}
                   </Link>
