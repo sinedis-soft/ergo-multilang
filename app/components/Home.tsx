@@ -5,6 +5,7 @@ import InfoCompare from "@/app/components/InfoCompare";
 import Calculator from "@/app/components/Calculator";
 import LeadForm from "@/app/components/LeadForm";
 import CoverageBlock from "@/app/components/CoverageBlock";
+import { keepShortWords } from "@/app/utils/typography";
 
 export default function Home({ lang }: { lang: Lang }) {
   const t = getHomeDictionary(lang);
@@ -20,8 +21,8 @@ export default function Home({ lang }: { lang: Lang }) {
                 <span className="badge">{t.hero.kicker}</span>
               </p>
 
-              <h1 className="h1">{t.hero.title}</h1>
-              <p className="lead">{t.hero.lead}</p>
+              <h1 className="h1">{keepShortWords(t.hero.title)}</h1>
+              <p className="lead">{keepShortWords(t.hero.lead)}</p>
 
               <div className="hero__cta">
                 <a className="btn btn--ghost" href="#calc">
@@ -54,7 +55,7 @@ export default function Home({ lang }: { lang: Lang }) {
         <div className="container">
           <div className="section__hd">
             <div>
-              <h2 className="section__title">{t.process.title}</h2>
+              <h2 className="section__title">{keepShortWords(t.process.title)}</h2>
               <p className="section__desc">{t.process.desc}</p>
             </div>
           </div>
@@ -63,7 +64,7 @@ export default function Home({ lang }: { lang: Lang }) {
             {t.process.steps.map((s, idx) => (
               <article className="process-flow__item" key={idx}>
                 <span className="process-flow__num" aria-hidden="true">{idx + 1}</span>
-                <h3 className="process-flow__title">{s.title}</h3>
+                <h3 className="process-flow__title">{keepShortWords(s.title)}</h3>
                 <p className="process-flow__text">{s.text}</p>
               </article>
             ))}
@@ -79,7 +80,7 @@ export default function Home({ lang }: { lang: Lang }) {
         <div className="container">
           <div className="section__hd">
             <div>
-              <h2 className="section__title">{t.why.title}</h2>
+              <h2 className="section__title">{keepShortWords(t.why.title)}</h2>
               <p className="section__desc">{t.why.desc}</p>
             </div>
           </div>
@@ -89,7 +90,7 @@ export default function Home({ lang }: { lang: Lang }) {
               <article className="card" key={idx}>
                 <div className="card__body">
                   <div className="card__top">
-                    <h3 className="card__title">{w.title}</h3>
+                    <h3 className="card__title">{keepShortWords(w.title)}</h3>
                     <span className="tag tag--green">OK</span>
                   </div>
                   <p className="card__text">{w.text}</p>
@@ -108,7 +109,7 @@ export default function Home({ lang }: { lang: Lang }) {
         <div className="container">
           <div className="section__hd">
             <div>
-              <h2 className="section__title">{t.form.title}</h2>
+              <h2 className="section__title">{keepShortWords(t.form.title)}</h2>
               <p className="section__desc">{t.form.desc}</p>
             </div>
           </div>
@@ -126,7 +127,7 @@ export default function Home({ lang }: { lang: Lang }) {
         <div className="container">
           <div className="section__hd">
             <div>
-              <h2 className="section__title">{t.faq.title}</h2>
+              <h2 className="section__title">{keepShortWords(t.faq.title)}</h2>
               <p className="section__desc">{t.faq.desc}</p>
             </div>
           </div>
@@ -156,7 +157,7 @@ export default function Home({ lang }: { lang: Lang }) {
         <div className="container">
           <div className="section__hd">
             <div>
-              <h2 className="section__title">{t.verify.title}</h2>
+              <h2 className="section__title">{keepShortWords(t.verify.title)}</h2>
               <p className="section__desc">{t.verify.lead}</p>
             </div>
           </div>
