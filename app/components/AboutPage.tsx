@@ -42,22 +42,6 @@ export default function AboutPage({ lang, t }: { lang: Lang; t: AboutDictionary 
           </div>
         </div>
       </section>
-
-      <section className="section" id="contact-form">
-        <div className="container">
-          <div className="section__hd">
-            <div>
-              <h2 className="section__title">{t.contact.title}</h2>
-              <p className="section__desc">{t.contact.desc}</p>
-            </div>
-          </div>
-          <div className="panel">
-            <div className="panel__body">
-              <LeadForm lang={lang} />
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

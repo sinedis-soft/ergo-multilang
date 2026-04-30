@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Страховой агент Людмила",
+  title: "Страховой агент Людмила Рыжова",
   description: "Официальные страховые услуги и сопровождение.",
 };
 
