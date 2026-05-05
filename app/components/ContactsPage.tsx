@@ -1,6 +1,7 @@
 import type { Lang } from "@/app/dictionaries/header";
 
-import LeadForm from "@/app/components/LeadForm";
+import ContactFeedbackForm from "@/app/components/ContactFeedbackForm";
+
 import { keepShortWords } from "@/app/utils/typography";
 
 const titles: Record<Lang, string> = {
@@ -62,7 +63,9 @@ export default function ContactsPage({ lang }: { lang: Lang }) {
         <div className="container">
           <div className="panel">
             <div className="panel__body">
-              <LeadForm lang={lang} />
+
+              <ContactFeedbackForm lang={lang} />
+
             </div>
           </div>
         </div>
