@@ -4,6 +4,7 @@ export const dynamicParams = false;
 import type { Metadata } from "next";
 import type { Lang } from "@/app/dictionaries/header";
 import { LOCALES } from "@/app/dictionaries/header";
+
 import ContactsPage from "@/app/components/ContactsPage";
 
 const titles: Record<Lang, string> = {
@@ -21,6 +22,7 @@ const descriptions: Record<Lang, string> = {
   uz: "Kontakt ma'lumotlari va qayta aloqa formasi.",
   kg: "Байланыш маалыматы жана кайтарым байланыш формасы.",
 };
+
 
 function normalizeLang(value: string): Lang {
   return (LOCALES as readonly string[]).includes(value) ? (value as Lang) : "ru";
@@ -45,4 +47,5 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
   const lang = normalizeLang(rawLang);
 
   return <ContactsPage lang={lang} />;
+
 }
