@@ -1,5 +1,7 @@
 import type { Lang } from "@/app/dictionaries/header";
+
 import ContactFeedbackForm from "@/app/components/ContactFeedbackForm";
+
 import { keepShortWords } from "@/app/utils/typography";
 
 const titles: Record<Lang, string> = {
@@ -27,19 +29,23 @@ const labels: Record<Lang, { phone: string; email: string }> = {
 };
 
 export default function ContactsPage({ lang }: { lang: Lang }) {
+
   return (
     <main id="main">
       <section className="section">
         <div className="container">
           <div className="section__hd">
             <div>
+
               <h1 className="section__title">{keepShortWords(titles[lang])}</h1>
               <p className="section__desc">{keepShortWords(intro[lang])}</p>
+
             </div>
           </div>
 
           <div className="panel">
             <div className="panel__body">
+
               <p className="section__desc" style={{ margin: "0 0 10px", fontWeight: 700 }}>Rižova Ludmila</p>
               <p className="section__desc" style={{ margin: "0 0 10px" }}>
                 {labels[lang].phone}: <a href="tel:+37122355307">+371 22355307</a>
@@ -47,6 +53,7 @@ export default function ContactsPage({ lang }: { lang: Lang }) {
               <p className="section__desc" style={{ margin: 0 }}>
                 {labels[lang].email}: <a href="mailto:ludmila.rizova@ergo.lv">ludmila.rizova@ergo.lv</a>
               </p>
+
             </div>
           </div>
         </div>
@@ -56,7 +63,9 @@ export default function ContactsPage({ lang }: { lang: Lang }) {
         <div className="container">
           <div className="panel">
             <div className="panel__body">
+
               <ContactFeedbackForm lang={lang} />
+
             </div>
           </div>
         </div>
