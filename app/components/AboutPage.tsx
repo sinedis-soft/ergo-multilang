@@ -1,9 +1,8 @@
 import type { Lang } from "@/app/dictionaries/header";
 import type { AboutDictionary } from "@/app/dictionaries/about";
-import LeadForm from "@/app/components/LeadForm";
 import { keepShortWords } from "@/app/utils/typography";
 
-export default function AboutPage({ lang, t }: { lang: Lang; t: AboutDictionary }) {
+export default function AboutPage({ t }: { lang: Lang; t: AboutDictionary }) {
   return (
     <main id="main">
       <section className="section">

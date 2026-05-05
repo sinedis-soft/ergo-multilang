@@ -12,18 +12,18 @@ function formatLatinName(raw: string): string {
 }
 
 function formatPhone(raw: string): string {
-  var digits = raw.replace(/\D/g, "");
+  const digits = raw.replace(/\D/g, "");
   if (!digits) return "";
   return "+" + digits;
 }
 
 function formatEmail(raw: string): string {
-  var value = raw.replace(/\s/g, "");
+  let value = raw.replace(/\s/g, "");
   value = value.replace(/[^A-Za-z0-9.@_-]/g, "");
-  var firstAtIndex = value.indexOf("@");
+  const firstAtIndex = value.indexOf("@");
   if (firstAtIndex !== -1) {
-    var beforeAt = value.slice(0, firstAtIndex + 1);
-    var afterAt = value.slice(firstAtIndex + 1).replace(/@/g, "");
+    const beforeAt = value.slice(0, firstAtIndex + 1);
+    const afterAt = value.slice(firstAtIndex + 1).replace(/@/g, "");
     value = beforeAt + afterAt;
   }
   if (value.length > 70) value = value.slice(0, 70);
@@ -35,18 +35,18 @@ function formatPlate(raw: string): string {
 }
 
 function formatDigits(raw: string, maxLen?: number): string {
-  var v = raw.replace(/\D/g, "");
+  let v = raw.replace(/\D/g, "");
   if (typeof maxLen === "number" && maxLen >= 0) v = v.slice(0, maxLen);
   return v;
 }
 
 function validateFiles(files: FileList, forbiddenTypes: string[], fileForbiddenText: string): boolean {
-  for (var i = 0; i < files.length; i++) {
-    var file = files[i];
-    var type = file.type || "";
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    const type = file.type || "";
 
-    for (var j = 0; j < forbiddenTypes.length; j++) {
-      var t = forbiddenTypes[j];
+    for (let j = 0; j < forbiddenTypes.length; j++) {
+      const t = forbiddenTypes[j];
       if (t.charAt(t.length - 1) === "/") {
         if (type.indexOf(t) === 0) {
           alert(file.name + ": " + fileForbiddenText);
@@ -64,30 +64,30 @@ function validateFiles(files: FileList, forbiddenTypes: string[], fileForbiddenT
 }
 
 export default function LeadForm(props: { lang: Lang }) {
-  var t = getLeadFormDictionary(props.lang);
+  const t = getLeadFormDictionary(props.lang);
 
-  var [status, setStatus] = useState<FormStatus>("idle");
-  var [message, setMessage] = useState("");
+  const [status, setStatus] = useState<FormStatus>("idle");
+  const [message, setMessage] = useState("");
 
-  var [firstName, setFirstName] = useState("");
-  var [lastName, setLastName] = useState("");
-  var [phone, setPhone] = useState("");
-  var [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
 
-  var [isCompany, setIsCompany] = useState(false);
+  const [isCompany, setIsCompany] = useState(false);
 
-  var [birthDate, setBirthDate] = useState("");
-  var [address, setAddress] = useState("");
+  const [birthDate, setBirthDate] = useState("");
+  const [address, setAddress] = useState("");
 
-  var [companyInn, setCompanyInn] = useState("");
-  var [ceoFullName, setCeoFullName] = useState("");
-  var [ceoTitle, setCeoTitle] = useState("");
+  const [companyInn, setCompanyInn] = useState("");
+  const [ceoFullName, setCeoFullName] = useState("");
+  const [ceoTitle, setCeoTitle] = useState("");
 
-  var [vehicleBlocks, setVehicleBlocks] = useState<number[]>([0]);
+  const [vehicleBlocks, setVehicleBlocks] = useState<number[]>([0]);
 
-  var formRef = useRef<HTMLFormElement | null>(null);
+  const formRef = useRef<HTMLFormElement | null>(null);
 
-  var forbiddenTypes = [
+  const forbiddenTypes = [
     "application/zip",
     "application/x-rar-compressed",
     "application/x-7z-compressed",
@@ -97,25 +97,25 @@ export default function LeadForm(props: { lang: Lang }) {
   ];
 
   function todayISO(): string {
-    var d = new Date();
-    var yyyy = d.getFullYear();
-    var mm = String(d.getMonth() + 1).padStart(2, "0");
-    var dd = String(d.getDate()).padStart(2, "0");
+    const d = new Date();
+    const yyyy = d.getFullYear();
+    const mm = String(d.getMonth() + 1).padStart(2, "0");
+    const dd = String(d.getDate()).padStart(2, "0");
     return yyyy + "-" + mm + "-" + dd;
   }
 
   function maxBirthDateISO(): string {
-    var d = new Date();
+    const d = new Date();
     d.setFullYear(d.getFullYear() - 18);
-    var yyyy = d.getFullYear();
-    var mm = String(d.getMonth() + 1).padStart(2, "0");
-    var dd = String(d.getDate()).padStart(2, "0");
+    const yyyy = d.getFullYear();
+    const mm = String(d.getMonth() + 1).padStart(2, "0");
+    const dd = String(d.getDate()).padStart(2, "0");
     return yyyy + "-" + mm + "-" + dd;
   }
 
   function addVehicle() {
     setVehicleBlocks(function (prev) {
-      var lastId = prev.length ? prev[prev.length - 1] : 0;
+      const lastId = prev.length ? prev[prev.length - 1] : 0;
       return prev.concat([lastId + 1]);
     });
   }
@@ -123,8 +123,8 @@ export default function LeadForm(props: { lang: Lang }) {
   function removeVehicle(id: number) {
     setVehicleBlocks(function (prev) {
       if (prev.length <= 1) return prev;
-      var next: number[] = [];
-      for (var i = 0; i < prev.length; i++) {
+      const next: number[] = [];
+      for (let i = 0; i < prev.length; i++) {
         if (prev[i] !== id) next.push(prev[i]);
       }
       return next;
@@ -134,13 +134,13 @@ export default function LeadForm(props: { lang: Lang }) {
   function validateAll(): boolean {
     if (!formRef.current) return true;
 
-    var elements = formRef.current.querySelectorAll("input, select, textarea") as NodeListOf<
+    const elements = formRef.current.querySelectorAll("input, select, textarea") as NodeListOf<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
     >;
 
-    for (var i = 0; i < elements.length; i++) {
-      var el = elements[i];
-      if ((el as any).offsetParent === null) continue;
+    for (let i = 0; i < elements.length; i++) {
+      const el = elements[i];
+      if (el.offsetParent === null) continue;
 
       if (!el.checkValidity()) {
         el.reportValidity();
@@ -180,30 +180,36 @@ export default function LeadForm(props: { lang: Lang }) {
     setStatus("loading");
 
     try {
-      var formEl = e.currentTarget;
-      var formData = new FormData(formEl);
+      const formEl = e.currentTarget;
+      const formData = new FormData(formEl);
 
       if (typeof window !== "undefined") {
         try {
           formData.append("pageUrl", window.location.href);
-          var utm = localStorage.getItem("utm_data");
+          const utm = localStorage.getItem("utm_data");
           if (utm) formData.append("utm", utm);
         } catch {
           // ignore
         }
       }
 
-      var res = await fetch("/api/lead", { method: "POST", body: formData });
+      const res = await fetch("/api/lead", { method: "POST", body: formData });
 
-      var data: any = null;
+      type LeadApiResponse = {
+        ok?: boolean;
+        message?: string;
+      };
+
+      let data: LeadApiResponse | null = null;
+
       try {
-        data = await res.json();
+        data = (await res.json()) as LeadApiResponse;
       } catch {
         data = null;
       }
 
-      var ok = !!(data && data.ok);
-      var serverMsg = data && data.message ? String(data.message) : "";
+      const ok = Boolean(data?.ok);
+      const serverMsg = data?.message ? String(data.message) : "";
 
       if (!res.ok || !ok) {
         setStatus("error");
@@ -236,9 +242,9 @@ export default function LeadForm(props: { lang: Lang }) {
     }
   }
 
-  var minStartDate = todayISO();
-  var maxBirthDate = maxBirthDateISO();
-  var statusId = "lead-form-status";
+  const minStartDate = todayISO();
+  const maxBirthDate = maxBirthDateISO();
+  const statusId = "lead-form-status";
 
   return (
     <section className="section" id="buy" aria-label={t.title}>
@@ -519,9 +525,9 @@ export default function LeadForm(props: { lang: Lang }) {
                       accept="image/*,application/pdf"
                       className="file"
                       onChange={(e) => {
-                        var fl = e.currentTarget.files;
+                        const fl = e.currentTarget.files;
                         if (!fl) return;
-                        var ok = validateFiles(fl, forbiddenTypes, t.fileForbidden);
+                        const ok = validateFiles(fl, forbiddenTypes, t.fileForbidden);
                         if (!ok) e.currentTarget.value = "";
                       }}
                     />

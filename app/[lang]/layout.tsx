@@ -21,8 +21,14 @@ export default async function LangLayout({
     ? (rawLang as Lang)
     : "ru";
 
+  const isRtl = lang === "fa";
+
   return (
-    <div className="min-h-dvh flex flex-col">
+    
+    <div
+      dir={isRtl ? "rtl" : "ltr"}
+      className={`min-h-dvh flex flex-col ${isRtl ? "text-right" : "text-left"}`}
+    >
       <Header lang={lang} />
       {children}
       <Footer lang={lang} />
