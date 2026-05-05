@@ -48,10 +48,15 @@ function writeConsent(state: ConsentState) {
 export default function CookieConsent({ lang }: { lang: Lang }) {
   const t = useMemo(() => getCookieDictionary(lang), [lang]);
 
-  const initialSaved = useMemo(() => safeParseConsent(readCookieValue(COOKIE_NAME)), []);
-  const [saved, setSaved] = useState<ConsentState | null>(initialSaved);
-  const [draft, setDraft] = useState<ConsentState>(initialSaved ?? DEFAULT_STATE);
-  const [isOpen, setIsOpen] = useState<boolean>(!initialSaved);
+  const [saved, setSaved] = useState<ConsentState | null>(() => {
+    if (typeof window === "undefined") return null;
+    return safeParseConsent(readCookieValue(COOKIE_NAME));
+  });
+  const [draft, setDraft] = useState<ConsentState>(() => {
+    if (typeof window === "undefined") return DEFAULT_STATE;
+    return safeParseConsent(readCookieValue(COOKIE_NAME)) ?? DEFAULT_STATE;
+  });
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   function save(next: ConsentState) {
     const normalized: ConsentState = { ...next, necessary: true };
@@ -70,7 +75,7 @@ export default function CookieConsent({ lang }: { lang: Lang }) {
 
   return (
     <>
-      <button type="button" onClick={() => setIsOpen(true)} className="cc-manage" aria-label={t.manageBtn}>
+      <button suppressHydrationWarning type="button" onClick={() => setIsOpen(true)} className="cc-manage" aria-label={t.manageBtn}>
         {t.manageBtn} {status}
       </button>
 

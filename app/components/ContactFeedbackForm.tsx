@@ -87,6 +87,7 @@ export default function ContactFeedbackForm({ lang }: { lang: Lang }) {
           <label className="field">
             <span>{dict.firstName}</span>
             <input
+              suppressHydrationWarning
               className="control"
               required
               autoComplete="given-name"
@@ -98,6 +99,7 @@ export default function ContactFeedbackForm({ lang }: { lang: Lang }) {
           <label className="field">
             <span>{dict.lastName}</span>
             <input
+              suppressHydrationWarning
               className="control"
               required
               autoComplete="family-name"
@@ -111,6 +113,7 @@ export default function ContactFeedbackForm({ lang }: { lang: Lang }) {
           <label className="field">
             <span>{dict.phone}</span>
             <input
+              suppressHydrationWarning
               className="control"
               required
               type="tel"
@@ -123,6 +126,7 @@ export default function ContactFeedbackForm({ lang }: { lang: Lang }) {
           <label className="field">
             <span>{dict.email}</span>
             <input
+              suppressHydrationWarning
               className="control"
               required
               type="email"
