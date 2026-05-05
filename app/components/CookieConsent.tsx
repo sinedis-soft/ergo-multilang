@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import type { Lang } from "@/app/dictionaries/header";
 import { getCookieDictionary, type CookieCategoryKey } from "@/app/dictionaries/cookies";
 
@@ -48,6 +48,8 @@ function writeConsent(state: ConsentState) {
 export default function CookieConsent({ lang }: { lang: Lang }) {
   const t = useMemo(() => getCookieDictionary(lang), [lang]);
 
+  const isHydrated = useSyncExternalStore(() => () => {}, () => true, () => false);
+
   const [saved, setSaved] = useState<ConsentState | null>(() => {
     if (typeof window === "undefined") return null;
     return safeParseConsent(readCookieValue(COOKIE_NAME));
@@ -67,7 +69,7 @@ export default function CookieConsent({ lang }: { lang: Lang }) {
     window.dispatchEvent(new CustomEvent("cookie-consent-changed", { detail: normalized }));
   }
 
-  const status = saved ? (saved.functional || saved.marketing ? "✓" : "✕") : "";
+  const status = isHydrated && saved ? (saved.functional || saved.marketing ? "✓" : "✕") : "";
   const mustChoose = saved === null;
 
   const policyUrl = useMemo(() => `/${lang}${t.policyHref.startsWith("/") ? t.policyHref : `/${t.policyHref}`}`,[lang, t.policyHref]);
