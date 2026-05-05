@@ -4,6 +4,7 @@ export const dynamicParams = false;
 import type { Metadata } from "next";
 import type { Lang } from "@/app/dictionaries/header";
 import { LOCALES } from "@/app/dictionaries/header";
+import { pageAlternates } from "@/app/seo";
 
 import ContactsPage from "@/app/components/ContactsPage";
 
@@ -49,6 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = normalizeLang(rawLang);
 
   return {
+    alternates: pageAlternates(lang, "/contacts"),
     title: `${titles[lang]} — EURO polis`,
     description: descriptions[lang],
   };

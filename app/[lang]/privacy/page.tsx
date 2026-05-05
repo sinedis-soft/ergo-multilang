@@ -1,10 +1,25 @@
 import CookiesPolicyPage from "@/app/components/CookiesPolicyPage";
 import { getPrivacyPolicyDictionary } from "@/app/dictionaries/privacyPolicy";
 import type { Lang } from "@/app/dictionaries/header";
+import { LOCALES } from "@/app/dictionaries/header";
+import { pageAlternates } from "@/app/seo";
+function normalizeLang(value: string): Lang {
+  return (LOCALES as readonly string[]).includes(value) ? (value as Lang) : "ru";
+}
+
 
 export const dynamic = "force-static";
 
 type Params = Promise<{ lang: Lang }>;
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang: rawLang } = await params;
+  const lang = normalizeLang(rawLang);
+
+  return {
+    alternates: pageAlternates(lang, "/privacy"),
+  };
+}
 
 export default async function PrivacyPolicyRoute({ params }: { params: Params }) {
   const { lang } = await params;

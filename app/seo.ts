@@ -17,3 +17,10 @@ export function languageAlternates(route: string): Record<string, string> {
     LOCALES.map((lang) => [lang, toAbsolute(localePath(lang, route))]),
   );
 }
+
+export function pageAlternates(lang: Lang, route: string) {
+  return {
+    canonical: localePath(lang, route),
+    languages: languageAlternates(route),
+  };
+}

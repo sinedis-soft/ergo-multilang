@@ -6,6 +6,7 @@ import type { Lang } from "@/app/dictionaries/header";
 import { LOCALES } from "@/app/dictionaries/header";
 import { getCookiesPolicyDictionary } from "@/app/dictionaries/privacyCookies";
 import CookiesPolicyPage from "@/app/components/CookiesPolicyPage";
+import { pageAlternates } from "@/app/seo";
 
 function normalizeLang(value: string): Lang {
   return (LOCALES as readonly string[]).includes(value) ? (value as Lang) : "ru";
@@ -24,6 +25,7 @@ export async function generateMetadata({
   const lang = normalizeLang(rawLang);
 
   return {
+    alternates: pageAlternates(lang, "/cookiepolicy"),
     title: getCookiesPolicyDictionary(lang).pageTitle,
   };
 }
