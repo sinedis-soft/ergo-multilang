@@ -35,7 +35,7 @@ export default function Footer({ lang }: { lang: Lang }) {
             <div>
               <h3 className="site-footer__title">{t.more}</h3>
               <div className="site-footer__links">
-                <a href="#">{t.rules}</a>
+                <Link href={withLang(lang, "/rules")}>{t.rules}</Link>
                 <a href="#">{t.documents}</a>
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function Footer({ lang }: { lang: Lang }) {
           <span>{t.copyright}</span>
 
           <div className="site-footer__legal">
-            <a href="#">{t.cookiePolicy}</a>
+            <Link href={withLang(lang, "/cookiepolicy")}>{t.cookiePolicy}</Link>
             <a href="#">{t.privacyPolicy}</a>
           </div>
         </div>
