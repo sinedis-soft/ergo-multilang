@@ -10,6 +10,19 @@ function withLang(lang: Lang, path: string) {
   return `/${lang}${path}`;
 }
 
+function switchLangPath(pathname: string | null, currentLang: Lang, targetLang: Lang) {
+  if (!pathname) return withLang(targetLang, "/");
+
+  const currentPrefix = `/${currentLang}`;
+
+  if (pathname === currentPrefix) return `/${targetLang}`;
+  if (pathname.startsWith(`${currentPrefix}/`)) {
+    return `/${targetLang}${pathname.slice(currentPrefix.length)}`;
+  }
+
+  return withLang(targetLang, "/");
+}
+
 type Active = "main" | "about" | "contacts";
 
 
@@ -58,7 +71,7 @@ export default function Header({ lang, active }: { lang: Lang; active?: Active }
               <Link
                 key={l}
                 className={`pill ${l === lang ? "pill--active" : ""}`}
-                href={withLang(l, "/")}
+                href={switchLangPath(pathname, lang, l)}
                 aria-current={l === lang ? "page" : undefined}
               >
                 {l.toUpperCase()}
@@ -140,7 +153,7 @@ export default function Header({ lang, active }: { lang: Lang; active?: Active }
                 <div className="hr" />
 
                 {LOCALES.map((l) => (
-                  <Link key={l} href={withLang(l, "/")}>
+                  <Link key={l} href={switchLangPath(pathname, lang, l)}>
                     {t.topLangLabel}: {l.toUpperCase()}
                   </Link>
                 ))}
