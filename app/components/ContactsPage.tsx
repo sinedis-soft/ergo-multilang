@@ -10,6 +10,12 @@ const titles: Record<Lang, string> = {
   en: "Contacts",
   uz: "Kontaktlar",
   kg: "Байланыш",
+  ka: "კონტაქტები",
+  kz: "Байланыс",
+  tr: "İletişim",
+  fa: "تماس با ما",
+  mn: "Холбоо барих",
+  hy: "Կոնտակտներ",
 };
 
 const intro: Record<Lang, string> = {
@@ -18,6 +24,12 @@ const intro: Record<Lang, string> = {
   en: "Contact us in any convenient way.",
   uz: "Biz bilan o'zingizga qulay usulda bog'laning.",
   kg: "Биз менен өзүңүзгө ыңгайлуу жол менен байланышыңыз.",
+  ka: "დაგვიკავშირდით თქვენთვის ხელსაყრელი ნებისმიერი ფორმით.",
+  kz: "Бізге өзіңізге ыңғайлы тәсілмен хабарласыңыз.",
+  tr: "Bize size en uygun yoldan ulaşın.",
+  fa: "از هر طریقی که برایتان راحت‌تر است با ما تماس بگیرید.",
+  mn: "Өөрт тохиромжтой хэлбэрээр бидэнтэй холбогдоорой.",
+  hy: "Կապվեք մեզ հետ ձեզ հարմար ցանկացած տարբերակով:"
 };
 
 const labels: Record<Lang, { phone: string; email: string }> = {
@@ -26,6 +38,12 @@ const labels: Record<Lang, { phone: string; email: string }> = {
   en: { phone: "Phone", email: "E-mail" },
   uz: { phone: "Telefon", email: "E-mail" },
   kg: { phone: "Телефон", email: "E-mail" },
+  ka: { phone: "ტელეფონი", email: "ელ-ფოსტა" },
+  kz: { phone: "Телефон", email: "Электрондық пошта" },
+  tr: { phone: "Telefon", email: "E-posta" },
+  fa: { phone: "تلفن", email: "ایمیل" },
+  mn: { phone: "Утас", email: "Имэйл" },
+  hy: { phone: "Հեռախոս", email: "Էլ. փոստ" },
 };
 
 export default function ContactsPage({ lang }: { lang: Lang }) {

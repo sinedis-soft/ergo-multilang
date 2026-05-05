@@ -13,6 +13,12 @@ const titles: Record<Lang, string> = {
   en: "Contacts",
   uz: "Kontaktlar",
   kg: "Байланыш",
+  ka: "კონტაქტები",
+  kz: "Байланыс",
+  tr: "İletişim",
+  fa: "تماس با ما",
+  mn: "Холбоо барих",
+  hy: "Կոնտակտներ",
 };
 
 const descriptions: Record<Lang, string> = {
@@ -21,6 +27,12 @@ const descriptions: Record<Lang, string> = {
   en: "Contact information and feedback form.",
   uz: "Kontakt ma'lumotlari va qayta aloqa formasi.",
   kg: "Байланыш маалыматы жана кайтарым байланыш формасы.",
+  ka: "საკონტაქტო ინფორმაცია და უკუკავშირის ფორმა.",
+  kz: "Байланыс ақпараты және кері байланыс формасы.",
+  tr: "İletişim bilgileri ve geri bildirim formu.",
+  fa: "اطلاعات تماس و فرم ارسال پیام.",
+  mn: "Холбоо барих мэдээлэл болон буцах холбооны маягт.",
+  hy: "Կոնտակտային տեղեկատվություն և հետադարձ կապի ձև։",
 };
 
 
