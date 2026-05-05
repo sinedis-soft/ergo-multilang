@@ -7,6 +7,7 @@ import { LOCALES } from "@/app/dictionaries/header";
 import { getCookiesPolicyDictionary } from "@/app/dictionaries/privacyCookies";
 import CookiesPolicyPage from "@/app/components/CookiesPolicyPage";
 import { pageAlternates } from "@/app/seo";
+import { getSeoDictionary } from "@/app/dictionaries/seo";
 
 function normalizeLang(value: string): Lang {
   return (LOCALES as readonly string[]).includes(value) ? (value as Lang) : "ru";
@@ -24,9 +25,12 @@ export async function generateMetadata({
   const { lang: rawLang } = await params;
   const lang = normalizeLang(rawLang);
 
+  const seo = getSeoDictionary(lang);
+
   return {
     alternates: pageAlternates(lang, "/cookiepolicy"),
-    title: getCookiesPolicyDictionary(lang).pageTitle,
+    title: seo.cookiePolicy.title,
+    description: seo.cookiePolicy.description,
   };
 }
 

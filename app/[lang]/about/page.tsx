@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import type { Lang } from "@/app/dictionaries/header";
 import { LOCALES } from "@/app/dictionaries/header";
 import { pageAlternates } from "@/app/seo";
+import { getSeoDictionary } from "@/app/dictionaries/seo";
 import { getAboutDictionary } from "@/app/dictionaries/about";
 import AboutPage from "@/app/components/AboutPage";
 
@@ -23,12 +24,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang: rawLang } = await params;
   const lang = normalizeLang(rawLang);
-  const t = getAboutDictionary(lang);
+  const seo = getSeoDictionary(lang);
+
 
   return {
     alternates: pageAlternates(lang, "/about"),
-    title: t.seo.title,
-    description: t.seo.description,
+    title: seo.about.title,
+    description: seo.about.description,
   };
 }
 

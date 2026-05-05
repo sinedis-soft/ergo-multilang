@@ -4,6 +4,7 @@ import CookieConsent from "@/app/components/CookieConsent";
 import type { Metadata } from "next";
 import { LOCALES, Lang } from "@/app/dictionaries/header";
 import { SITE_URL } from "@/app/seo";
+import { getSeoDictionary } from "@/app/dictionaries/seo";
 import { InsuranceAgencyJsonLd, OrganizationJsonLd } from "@/app/components/StructuredData";
 
 export const dynamicParams = false;
@@ -46,14 +47,15 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang: rawLang } = await params;
   const lang = (LOCALES as readonly string[]).includes(rawLang) ? (rawLang as Lang) : "ru";
 
+  const seo = getSeoDictionary(lang);
+
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      default: "EURO polis — пограничное страхование для ваших авто",
+      default: seo.home.title,
       template: "%s | EURO polis",
     },
-    description:
-      "Трансграничная страховка для международных грузоперевозчиков от латвийского страхового агентства.",
+    description:seo.home.description,
     alternates: {
       canonical: `/${lang}`,
     },
@@ -62,9 +64,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       locale: lang,
       url: `/${lang}`,
       siteName: "EURO polis",
-      title: "EURO polis — пограничное страхование для ваших авто",
-      description:
-        "Страховые решения для международных перевозок в странах Европы и Азии.",
+      title: seo.home.title,
+      description: seo.home.description,
     },
   };
 }

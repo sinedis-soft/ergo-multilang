@@ -3,6 +3,7 @@ import { getPrivacyPolicyDictionary } from "@/app/dictionaries/privacyPolicy";
 import type { Lang } from "@/app/dictionaries/header";
 import { LOCALES } from "@/app/dictionaries/header";
 import { pageAlternates } from "@/app/seo";
+import { getSeoDictionary } from "@/app/dictionaries/seo";
 function normalizeLang(value: string): Lang {
   return (LOCALES as readonly string[]).includes(value) ? (value as Lang) : "ru";
 }
@@ -16,8 +17,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang: rawLang } = await params;
   const lang = normalizeLang(rawLang);
 
+  const seo = getSeoDictionary(lang);
+
   return {
     alternates: pageAlternates(lang, "/privacy"),
+
+    title: seo.privacy.title,
+    description: seo.privacy.description,
   };
 }
 

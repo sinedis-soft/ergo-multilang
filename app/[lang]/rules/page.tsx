@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import type { Lang } from "@/app/dictionaries/header";
 import { LOCALES } from "@/app/dictionaries/header";
 import { pageAlternates } from "@/app/seo";
+import { getSeoDictionary } from "@/app/dictionaries/seo";
 import { getRulesDictionary } from "@/app/dictionaries/rules";
 import RulesPage from "@/app/components/RulesPage";
 
@@ -17,9 +18,12 @@ export function generateStaticParams() { return LOCALES.map((lang) => ({ lang })
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang: rawLang } = await params;const lang = normalizeLang(rawLang);
 
+  const seo = getSeoDictionary(lang);
+
   return {
     alternates: pageAlternates(lang, "/rules"),
-    title: getRulesDictionary(lang).pageTitle,
+    title: seo.rules.title,
+    description: seo.rules.description,
   };
 }
 
