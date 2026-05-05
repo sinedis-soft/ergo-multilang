@@ -84,7 +84,7 @@ export default function LeadForm(props: { lang: Lang }) {
   const [ceoTitle, setCeoTitle] = useState("");
 
   const [vehicleBlocks, setVehicleBlocks] = useState<number[]>([0]);
-
+  const [vehicleFileCounts, setVehicleFileCounts] = useState<Record<number, number>>({});
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const forbiddenTypes = [
@@ -127,6 +127,11 @@ export default function LeadForm(props: { lang: Lang }) {
       for (let i = 0; i < prev.length; i++) {
         if (prev[i] !== id) next.push(prev[i]);
       }
+      return next;
+    });
+    setVehicleFileCounts(function (prev) {
+      const next = { ...prev };
+      delete next[id];
       return next;
     });
   }
@@ -236,6 +241,7 @@ export default function LeadForm(props: { lang: Lang }) {
       setCeoTitle("");
 
       setVehicleBlocks([0]);
+      setVehicleFileCounts({});
     } catch {
       setStatus("error");
       setMessage(t.statusError);
@@ -263,6 +269,7 @@ export default function LeadForm(props: { lang: Lang }) {
             onSubmit={onSubmit}
             aria-describedby={status !== "idle" ? statusId : undefined}
           >
+            <input type="hidden" name="lang" value={props.lang} />
             <div className="hr" />
 
             <div className="legend">{t.contact.legend}</div>
@@ -514,9 +521,15 @@ export default function LeadForm(props: { lang: Lang }) {
                       }}
                     />
                   </div>
+                  <div className="field">
+                    <label>COMMENT</label>
+                    <textarea name={"vehicles[" + idx + "][comment]"} className="input" rows={3} />
+                  </div>
 
                   <div className="field">
-                    <label>{t.policy.docsLabel} *</label>
+                    <label>
+                      {t.policy.docsLabel} *{vehicleFileCounts[id] ? " (" + vehicleFileCounts[id] + ")" : ""}
+                    </label>
                     <input
                       type="file"
                       name={"vehicles[" + idx + "][docs]"}
@@ -528,7 +541,16 @@ export default function LeadForm(props: { lang: Lang }) {
                         const fl = e.currentTarget.files;
                         if (!fl) return;
                         const ok = validateFiles(fl, forbiddenTypes, t.fileForbidden);
-                        if (!ok) e.currentTarget.value = "";
+                        if (!ok) {
+                          e.currentTarget.value = "";
+                          setVehicleFileCounts(function (prev) {
+                            return { ...prev, [id]: 0 };
+                          });
+                          return;
+                        }
+                        setVehicleFileCounts(function (prev) {
+                          return { ...prev, [id]: fl.length };
+                        });
                       }}
                     />
                     <div className="help">{t.policy.docsHint}</div>
