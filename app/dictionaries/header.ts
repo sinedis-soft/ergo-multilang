@@ -3,6 +3,20 @@
 export const LOCALES = ["ru", "lv", "en", "uz", "kg", "ka", "kz", "tr", "fa", "mn", "hy"] as const;
 export type Lang = (typeof LOCALES)[number];
 
+export const LOCALE_META: Record<Lang, { nativeName: string; region: "Europe" | "Asia" }> = {
+  ru: { nativeName: "Русский", region: "Europe" },
+  lv: { nativeName: "Latviešu", region: "Europe" },
+  en: { nativeName: "English", region: "Europe" },
+  uz: { nativeName: "O‘zbek", region: "Asia" },
+  kg: { nativeName: "Кыргызча", region: "Asia" },
+  ka: { nativeName: "ქართული", region: "Asia" },
+  kz: { nativeName: "Қазақша", region: "Asia" },
+  tr: { nativeName: "Türkçe", region: "Asia" },
+  fa: { nativeName: "فارسی", region: "Asia" },
+  mn: { nativeName: "Монгол", region: "Asia" },
+  hy: { nativeName: "Հայերեն", region: "Asia" },
+};
+
 export interface HeaderDictionary {
   brandTitle: string;
   brandSub: string;
@@ -19,6 +33,8 @@ export interface HeaderDictionary {
   ctaCalc: string;
   ctaBuy: string;
   menu: string;
+  languageDialogTitle: string;
+  languageDialogClose: string;
 }
 
 export const headerDictionary: Record<Lang, HeaderDictionary> = {
@@ -35,6 +51,9 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     ctaCalc: "Калькулятор",
     ctaBuy: "Купить полис",
     menu: "Меню",
+    languageDialogTitle: "Выберите язык",
+    languageDialogClose: "Закрыть",
+
   },
 
   lv: {
@@ -50,6 +69,8 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     ctaCalc: "Kalkulators",
     ctaBuy: "Iegādāties polisi",
     menu: "Izvēlne",
+    languageDialogTitle: "Izvēlieties valodu",
+    languageDialogClose: "Aizvērt",
   },
 
   en: {
@@ -65,6 +86,8 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     ctaCalc: "Calculator",
     ctaBuy: "Buy policy",
     menu: "Menu",
+    languageDialogTitle: "Choose language",
+    languageDialogClose: "Close",
   },
 
   uz: {
@@ -80,6 +103,8 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     ctaCalc: "Kalkulyator",
     ctaBuy: "Polis sotib olish",
     menu: "Menyu",
+    languageDialogTitle: "Tilni tanlang",
+    languageDialogClose: "Yopish",
   },
 
   kg: {
@@ -95,6 +120,8 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     ctaCalc: "Калькулятор",
     ctaBuy: "Полис сатып алуу",
     menu: "Меню",
+    languageDialogTitle: "Тилди тандаңыз",
+    languageDialogClose: "Жабуу",
   },
   ka: {
     brandTitle: "EURO polis",
@@ -109,6 +136,8 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     ctaCalc: "კალკულატორი",
     ctaBuy: "პოლისის შეძენა",
     menu: "მენიუ",
+    languageDialogTitle: "აირჩიეთ ენა",
+    languageDialogClose: "დახურვა",
   },
   kz: {
     brandTitle: "EURO polis",
@@ -123,6 +152,8 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     ctaCalc: "Калькулятор",
     ctaBuy: "Полис сатып алу",
     menu: "Мәзір",
+    languageDialogTitle: "Тілді таңдаңыз",
+    languageDialogClose: "Жабу",
   },
   tr: {
     brandTitle: "EURO polis",
@@ -137,6 +168,8 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     ctaCalc: "Hesaplayıcı",
     ctaBuy: "Poliçe satın al",
     menu: "Menü",
+    languageDialogTitle: "Dil seçin",
+    languageDialogClose: "Kapat",
   },
   fa: {
     brandTitle: "EURO polis",
@@ -151,6 +184,8 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     ctaCalc: "محاسبه‌گر",
     ctaBuy: "خرید بیمه‌نامه",
     menu: "منو",
+    languageDialogTitle: "زبان را انتخاب کنید",
+    languageDialogClose: "بستن",
   },
   mn: {
     brandTitle: "EURO polis",
@@ -165,6 +200,8 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     ctaCalc: "Тооцоолуур",
     ctaBuy: "Даатгалын полис авах",
     menu: "Цэс",
+    languageDialogTitle: "Хэл сонгох",
+    languageDialogClose: "Хаах",
   },
 
   hy: {
@@ -180,5 +217,7 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     ctaCalc: "Հաշվիչ",
     ctaBuy: "Գնել պոլիս",
     menu: "Մենյու",
+    languageDialogTitle: "Ընտրեք լեզուն",
+    languageDialogClose: "Փակել",
   },
 };

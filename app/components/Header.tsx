@@ -4,7 +4,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { headerDictionary, LOCALES, Lang } from "@/app/dictionaries/header";
+import { useMemo, useState } from "react";
+import { headerDictionary, LOCALES, LOCALE_META, Lang } from "@/app/dictionaries/header";
 
 function withLang(lang: Lang, path: string) {
   return `/${lang}${path}`;
@@ -25,7 +26,6 @@ function switchLangPath(pathname: string | null, currentLang: Lang, targetLang: 
 
 type Active = "main" | "about" | "contacts";
 
-
 function detectActiveFromPath(pathname: string | null, lang: Lang): Active {
   const base = `/${lang}`;
 
@@ -41,6 +41,7 @@ export default function Header({ lang, active }: { lang: Lang; active?: Active }
   const pathname = usePathname();
   const toggleId = "nav-toggle";
   const drawerId = "mobile-drawer";
+  const [isLanguageModalOpen, setLanguageModalOpen] = useState(false);
 
   const resolvedActive = active ?? detectActiveFromPath(pathname, lang);
 
@@ -49,6 +50,16 @@ export default function Header({ lang, active }: { lang: Lang; active?: Active }
     { id: "about", label: t.nav.about, href: "/about" },
     { id: "contacts", label: t.nav.contacts, href: "/contacts" },
   ] as const;
+
+  const groupedLocales = useMemo(() => {
+    return LOCALES.reduce<Record<string, Lang[]>>((acc, locale) => {
+      const region = LOCALE_META[locale].region;
+      if (!acc[region]) acc[region] = [];
+      acc[region].push(locale);
+      return acc;
+    }, {});
+  }, []);
+
 
   const calcHref = "/#calc";
   const buyHref = "/#buy";
@@ -67,16 +78,10 @@ export default function Header({ lang, active }: { lang: Lang; active?: Active }
               {t.topContacts}
             </Link>
 
-            {LOCALES.map((l) => (
-              <Link
-                key={l}
-                className={`pill ${l === lang ? "pill--active" : ""}`}
-                href={switchLangPath(pathname, lang, l)}
-                aria-current={l === lang ? "page" : undefined}
-              >
-                {l.toUpperCase()}
-              </Link>
-            ))}
+            <button className="language-trigger" type="button" onClick={() => setLanguageModalOpen(true)}>
+              <span aria-hidden="true">🌐</span>
+              <span>{LOCALE_META[lang].nativeName}</span>
+            </button>
           </div>
         </div>
       </div>
@@ -84,11 +89,9 @@ export default function Header({ lang, active }: { lang: Lang; active?: Active }
       {/* Main header */}
       <header className="site-header">
         <div className="container">
-          {/* ВАЖНО: input должен быть на одном уровне с .mobile-drawer */}
           <input id={toggleId} className="nav-toggle" type="checkbox" />
 
           <div className="header__row">
-            {/* Brand */}
             <Link className="brand" href={withLang(lang, "/")} aria-label={t.nav.main}>
               <div className="logo" aria-hidden="true" />
               <div className="brand__text">
@@ -144,24 +147,44 @@ export default function Header({ lang, active }: { lang: Lang; active?: Active }
                     {item.label}
                   </Link>
                 ))}
-
                 <div className="hr" />
-
                 <Link href={withLang(lang, calcHref)}>{t.ctaCalc}</Link>
                 <Link href={withLang(lang, buyHref)}>{t.ctaBuy}</Link>
-
-                <div className="hr" />
-
-                {LOCALES.map((l) => (
-                  <Link key={l} href={switchLangPath(pathname, lang, l)}>
-                    {t.topLangLabel}: {l.toUpperCase()}
-                  </Link>
-                ))}
               </div>
             </div>
           </div>
         </div>
       </header>
+      {isLanguageModalOpen && (
+        <div className="language-modal" role="dialog" aria-modal="true" aria-label={t.languageDialogTitle}>
+          <div className="language-modal__card">
+            <div className="language-modal__header">
+              <h2>{t.languageDialogTitle}</h2>
+              <button type="button" onClick={() => setLanguageModalOpen(false)}>
+                {t.languageDialogClose}
+              </button>
+            </div>
+
+            {Object.entries(groupedLocales).map(([region, locales]) => (
+              <section key={region} className="language-modal__region">
+                <h3>{region}</h3>
+                <div className="language-modal__grid">
+                  {locales.map((l) => (
+                    <Link
+                      key={l}
+                      href={switchLangPath(pathname, lang, l)}
+                      className={`pill ${l === lang ? "pill--active" : ""}`}
+                      onClick={() => setLanguageModalOpen(false)}
+                    >
+                      {LOCALE_META[l].nativeName}
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        </div>
+      )}
     </>
   );
 }
