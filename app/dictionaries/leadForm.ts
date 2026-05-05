@@ -52,6 +52,7 @@ export type LeadFormDictionary = {
     addVehicle: string;
     removeVehicle: string;
     vehicleBlockTitle: string;
+    comment: string;
 
     options: {
       countriesFrom: Array<{ value: string; label: string }>;
@@ -112,6 +113,7 @@ const ru: LeadFormDictionary = {
     addVehicle: "Добавить ТС",
     removeVehicle: "Удалить",
     vehicleBlockTitle: "Транспортное средство",
+    comment: "Коментарий (опционально)",
 
     options: {
       countriesFrom: [
@@ -198,6 +200,7 @@ const lv: LeadFormDictionary = {
     addVehicle: "Pievienot transportlīdzekli",
     removeVehicle: "Dzēst",
     vehicleBlockTitle: "Transportlīdzeklis",
+    comment: "Komentārs (neobligāti)",
 
     options: {
       countriesFrom: [
@@ -284,6 +287,7 @@ const en: LeadFormDictionary = {
     addVehicle: "Add vehicle",
     removeVehicle: "Remove",
     vehicleBlockTitle: "Vehicle",
+    comment: "Comment (optional)",
 
     options: {
       countriesFrom: [
@@ -370,6 +374,7 @@ const uz: LeadFormDictionary = {
     addVehicle: "Transport vositasi qo‘shish",
     removeVehicle: "O‘chirish",
     vehicleBlockTitle: "Transport vositasi",
+    comment: "Izoh (ixtiyoriy)",
 
     options: {
       countriesFrom: [
@@ -456,6 +461,7 @@ const kg: LeadFormDictionary = {
     addVehicle: "ТК кошуу",
     removeVehicle: "Өчүрүү",
     vehicleBlockTitle: "Транспорт каражаты",
+    comment: "Комментарий (милдеттүү эмес)",
 
     options: {
       countriesFrom: [
@@ -542,6 +548,7 @@ const ka: LeadFormDictionary = {
     addVehicle: "ТС-ის დამატება",
     removeVehicle: "წაშლა",
     vehicleBlockTitle: "სატრანსპორტო საშუალება",
+    comment: "კომენტარი (არასავალდებულო)",
 
     options: {
       countriesFrom: [
@@ -628,6 +635,7 @@ const kz: LeadFormDictionary = {
     addVehicle: "Көлік қосу",
     removeVehicle: "Өшіру",
     vehicleBlockTitle: "Көлік құралы",
+    comment: "Пікір (міндетті емес)",
 
     options: {
       countriesFrom: [
@@ -714,6 +722,7 @@ const tr: LeadFormDictionary = {
     addVehicle: "Araç ekle",
     removeVehicle: "Sil",
     vehicleBlockTitle: "Araç",
+    comment: "Mesaj (isteğe bağlı)",
 
     options: {
       countriesFrom: [
@@ -800,6 +809,8 @@ const fa: LeadFormDictionary = {
     addVehicle: "افزودن وسیله نقلیه",
     removeVehicle: "حذف",
     vehicleBlockTitle: "وسیله نقلیه",
+    comment: "توضیحات (اختیاری)",
+    
 
     options: {
       countriesFrom: [
@@ -886,6 +897,7 @@ const mn: LeadFormDictionary = {
     addVehicle: "Тээврийн хэрэгсэл нэмэх",
     removeVehicle: "Устгах",
     vehicleBlockTitle: "Тээврийн хэрэгсэл",
+    comment: "Тайлбар (заавал биш)",
 
     options: {
       countriesFrom: [
@@ -972,6 +984,7 @@ const hy: LeadFormDictionary = {
     addVehicle: "Ավելացնել ՏՄ",
     removeVehicle: "Ջնջել",
     vehicleBlockTitle: "Տրանսպորտային միջոց",
+    comment: "Մեկնաբանություն (ոչ պարտադիր)",
 
     options: {
       countriesFrom: [

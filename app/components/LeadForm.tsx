@@ -522,7 +522,7 @@ export default function LeadForm(props: { lang: Lang }) {
                     />
                   </div>
                   <div className="field">
-                    <label>COMMENT</label>
+                    <label>{t.policy.comment}</label>
                     <textarea name={"vehicles[" + idx + "][comment]"} className="input" rows={3} />
                   </div>
 
