@@ -4,8 +4,25 @@ export const dynamicParams = false;
 import type { Metadata } from "next";
 import type { Lang } from "@/app/dictionaries/header";
 import { LOCALES } from "@/app/dictionaries/header";
-import { getAboutDictionary } from "@/app/dictionaries/about";
+
 import ContactsPage from "@/app/components/ContactsPage";
+
+const titles: Record<Lang, string> = {
+  ru: "Контакты",
+  lv: "Kontakti",
+  en: "Contacts",
+  uz: "Kontaktlar",
+  kg: "Байланыш",
+};
+
+const descriptions: Record<Lang, string> = {
+  ru: "Контактная информация и форма обратной связи.",
+  lv: "Kontaktinformācija un atsauksmju forma.",
+  en: "Contact information and feedback form.",
+  uz: "Kontakt ma'lumotlari va qayta aloqa formasi.",
+  kg: "Байланыш маалыматы жана кайтарым байланыш формасы.",
+};
+
 
 function normalizeLang(value: string): Lang {
   return (LOCALES as readonly string[]).includes(value) ? (value as Lang) : "ru";
@@ -15,29 +32,20 @@ export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang: rawLang } = await params;
   const lang = normalizeLang(rawLang);
-  const t = getAboutDictionary(lang);
 
   return {
-    title: t.contact.title + " — EURO polis",
-    description: t.contact.desc,
+    title: `${titles[lang]} — EURO polis`,
+    description: descriptions[lang],
   };
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang: rawLang } = await params;
   const lang = normalizeLang(rawLang);
-  const t = getAboutDictionary(lang);
 
-  return <ContactsPage lang={lang} t={t} />;
+  return <ContactsPage lang={lang} />;
+
 }
