@@ -1,6 +1,6 @@
 import { LOCALES, type Lang } from "@/app/dictionaries/header";
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://europolis.lv";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://euro-polis.com";
 
 export const ROUTES = ["", "/about", "/contacts", "/product-info", "/rules", "/privacy", "/cookiepolicy"] as const;
 
