@@ -6,12 +6,14 @@ import Calculator from "@/app/components/Calculator";
 import LeadForm from "@/app/components/LeadForm";
 import CoverageBlock from "@/app/components/CoverageBlock";
 import { keepShortWords } from "@/app/utils/typography";
+import { FaqPageJsonLd } from "@/app/components/StructuredData";
 
 export default function Home({ lang }: { lang: Lang }) {
   const t = getHomeDictionary(lang);
 
   return (
     <main id="main">
+      <FaqPageJsonLd lang={lang} />
       {/* HERO + CALC */}
       <section className="hero">
         <div className="container">

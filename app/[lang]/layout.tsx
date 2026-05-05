@@ -4,6 +4,7 @@ import CookieConsent from "@/app/components/CookieConsent";
 import type { Metadata } from "next";
 import { LOCALES, Lang } from "@/app/dictionaries/header";
 import { SITE_URL } from "@/app/seo";
+import { InsuranceAgencyJsonLd, OrganizationJsonLd } from "@/app/components/StructuredData";
 
 export const dynamicParams = false;
 
@@ -31,6 +32,8 @@ export default async function LangLayout({
       dir={isRtl ? "rtl" : "ltr"}
       className={`min-h-dvh flex flex-col ${isRtl ? "text-right" : "text-left"}`}
     >
+      <OrganizationJsonLd lang={lang} />
+      <InsuranceAgencyJsonLd lang={lang} />
       <Header lang={lang} />
       {children}
       <Footer lang={lang} />
@@ -46,7 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      default: "EURO polis — трансграничное страхование для перевозчиков",
+      default: "EURO polis — пограничное страхование для ваших авто",
       template: "%s | EURO polis",
     },
     description:
@@ -59,7 +62,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       locale: lang,
       url: `/${lang}`,
       siteName: "EURO polis",
-      title: "EURO polis — трансграничное страхование для перевозчиков",
+      title: "EURO polis — пограничное страхование для ваших авто",
       description:
         "Страховые решения для международных перевозок в странах Европы и Азии.",
     },
