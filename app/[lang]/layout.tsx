@@ -1,5 +1,6 @@
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import CookieConsent from "@/app/components/CookieConsent";
 import { LOCALES, Lang } from "@/app/dictionaries/header";
 
 export const dynamicParams = false;
@@ -25,6 +26,7 @@ export default async function LangLayout({
       <Header lang={lang} />
       {children}
       <Footer lang={lang} />
+      <CookieConsent lang={lang} />
     </div>
   );
 }
