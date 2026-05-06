@@ -534,6 +534,15 @@ header.site-header{
   border-bottom: 1px solid var(--border);
 }
 
+
+.about-hero{
+  background:
+    radial-gradient(900px 420px at 20% 10%, rgba(15,148,167,.16), rgba(15,148,167,0) 60%),
+    radial-gradient(900px 420px at 80% 0%, rgba(191,21,40,.10), rgba(191,21,40,0) 55%),
+    linear-gradient(180deg, var(--bg-50), #fff 65%);
+  border-bottom: 1px solid var(--border);
+}
+
 .hero__grid{
   display:grid;
   grid-template-columns: 1.25fr .75fr;
