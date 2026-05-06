@@ -60,6 +60,23 @@ export type LeadFormDictionary = {
       periods: Array<{ value: string; label: string }>;
     };
   };
+    steps: {
+    step1: string;
+    step2: string;
+    contacts: string;
+    vehicleData: string;
+    next: string;
+    back: string;
+  };
+    terms: {
+    textBefore: string;
+    linkText: string;
+    textAfter: string;
+  };
+  estimate: {
+    title: string;
+    hint: string;
+  };
 };
 
 const ru: LeadFormDictionary = {
@@ -146,6 +163,23 @@ const ru: LeadFormDictionary = {
         { value: "365", label: "12 месяцев" },
       ],
     },
+  },
+    steps: {
+    step1: "Шаг 1",
+    step2: "Шаг 2",
+    contacts: "Контакты",
+    vehicleData: "Данные авто",
+    next: "Далее",
+    back: "Назад",
+  },
+  terms: {
+    textBefore: "Я принимаю",
+    linkText: "условия оформления и правила страхования",
+    textAfter: ".",
+  },
+  estimate: {
+    title: "Ориентировочная стоимость по заявке:",
+    hint: "Окончательная стоимость будет предоставлена в письме с данными на оплату (в инвойсе) после проверки всех данных и согласования со страховой.",
   },
 };
 
@@ -234,6 +268,23 @@ const lv: LeadFormDictionary = {
       ],
     },
   },
+    steps: {
+    step1: "1. solis",
+    step2: "2. solis",
+    contacts: "Kontakti",
+    vehicleData: "Transportlīdzekļa dati",
+    next: "Tālāk",
+    back: "Atpakaļ",
+  },
+  terms: {
+    textBefore: "Es piekrītu",
+    linkText: "noformēšanas noteikumiem un apdrošināšanas noteikumiem",
+    textAfter: ".",
+  },
+  estimate: {
+    title: "Orientējošās izmaksas pēc pieteikuma:",
+    hint: "Galīgā apdrošināšanas prēmija tiks norādīta rēķinā pēc visu datu pārbaudes un saskaņošanas ar apdrošinātāju.",
+  },
 };
 
 const en: LeadFormDictionary = {
@@ -320,6 +371,23 @@ const en: LeadFormDictionary = {
         { value: "365", label: "12 months" },
       ],
     },
+  },
+    steps: {
+    step1: "Step 1",
+    step2: "Step 2",
+    contacts: "Contacts",
+    vehicleData: "Vehicle details",
+    next: "Next",
+    back: "Back",
+  },
+  terms: {
+    textBefore: "I accept",
+    linkText: "the application terms and insurance rules",
+    textAfter: ".",
+  },
+  estimate: {
+    title: "Estimated cost for your request:",
+    hint: "The final premium will be provided in the invoice after verification of all details and confirmation by the insurer.",
   },
 };
 
@@ -408,6 +476,23 @@ const uz: LeadFormDictionary = {
       ],
     },
   },
+    steps: {
+    step1: "1-qadam",
+    step2: "2-qadam",
+    contacts: "Aloqa ma’lumotlari",
+    vehicleData: "Transport ma’lumotlari",
+    next: "Keyingi",
+    back: "Orqaga",
+  },
+  terms: {
+    textBefore: "Men",
+    linkText: "rasmiylashtirish shartlari va sug‘urta qoidalarini",
+    textAfter: " qabul qilaman.",
+  },
+  estimate: {
+    title: "Ariza bo‘yicha taxminiy narx:",
+    hint: "Yakuniy narx barcha ma’lumotlar tekshirilgandan va sug‘urta kompaniyasi bilan kelishilgandan so‘ng, to‘lov uchun yuboriladigan invoice’da ko‘rsatiladi.",
+  },
 };
 
 const kg: LeadFormDictionary = {
@@ -494,6 +579,23 @@ const kg: LeadFormDictionary = {
         { value: "365", label: "12 ай" },
       ],
     },
+  },
+    steps: {
+    step1: "1-кадам",
+    step2: "2-кадам",
+    contacts: "Байланыштар",
+    vehicleData: "Унаа маалыматтары",
+    next: "Кийинки",
+    back: "Артка",
+  },
+  terms: {
+    textBefore: "Мен",
+    linkText: "тариздөө шарттарын жана камсыздандыруу эрежелерин",
+    textAfter: " кабыл алам.",
+  },
+  estimate: {
+    title: "Өтүнмө боюнча болжолдуу баа:",
+    hint: "Акыркы баа бардык маалыматтар текшерилип, камсыздандыруу компаниясы менен макулдашылгандан кийин төлөм үчүн жөнөтүлүүчү катта (инвойста) көрсөтүлөт.",
   },
 };
 
@@ -582,6 +684,23 @@ const ka: LeadFormDictionary = {
       ],
     },
   },
+    steps: {
+    step1: "ნაბიჯი 1",
+    step2: "ნაბიჯი 2",
+    contacts: "საკონტაქტო მონაცემები",
+    vehicleData: "ავტომობილის მონაცემები",
+    next: "შემდეგი",
+    back: "უკან",
+  },
+  terms: {
+    textBefore: "ვეთანხმები",
+    linkText: "გაფორმების პირობებსა და დაზღვევის წესებს",
+    textAfter: ".",
+  },
+  estimate: {
+    title: "განაცხადის მიხედვით საორიენტაციო ღირებულება:",
+    hint: "საბოლოო ღირებულება მითითებული იქნება ინვოისში გადახდის მონაცემებთან ერთად, ყველა მონაცემის გადამოწმებისა და სადაზღვევო კომპანიასთან შეთანხმების შემდეგ.",
+  },
 };
 
 const kz: LeadFormDictionary = {
@@ -669,6 +788,23 @@ const kz: LeadFormDictionary = {
       ],
     },
   },
+    steps: {
+    step1: "1-қадам",
+    step2: "2-қадам",
+    contacts: "Байланыс деректері",
+    vehicleData: "Көлік деректері",
+    next: "Келесі",
+    back: "Артқа",
+  },
+  terms: {
+    textBefore: "Мен",
+    linkText: "рәсімдеу шарттары мен сақтандыру ережелерін",
+    textAfter: " қабылдаймын.",
+  },
+  estimate: {
+    title: "Өтінім бойынша болжамды құны:",
+    hint: "Соңғы құны барлық деректер тексеріліп, сақтандыру компаниясымен келісілгеннен кейін төлем деректері көрсетілген хатта (инвойста) жіберіледі.",
+  },
 };
 
 const tr: LeadFormDictionary = {
@@ -755,6 +891,23 @@ const tr: LeadFormDictionary = {
         { value: "365", label: "12 ay" },
       ],
     },
+  },
+    steps: {
+      step1: "1. adım",
+      step2: "2. adım",
+      contacts: "İletişim bilgileri",
+      vehicleData: "Araç bilgileri",
+      next: "İleri",
+      back: "Geri",
+  },
+  terms: {
+    textBefore: "Başvuru şartlarını ve",
+    linkText: "sigorta kurallarını",
+    textAfter: " kabul ediyorum.",
+  },
+  estimate: {
+    title: "Başvuruya göre tahmini maliyet:",
+    hint: "Nihai tutar, tüm bilgiler kontrol edildikten ve sigorta şirketiyle onaylandıktan sonra ödeme bilgilerini içeren faturada tarafınıza bildirilecektir.",
   },
 };
 
@@ -844,6 +997,23 @@ const fa: LeadFormDictionary = {
       ],
     },
   },
+  steps: {
+    step1: "مرحله ۱",
+    step2: "مرحله ۲",
+    contacts: "اطلاعات تماس",
+    vehicleData: "اطلاعات خودرو",
+    next: "بعدی",
+    back: "بازگشت",
+  },
+  terms: {
+    textBefore: "من",
+    linkText: "شرایط صدور و مقررات بیمه",
+    textAfter: " را می‌پذیرم.",
+  },
+  estimate: {
+    title: "هزینه تقریبی بر اساس درخواست:",
+    hint: "هزینه نهایی پس از بررسی اطلاعات و تأیید شرکت بیمه، در فاکتور ارسالی همراه با اطلاعات پرداخت اعلام خواهد شد.",
+  },
 };
 
 const mn: LeadFormDictionary = {
@@ -931,6 +1101,23 @@ const mn: LeadFormDictionary = {
       ],
     },
   },
+  steps: {
+    step1: "1-р алхам",
+    step2: "2-р алхам",
+    contacts: "Холбоо барих мэдээлэл",
+    vehicleData: "Тээврийн хэрэгслийн мэдээлэл",
+    next: "Дараах",
+    back: "Буцах",
+  },
+  terms: {
+    textBefore: "Би",
+    linkText: "бүрдүүлэлтийн нөхцөл болон даатгалын дүрмийг",
+    textAfter: " зөвшөөрч байна.",
+  },
+  estimate: {
+    title: "Хүсэлтийн урьдчилсан үнэ:",
+    hint: "Бүх мэдээллийг шалгаж, даатгалын компанитай тохиролцсоны дараа төлбөрийн мэдээлэл бүхий нэхэмжлэхэд эцсийн үнийг илгээнэ.",
+  },
 };
 
 const hy: LeadFormDictionary = {
@@ -1017,6 +1204,23 @@ const hy: LeadFormDictionary = {
         { value: "365", label: "12 ամիս" },
       ],
     },
+  },
+  steps: {
+    step1: "Քայլ 1",
+    step2: "Քայլ 2",
+    contacts: "Կոնտակտային տվյալներ",
+    vehicleData: "Տրանսպորտային միջոցի տվյալներ",
+    next: "Հաջորդը",
+    back: "Հետ",
+  },
+  terms: {
+    textBefore: "Ես ընդունում եմ",
+    linkText: "ձևակերպման պայմանները և ապահովագրության կանոնները",
+    textAfter: "։",
+  },
+  estimate: {
+    title: "Հայտի նախնական արժեքը՝",
+    hint: "Վերջնական արժեքը կներկայացվի վճարման տվյալներով նամակում (ինվոյսում)՝ բոլոր տվյալների ստուգումից և ապահովագրողի հետ համաձայնեցումից հետո։",
   },
 };
 

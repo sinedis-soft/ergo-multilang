@@ -5,12 +5,45 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://euro-polis.
 export const ROUTES = ["", "/about", "/contacts", "/product-info", "/rules", "/privacy", "/cookiepolicy"] as const;
 
 const REGIONAL_HREFLANG_MAP: Record<string, Lang> = {
+  // Russian
   "ru-RU": "ru",
   "ru-BY": "ru",
-  "ru-UC": "ru",
+  "ru-KZ": "ru",
+  "ru-KG": "ru",
+  "ru-UZ": "ru",
+
+  // Latvian
   "lv-LV": "lv",
-  "en-EU": "en",
+
+  // English
+  "en-US": "en",
+  "en-GB": "en",
+  "en-EU": "en", // допустимо оставить как кастом, но лучше убрать
+  "en": "en",
+
+  // Uzbek
+  "uz-UZ": "uz",
+
+  // Kyrgyz
+  "kg-KG": "kg",
+
+  // Georgian
+  "ka-GE": "ka",
+
+  // Kazakh
+  "kz-KZ": "kz",
+
+  // Turkish
   "tr-TR": "tr",
+
+  // Persian (Farsi)
+  "fa-IR": "fa",
+
+  // Mongolian
+  "mn-MN": "mn",
+
+  // Armenian
+  "hy-AM": "hy",
 };
 
 export function toAbsolute(path: string): string {

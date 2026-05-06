@@ -1368,3 +1368,53 @@ footer{
 @media (max-width: 980px){
   .language-modal__grid{ grid-template-columns: repeat(2, minmax(140px, 1fr)); }
 }
+.payment-planned {
+  padding-top: 10px;
+  padding-bottom: 28px;
+}
+
+.payment-planned__inner {
+  text-align: center;
+}
+
+.payment-planned__before {
+  margin: 0;
+  color: var(--text-700);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.payment-planned__after {
+  margin: 4px 0 16px;
+  color: var(--brand-red-dark);
+  font-size: 22px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.payment-planned__logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.payment-planned__logo {
+  width: 120px;
+  height: 48px;
+  object-fit: contain;
+}
+
+@media (max-width: 520px) {
+  .payment-planned__after {
+    font-size: 19px;
+  }
+
+  .payment-planned__logo {
+    width: 104px;
+    height: 42px;
+  }
+}

@@ -1,4 +1,5 @@
 // app/components/Home.tsx
+import Image from "next/image";
 import type { Lang } from "@/app/dictionaries/header";
 import { getHomeDictionary } from "@/app/dictionaries/home";
 import InfoCompare from "@/app/components/InfoCompare";
@@ -14,7 +15,7 @@ export default function Home({ lang }: { lang: Lang }) {
   return (
     <main id="main">
       <FaqPageJsonLd lang={lang} />
-      {/* HERO + CALC */}
+
       <section className="hero">
         <div className="container">
           <div className="hero__grid">
@@ -44,7 +45,6 @@ export default function Home({ lang }: { lang: Lang }) {
               </div>
             </div>
 
-            {/* Anchor for hero button + calculator */}
             <div id="calc">
               <Calculator lang={lang} />
             </div>
@@ -52,7 +52,6 @@ export default function Home({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* PROCESS */}
       <section className="section">
         <div className="container">
           <div className="section__hd">
@@ -65,7 +64,9 @@ export default function Home({ lang }: { lang: Lang }) {
           <div className="process-flow" aria-label={t.process.title}>
             {t.process.steps.map((s, idx) => (
               <article className="process-flow__item" key={idx}>
-                <span className="process-flow__num" aria-hidden="true">{idx + 1}</span>
+                <span className="process-flow__num" aria-hidden="true">
+                  {idx + 1}
+                </span>
                 <h3 className="process-flow__title">{keepShortWords(s.title)}</h3>
                 <p className="process-flow__text">{s.text}</p>
               </article>
@@ -74,10 +75,8 @@ export default function Home({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* INFO COMPARE */}
       <InfoCompare lang={lang} />
 
-      {/* WHY */}
       <section className="section">
         <div className="container">
           <div className="section__hd">
@@ -103,10 +102,8 @@ export default function Home({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* COVERAGE */}
       <CoverageBlock lang={lang} />
 
-      {/* FORM */}
       <section className="section" id="buy">
         <div className="container">
           <div className="section__hd">
@@ -124,7 +121,6 @@ export default function Home({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="section" id="faq">
         <div className="container">
           <div className="section__hd">
@@ -142,10 +138,7 @@ export default function Home({ lang }: { lang: Lang }) {
                   <span className="muted">+</span>
                 </summary>
 
-                <div
-                  className="details__body"
-                  style={{ whiteSpace: "pre-line" }}
-                >
+                <div className="details__body" style={{ whiteSpace: "pre-line" }}>
                   {f.a}
                 </div>
               </details>
@@ -154,7 +147,6 @@ export default function Home({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* VERIFY */}
       <section className="section" id="verify">
         <div className="container">
           <div className="section__hd">
@@ -181,12 +173,7 @@ export default function Home({ lang }: { lang: Lang }) {
                   <p className="card__text">{v.desc}</p>
 
                   <div className="card__cta">
-                    <a
-                      className="btn btn--ghost"
-                      href={v.href}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
+                    <a className="btn btn--ghost" href={v.href} target="_blank" rel="noreferrer">
                       {v.cta}
                     </a>
                   </div>
@@ -196,6 +183,34 @@ export default function Home({ lang }: { lang: Lang }) {
           </div>
         </div>
       </section>
+
+      <section className="section payment-planned" aria-label={t.paymentPlanned.ariaLabel}>
+        <div className="container">
+          <div className="payment-planned__inner">
+            <p className="payment-planned__before">{t.paymentPlanned.before}</p>
+            <p className="payment-planned__after">{t.paymentPlanned.after}</p>
+
+            <div className="payment-planned__logos" aria-label={t.paymentPlanned.logosAriaLabel}>
+              <Image
+                src="/Mastercard-logo.svg.png"
+                alt={t.paymentPlanned.mastercardAlt}
+                width={160}
+                height={80}
+                className="payment-planned__logo"
+              />
+              <Image
+                src="/Visa_Inc._logo_(2021–present).svg"
+                alt={t.paymentPlanned.visaAlt}
+                width={160}
+                height={80}
+                className="payment-planned__logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
     </main>
   );
 }

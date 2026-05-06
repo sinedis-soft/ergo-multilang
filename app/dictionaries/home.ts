@@ -60,6 +60,14 @@ export interface HomeDictionary {
       href: string;
     }>;
   };
+  paymentPlanned: {
+    ariaLabel: string;
+    before: string;
+    after: string;
+    logosAriaLabel: string;
+    mastercardAlt: string;
+    visaAlt: string;
+  };
 }
 
 export const homeDictionary: Record<Lang, HomeDictionary> = {
@@ -129,7 +137,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       desc: "Короткие ответы на частые вопросы.",
       items: [
         { q: "Сколько времени занимает оформление?", a: "Обычно 10–20 минут при наличии всех данных." },
-        { q: "Можно ли оплатить картой?", a: "Да, после подготовки полиса вы оплачиваете и получаете PDF." },
+        { q: "Можно ли оплатить картой?", a: "На данном этапе доступен только SWIFT и  SEPA переводы, после подготовки полиса вы оплачиваете и получаете PDF. Функцию оплаты картой планируем ввести к сентябрю 2026г." },
         { q: "Это то же самое, что «зелёная карта»?", a: "Нет. Это разные продукты и разные правила." },
         { q: "Что это за страховка??", a: "Это обязательное страхование ответственности владельцев или пользователей механических транспортных средств, действующее на территории Латвии и ЕС." },
         {
@@ -203,6 +211,14 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
         
       ],
     },
+    paymentPlanned: {
+      ariaLabel: "Планируемая оплата картой",
+      before: "К сентябрю 2026 мы планируем принимать",
+      after: "оплату картой",
+      logosAriaLabel: "Платёжные системы Mastercard и Visa",
+      mastercardAlt: "Логотип Mastercard",
+      visaAlt: "Логотип Visa",
+    },  
   },
 
   lv: {
@@ -270,7 +286,10 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       desc: "Īsas atbildes uz biežākajiem jautājumiem.",
       items: [
         { q: "Cik ilgi aizņem noformēšana?", a: "Parasti 10–20 minūtes, ja ir pieejami visi dati." },
-        { q: "Vai var norēķināties ar karti?", a: "Jā, pēc polises sagatavošanas veicat apmaksu un saņemat PDF." },
+        {
+          q: "Vai iespējams norēķināties ar bankas karti?",
+          a: "Šobrīd pieejami tikai SWIFT un SEPA pārskaitījumi. Pēc polises sagatavošanas jūs veicat apmaksu un saņemat PDF polisi. Norēķinu ar bankas karti plānots ieviest līdz 2026. gada septembrim."
+        },
         { q: "Vai tas ir tas pats, kas “Zaļā karte”?", a: "Nē. Tie ir atšķirīgi produkti ar dažādiem noteikumiem." },
         { q: "Kas tā ir par apdrošināšanu?", a: "Tā ir obligātā transportlīdzekļu īpašnieku civiltiesiskās atbildības apdrošināšana, kas ir spēkā Latvijā un ES." },
         {
@@ -342,6 +361,14 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
           href: "https://www.ufg.pl/",
         },
       ],
+    },
+    paymentPlanned: {
+      ariaLabel: "Plānotie norēķini ar bankas karti",
+      before: "Līdz 2026. gada septembrim plānojam pieņemt",
+      after: "maksājumus ar bankas karti",
+      logosAriaLabel: "Maksājumu sistēmas Mastercard un Visa",
+      mastercardAlt: "Mastercard logotips",
+      visaAlt: "Visa logotips",
     },
   },
   en: {
@@ -426,7 +453,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
         },
         {
           q: "Can I pay by card?",
-          a: "Yes. Once the policy is prepared, you can pay and receive the PDF.",
+          a: "At the moment, only SWIFT and SEPA bank transfers are available. Once the policy is prepared, you make the payment and receive the PDF policy. Card payments are planned to be introduced by September 2026."
         },
         {
           q: "Is this the same as a Green Card?",
@@ -506,6 +533,14 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
         },
       ],
     },
+    paymentPlanned: {
+      ariaLabel: "Planned card payment support",
+      before: "By September 2026, we plan to accept",
+      after: "card payments",
+      logosAriaLabel: "Mastercard and Visa payment systems",
+      mastercardAlt: "Mastercard logo",
+      visaAlt: "Visa logo",
+    },
   },
   uz: {
     hero: {
@@ -572,7 +607,10 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       desc: "Eng ko‘p beriladigan savollarga qisqa javoblar.",
       items: [
         { q: "Rasmiylashtirish qancha vaqt oladi?", a: "Odatda barcha ma’lumotlar mavjud bo‘lsa, 10–20 daqiqa." },
-        { q: "Kartadan to‘lash mumkinmi?", a: "Ha, polis tayyor bo‘lgach to‘laysiz va PDF olasiz." },
+        {
+          q: "Bank kartasi bilan to‘lash mumkinmi?",
+          a: "Hozircha faqat SWIFT va SEPA o‘tkazmalari mavjud. Polis tayyorlangandan so‘ng siz to‘lovni amalga oshirasiz va PDF formatdagi polisni olasiz. Bank kartasi orqali to‘lov funksiyasini 2026-yil sentyabrigacha joriy etish rejalashtirilgan."
+        },
         { q: "Bu “yashil karta” bilan bir xilmi?", a: "Yo‘q. Bu turli mahsulotlar va turli qoidalarga ega." },
         { q: "Bu qanday sug‘urta?", a: "Bu transport vositalari egalari yoki foydalanuvchilarining fuqarolik javobgarligini majburiy sug‘urtalash bo‘lib, Latviya va YI hududida amal qiladi." },
         {
@@ -645,6 +683,14 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
         },
       ],
     },
+    paymentPlanned: {
+      ariaLabel: "Rejalashtirilayotgan karta orqali to‘lov",
+      before: "2026-yil sentyabrigacha biz",
+      after: "bank kartalari orqali to‘lovni qabul qilishni rejalashtirmoqdamiz",
+      logosAriaLabel: "Mastercard va Visa to‘lov tizimlari",
+      mastercardAlt: "Mastercard logotipi",
+      visaAlt: "Visa logotipi",
+    },
   },
   kg: {
     hero: {
@@ -711,7 +757,10 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       desc: "Кыска жана так жооптор.",
       items: [
         { q: "Тариздөө канча убакыт алат?", a: "Бардык маалыматтар болсо, адатта 10–20 мүнөт." },
-        { q: "Карта менен төлөөгө болобу?", a: "Ооба, полис даяр болгондон кийин төлөп, PDF аласыз." },
+        {
+          q: "Банк картасы менен төлөсө болобу?",
+          a: "Азыркы учурда SWIFT жана SEPA которуулары гана жеткиликтүү. Полис даяр болгондон кийин төлөм жүргүзүп, PDF аласыз. Банк картасы менен төлөө мүмкүнчүлүгүн 2026-жылдын сентябрына чейин киргизүүнү пландап жатабыз."
+        },
         { q: "Бул «жашыл карта» менен бирдейби?", a: "Жок. Бул башка продукт жана башка эрежелер." },
         { q: "Бул кандай камсыздандыруу?", a: "Бул транспорт каражаттарынын ээлеринин же пайдалануучуларынын жарандык жоопкерчилигин милдеттүү камсыздандыруу, Латвияда жана ЕБ аймагында жарактуу." },
         {
@@ -784,6 +833,14 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
         },
       ],
     },
+    paymentPlanned: {
+      ariaLabel: "Пландалган карта менен төлөм",
+      before: "2026-жылдын сентябрына чейин биз",
+      after: "банк карталары аркылуу төлөм кабыл алууну пландап жатабыз",
+      logosAriaLabel: "Mastercard жана Visa төлөм системалары",
+      mastercardAlt: "Mastercard логотиби",
+      visaAlt: "Visa логотиби",
+    },
   },
   ka: {
     hero: {
@@ -850,7 +907,10 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       desc: "მოკლე პასუხები ხშირად დასმულ კითხვებზე.",
       items: [
         { q: "რამდენი დრო სჭირდება გაფორმებას?", a: "ჩვეულებრივ 10–20 წუთი, თუ ყველა მონაცემი მზად არის." },
-        { q: "შეიძლება ბარათით გადახდა?", a: "დიახ, პოლისის მომზადების შემდეგ იხდით და იღებთ PDF-ს." },
+        {
+          q: "შესაძლებელია თუ არა ბარათით გადახდა?",
+          a: "ამ ეტაპზე ხელმისაწვდომია მხოლოდ SWIFT და SEPA გადარიცხვები. პოლისის მომზადების შემდეგ ახორციელებთ გადახდას და იღებთ PDF ფაილს. ბარათით გადახდის ფუნქციის დამატებას ვგეგმავთ 2026 წლის სექტემბრამდე."
+        },
         { q: "ეს იგივეა, რაც „მწვანე ბარათი“?", a: "არა. ეს სხვადასხვა პროდუქტებია და განსხვავებული წესებით." },
         { q: "რა ტიპის დაზღვევაა?", a: "ეს არის სავალდებულო პასუხისმგებლობის დაზღვევა სატრანსპორტო საშუალების მფლობელებისთვის ან მომხმარებლებისთვის, რომელიც მოქმედებს ლატვიასა და ევროკავშირის ქვეყნებში." },
         {
@@ -923,6 +983,14 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
         },
       ],
     },
+    paymentPlanned: {
+      ariaLabel: "დაგეგმილი ბარათით გადახდა",
+      before: "2026 წლის სექტემბრიდან ვგეგმავთ",
+      after: "ბარათით გადახდის მიღებას",
+      logosAriaLabel: "Mastercard და Visa გადახდის სისტემები",
+      mastercardAlt: "Mastercard-ის ლოგო",
+      visaAlt: "Visa-ს ლოგო",
+    },
   },
   kz: {
     hero: {
@@ -989,7 +1057,10 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       desc: "Ең жиі қойылатын сұрақтарға қысқа жауаптар.",
       items: [
         { q: "Рәсімдеу қанша уақыт алады?", a: "Барлық деректер дайын болса, әдетте 10–20 минут." },
-        { q: "Картамен төлеуге бола ма?", a: "Иә, полис дайын болғаннан кейін төлем жасап, PDF аласыз." },
+        {
+          q: "Банк картасымен төлеуге бола ма?",
+          a: "Қазіргі уақытта тек SWIFT және SEPA аударымдары қолжетімді. Полис дайындалғаннан кейін төлем жасап, PDF нұсқасын аласыз. Банк картасымен төлеу мүмкіндігін 2026 жылдың қыркүйегіне дейін енгізу жоспарланып отыр."
+        },
         { q: "Бұл «жасыл карта» ма?", a: "Жоқ. Бұл әртүрлі өнімдер және ережелері де бөлек." },
         { q: "Бұл қандай сақтандыру?", a: "Бұл Латвия мен ЕО аумағында әрекет ететін көлік иелерінің немесе пайдаланушыларының азаматтық-құқықтық жауапкершілігін міндетті сақтандыру." },
         {
@@ -1062,6 +1133,14 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
         },
       ],
     },
+    paymentPlanned: {
+      ariaLabel: "Жоспарланған карта арқылы төлем",
+      before: "2026 жылдың қыркүйегіне дейін біз",
+      after: "карта арқылы төлем қабылдауды жоспарлап отырмыз",
+      logosAriaLabel: "Mastercard және Visa төлем жүйелері",
+      mastercardAlt: "Mastercard логотипі",
+      visaAlt: "Visa логотипі",
+    },
   },
   tr: {
     hero: {
@@ -1128,7 +1207,10 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       desc: "Sık sorulan sorulara kısa yanıtlar.",
       items: [
         { q: "Başvuru ne kadar sürer?", a: "Tüm bilgiler hazırsa genellikle 10–20 dakika sürer." },
-        { q: "Kartla ödeme mümkün mü?", a: "Evet. Poliçe hazırlandıktan sonra ödeme yapıp PDF alırsınız." },
+        {
+          q: "Kartla ödeme yapabilir miyim?",
+          a: "Şu anda yalnızca SWIFT ve SEPA havalesi ile ödeme mümkündür. Poliçe hazırlandıktan sonra ödeme yapar ve PDF formatındaki poliçeyi alırsınız. Kartla ödeme özelliğini Eylül 2026’ya kadar devreye almayı planlıyoruz."
+        },
         { q: "Bu ‘Yeşil Kart’ ile aynı mı?", a: "Hayır. Bunlar farklı ürünlerdir ve kuralları farklıdır." },
         { q: "Bu sigorta nedir?", a: "Letonya ve AB’de geçerli olan, araç sahiplerinin veya kullanıcılarının zorunlu mali sorumluluk sigortasıdır." },
         {
@@ -1201,6 +1283,14 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
         },
       ],
     },
+    paymentPlanned: {
+      ariaLabel: "Planlanan kartla ödeme",
+      before: "Eylül 2026’ya kadar",
+      after: "kartla ödeme kabul etmeyi planlıyoruz",
+      logosAriaLabel: "Mastercard ve Visa ödeme sistemleri",
+      mastercardAlt: "Mastercard logosu",
+      visaAlt: "Visa logosu",
+    },
   },
   fa: {
     hero: {
@@ -1267,7 +1357,10 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       desc: "پاسخ‌های کوتاه به پرسش‌های رایج.",
       items: [
         { q: "صدور بیمه چقدر زمان می‌برد؟", a: "معمولاً در صورت تکمیل بودن اطلاعات، ۱۰ تا ۲۰ دقیقه." },
-        { q: "آیا امکان پرداخت با کارت وجود دارد؟", a: "بله، پس از آماده‌سازی بیمه‌نامه پرداخت انجام می‌شود و فایل PDF دریافت می‌کنید." },
+        {
+          q: "آیا امکان پرداخت با کارت بانکی وجود دارد؟",
+          a: "در حال حاضر فقط انتقال بانکی SWIFT و SEPA در دسترس است. پس از آماده شدن بیمه‌نامه، پرداخت را انجام می‌دهید و فایل PDF را دریافت می‌کنید. امکان پرداخت با کارت بانکی طبق برنامه تا سپتامبر ۲۰۲۶ اضافه خواهد شد."
+        },
         { q: "آیا این همان «گرین کارت» است؟", a: "خیر. این دو محصول متفاوت با مقررات متفاوت هستند." },
         { q: "این بیمه چیست؟", a: "بیمه اجباری مسئولیت مدنی دارندگان یا استفاده‌کنندگان از وسایل نقلیه موتوری است که در قلمرو لتونی و اتحادیه اروپا معتبر است." },
         {
@@ -1340,6 +1433,14 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
         },
       ],
     },
+    paymentPlanned: {
+      ariaLabel: "پرداخت برنامه‌ریزی‌شده با کارت بانکی",
+      before: "تا سپتامبر ۲۰۲۶ قصد داریم",
+      after: "پرداخت با کارت بانکی را فعال کنیم",
+      logosAriaLabel: "سیستم‌های پرداخت Mastercard و Visa",
+      mastercardAlt: "لوگوی Mastercard",
+      visaAlt: "لوگوی Visa",
+    },
   },
   mn: {
     hero: {
@@ -1406,7 +1507,10 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       desc: "Түгээмэл асуултын товч хариулт.",
       items: [
         { q: "Бүрдүүлэлт хэр удаан үргэлжилдэг вэ?", a: "Бүх мэдээлэл байгаа тохиолдолд ихэвчлэн 10–20 минут." },
-        { q: "Картаар төлбөр хийх боломжтой юу?", a: "Тийм. Полис бэлэн болсны дараа төлбөр хийж PDF авна." },
+        {
+          q: "Картаар төлбөр хийх боломжтой юу?",
+          a: "Одоогоор зөвхөн SWIFT болон SEPA шилжүүлгээр төлбөр хийх боломжтой. Полис бэлэн болсны дараа та төлбөрөө хийж, PDF хувилбарыг авна. Картаар төлбөр хийх боломжийг 2026 оны 9-р сар гэхэд нэвтрүүлэхээр төлөвлөж байна."
+        },
         { q: "Энэ нь “ногоон карт”-тай адил уу?", a: "Үгүй. Эдгээр нь өөр бүтээгдэхүүн, өөр дүрэмтэй." },
         { q: "Энэ ямар даатгал вэ?", a: "Энэ нь механик тээврийн хэрэгслийн эзэмшигч эсвэл ашиглагчийн иргэний хариуцлагын заавал даатгал бөгөөд Латви болон ЕХ-д хүчинтэй." },
         {
@@ -1479,6 +1583,14 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
         },
       ],
     },
+    paymentPlanned: {
+      ariaLabel: "Төлөвлөж буй картаар төлбөр",
+      before: "2026 оны 9-р сар гэхэд бид",
+      after: "картаар төлбөр хүлээн авахаар төлөвлөж байна",
+      logosAriaLabel: "Mastercard болон Visa төлбөрийн системүүд",
+      mastercardAlt: "Mastercard лого",
+      visaAlt: "Visa лого",
+    },
   },
   hy: {
     hero: {
@@ -1545,7 +1657,10 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       desc: "Կարճ պատասխաններ հիմնական հարցերին։",
       items: [
         { q: "Որքա՞ն ժամանակ է պահանջվում ձևակերպման համար։", a: "Սովորաբար 10–20 րոպե՝ եթե բոլոր տվյալները առկա են։" },
-        { q: "Կարելի՞ է վճարել քարտով։", a: "Այո, պոլիսի պատրաստ լինելուց հետո վճարում եք և ստանում PDF։" },
+        {
+          q: "Հնարավո՞ր է վճարել քարտով։",
+          a: "Այս փուլում հասանելի են միայն SWIFT և SEPA փոխանցումները։ Պոլիսի պատրաստ լինելուց հետո դուք կատարում եք վճարումը և ստանում PDF տարբերակը։ Քարտով վճարման հնարավորությունը նախատեսվում է ներդնել մինչև 2026 թվականի սեպտեմբեր։"
+        },
         { q: "Սա նույնն է, ինչ «կանաչ քարտ»-ը՞", a: "Ոչ։ Սրանք տարբեր ապահովագրական ապրանքներ են՝ տարբեր կանոններով։" },
         { q: "Ի՞նչ ապահովագրություն է սա։", a: "Սա մեխանիկական տրանսպորտային միջոցների սեփականատերերի կամ օգտագործողների պարտադիր քաղաքացիական պատասխանատվության ապահովագրություն է, որը գործում է Լատվիայում և ԵՄ-ում։" },
         {
@@ -1617,6 +1732,14 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
           href: "https://www.ufg.pl/",
         },
       ],
+    },
+      paymentPlanned: {
+      ariaLabel: "Պլանավորվող քարտային վճարում",
+      before: "Մինչև 2026 թվականի սեպտեմբեր նախատեսում ենք ընդունել",
+      after: "քարտային վճարումներ",
+      logosAriaLabel: "Mastercard և Visa վճարային համակարգեր",
+      mastercardAlt: "Mastercard-ի լոգոտիպ",
+      visaAlt: "Visa-ի լոգոտիպ",
     },
   },
 
