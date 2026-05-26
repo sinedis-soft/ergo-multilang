@@ -1418,3 +1418,53 @@ footer{
     height: 42px;
   }
 }
+.submit-modal__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(2, 10, 25, 0.5);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.submit-modal {
+  width: min(680px, 100%);
+  border-radius: 16px;
+  padding: 28px 44px 28px 22px;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(2, 10, 25, 0.35);
+}
+
+.submit-modal--success {
+  background: #7f1d2d;
+  color: #f8f6f4;
+}
+
+.submit-modal--warning {
+  background: #bff7f1;
+  color: #111111;
+}
+
+.submit-modal__close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #111111;
+}
+
+.submit-modal__close--light {
+  color: #f8f6f4;
+}
+
+.submit-modal__message {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+}
