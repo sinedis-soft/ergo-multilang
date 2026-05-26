@@ -6,10 +6,29 @@ import Link from "next/link";
 import type { Lang } from "@/app/dictionaries/header";
 import { getLeadFormDictionary } from "@/app/dictionaries/leadForm";
 import { getPolicyPrice, formatEUR } from "@/app/lib/insurancePrices";
+import SubmissionModal from "@/app/components/SubmissionModal";
 
-type FormStatus = "idle" | "loading" | "success" | "error";
+type FormStatus = "idle" | "loading" | "success" | "partial" | "error";
 type Step = 1 | 2;
 
+
+function getSubmissionMessages(lang: Lang) {
+  const successByLang: Record<string, string> = {
+    ru: "Ваша заявка УСПЕШНО отправлена! С вами может связаться менеджер через почту или мессенджеры для уточнения информации",
+    en: "Your request has been SUCCESSFULLY submitted! A manager may contact you by email or messenger to clarify details.",
+    lv: "Jūsu pieteikums ir VEIKSMĪGI nosūtīts! Menedžeris var ar jums sazināties pa e-pastu vai ziņapmaiņas lietotnēm, lai precizētu informāciju.",
+  };
+
+  const partialByLang: Record<string, string> = {
+    ru: "Ваша заявка отправлена! Но есть проблема с прикрепленными файлами, с вами свяжется менеджер через почту или мессенджеры для уточнения информации",
+    en: "Your request has been submitted! There is an issue with attached files. A manager will contact you by email or messenger to clarify details.",
+    lv: "Jūsu pieteikums ir nosūtīts! Taču radās problēma ar pievienotajiem failiem. Menedžeris sazināsies ar jums pa e-pastu vai ziņapmaiņas lietotnēm, lai precizētu informāciju.",
+  };
+
+  const success = successByLang[lang] || successByLang.en;
+  const partial = partialByLang[lang] || partialByLang.en;
+  return { success, partial };
+}
 function formatLatinName(raw: string): string {
   return raw.replace(/[^A-Za-z\s'-]/g, "");
 }
@@ -82,6 +101,8 @@ export default function LeadForm(props: { lang: Lang }) {
   const [step, setStep] = useState<Step>(1);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalVariant, setModalVariant] = useState<"success" | "warning">("success");
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -263,6 +284,7 @@ export default function LeadForm(props: { lang: Lang }) {
       type LeadApiResponse = {
         ok?: boolean;
         message?: string;
+        fileProcessingIssue?: boolean;
       };
 
       let data: LeadApiResponse | null = null;
@@ -282,8 +304,19 @@ export default function LeadForm(props: { lang: Lang }) {
         return;
       }
 
-      setStatus("success");
-      setMessage(t.statusSuccess);
+      const modalTexts = getSubmissionMessages(props.lang);
+
+      if (data?.fileProcessingIssue) {
+        setStatus("partial");
+        setMessage(modalTexts.partial);
+        setModalVariant("warning");
+      } else {
+        setStatus("success");
+        setMessage(modalTexts.success);
+        setModalVariant("success");
+      }
+
+      setModalOpen(true);
 
       formEl.reset();
 
@@ -338,6 +371,13 @@ export default function LeadForm(props: { lang: Lang }) {
               <b>{t.steps.vehicleData}</b>
             </div>
           </div>
+
+          <SubmissionModal
+            open={modalOpen}
+            message={message}
+            variant={modalVariant}
+            onClose={() => setModalOpen(false)}
+          />
 
           <form
             ref={formRef}

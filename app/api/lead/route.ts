@@ -256,11 +256,18 @@ export async function POST(req: Request) {
       }
     }
 
+    let hasFileProcessingIssue = false;
+
     for (const vehicle of vehicles) {
-      const docs: Array<[string, string]> = [];
+      const docs: Array<[string, string | null]> = [];
 
       for (const file of vehicle.docs) {
-        docs.push([file.name, await fileToBase64(file)]);
+        try {
+          docs.push([file.name, await fileToBase64(file)]);
+        } catch {
+          docs.push([file.name, null]);
+          hasFileProcessingIssue = true;
+        }
       }
 
       await bx("crm.deal.add", {
@@ -287,7 +294,7 @@ export async function POST(req: Request) {
       });
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, fileProcessingIssue: hasFileProcessingIssue });
   } catch (error) {
     return NextResponse.json(
       {

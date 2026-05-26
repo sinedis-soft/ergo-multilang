@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import type { Lang } from "@/app/dictionaries/header";
 import { getContactFeedbackFormDictionary } from "@/app/dictionaries/contactFeedbackForm";
+import SubmissionModal from "@/app/components/SubmissionModal";
 
 type FormState = {
   firstName: string;
@@ -28,6 +29,7 @@ export default function ContactFeedbackForm({ lang }: { lang: Lang }) {
   const [form, setForm] = useState<FormState>(initialFormState);
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [message, setMessage] = useState("");
+  const [modalOpen, setModalOpen] = useState(false);
 
   function updateField<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({
@@ -68,7 +70,13 @@ export default function ContactFeedbackForm({ lang }: { lang: Lang }) {
       }
 
       setStatus("success");
-      setMessage(dict.ok);
+      const successByLang: Record<string, string> = {
+        ru: "Ваша заявка УСПЕШНО отправлена! С вами может связаться менеджер через почту или мессенджеры для уточнения информации",
+        en: "Your request has been SUCCESSFULLY submitted! A manager may contact you by email or messenger to clarify details.",
+        lv: "Jūsu pieteikums ir VEIKSMĪGI nosūtīts! Menedžeris var ar jums sazināties pa e-pastu vai ziņapmaiņas lietotnēm, lai precizētu informāciju.",
+      };
+      setMessage(successByLang[lang] || successByLang.en);
+      setModalOpen(true);
       setForm(initialFormState);
     } catch {
       setStatus("error");
@@ -85,6 +93,13 @@ export default function ContactFeedbackForm({ lang }: { lang: Lang }) {
             <h2 className="contact-form-title">{dict.title}</h2>
           </div>
         </div>
+
+        <SubmissionModal
+          open={modalOpen}
+          message={message}
+          variant="success"
+          onClose={() => setModalOpen(false)}
+        />
 
         <form className="contact-form" onSubmit={onSubmit}>
           <div className="contact-form-grid">
