@@ -66,7 +66,7 @@ export default function ContactsPage({ lang }: { lang: Lang }) {
 
               <p className="section__desc" style={{ margin: "0 0 10px", fontWeight: 700 }}>Rižova Ludmila</p>
               <p className="section__desc" style={{ margin: "0 0 10px" }}>
-                {labels[lang].phone}: <a href="tel:+37122355307">+371 22355307</a>
+                {labels[lang].phone}: <a href="tel:+37122355307">+371 20 770244</a>
               </p>
               <p className="section__desc" style={{ margin: 0 }}>
                 {labels[lang].email}: <a href="mailto:ludmila.rizova@ergo.lv">ludmila.rizova@ergo.lv</a>
