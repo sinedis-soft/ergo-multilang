@@ -1,7 +1,10 @@
 import { BUSINESS_HOURS, BUSINESS_TIME_ZONE } from "./business";
+import type { Lang } from "../dictionaries/header";
+import { calendarDictionary } from "../dictionaries/calendar";
 
 function dateParts(date: Date, timeZone: string) {
-  const parts = new Intl.DateTimeFormat("en-CA", {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    calendar: "gregory", numberingSystem: "latn",
     timeZone, year: "numeric", month: "2-digit", day: "2-digit",
     hour: "2-digit", minute: "2-digit", hourCycle: "h23",
   }).formatToParts(date);
@@ -37,13 +40,25 @@ export function weeklyIntervals(monday: string) {
   }));
 }
 
-export function formatInterval(interval: { opens: Date; closes: Date }, locale: string, timeZone: string) {
-  const date = new Intl.DateTimeFormat(locale, { timeZone, weekday: "long", day: "numeric", month: "short" });
-  const time = new Intl.DateTimeFormat(locale, { timeZone, hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
-  const startDate = date.format(interval.opens);
-  const endDate = date.format(interval.closes);
+function formatDay(parts: ReturnType<typeof dateParts>, lang: Lang) {
+  const t = calendarDictionary[lang];
+  const weekday = new Date(Date.UTC(parts.year, parts.month - 1, parts.day)).getUTCDay();
+  return t.pattern.replace("{weekday}", t.weekdays[weekday])
+    .replace("{day}", String(parts.day)).replace("{month}", t.months[parts.month - 1]);
+}
+
+function formatTime(parts: ReturnType<typeof dateParts>) {
+  return `${String(parts.hour).padStart(2, "0")}:${String(parts.minute).padStart(2, "0")}`;
+}
+
+export function formatInterval(interval: { opens: Date; closes: Date }, lang: Lang, timeZone: string) {
+  // Intl only converts numeric Gregorian parts to the visitor's time zone.
+  // Localized names come from our dictionary, never the browser's fallback locale.
+  const start = dateParts(interval.opens, timeZone);
+  const end = dateParts(interval.closes, timeZone);
+  const sameDay = start.year === end.year && start.month === end.month && start.day === end.day;
   return {
-    day: startDate,
-    hours: `${time.format(interval.opens)} – ${startDate === endDate ? "" : `${endDate} `}${time.format(interval.closes)}`,
+    day: formatDay(start, lang),
+    hours: `${formatTime(start)} – ${sameDay ? "" : `${formatDay(end, lang)} `}${formatTime(end)}`,
   };
 }

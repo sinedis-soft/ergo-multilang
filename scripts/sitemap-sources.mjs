@@ -19,7 +19,7 @@ const pages = {
 const dictionaries = {
   '': ['home', 'infoCompare', 'calculator', 'leadForm', 'coverage'],
   '/about': ['about'],
-  '/contacts': ['contactFeedbackForm', 'businessHours'],
+  '/contacts': ['contactFeedbackForm', 'businessHours', 'calendar'],
   '/product-info': ['productInfo'],
   '/rules': ['rules'],
   '/privacy': ['privacyPolicy'],
