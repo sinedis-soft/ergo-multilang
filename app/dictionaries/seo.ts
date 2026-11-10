@@ -8,11 +8,11 @@ type SeoDictionary = Record<SeoRouteKey, RouteSeo>;
 export const seoDictionary: Record<Lang, SeoDictionary> = {
   ru: {
     home: {
-      title: "Border insurance для грузоперевозчиков и физических лиц",
+      title: "EUROpolis - страховка для въезда в страны ЕС",
       description: "Трансграничная MTPL-страховка для международных перевозок: Green Card, border insurance, Зеленая карта в Евросоюз.",
     },
     about: {
-      title: "О нас — международное страхование перевозок",
+      title: "Данные о страховом агенте ERGO Insurance SE",
       description: "Латвийское страховое агентство для международных грузоперевозчиков: оформление пограничного страхования в страны Европейской экономической зоны.",
     },
     contacts: {
@@ -38,11 +38,11 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
   },
   lv: {
     home: {
-        title: "Robežapdrošināšana kravu pārvadātājiem un fiziskām personām",
+        title: "EUROpolis - apdrošināšana iebraukšanai ES valstīs",
         description: "Pārrobežu civiltiesiskās atbildības apdrošināšana (MTPL) starptautiskajiem pārvadājumiem: Zaļā karte, robežapdrošināšana, apdrošināšana iebraukšanai Eiropas Savienībā.",
     },
     about: {
-        title: "Par mums — starptautiskā pārvadājumu apdrošināšana",
+        title: "Informācija par ERGO Insurance SE apdrošināšanas aģentu",
         description: "Latvijas apdrošināšanas aģentūra starptautiskajiem kravu pārvadātājiem: robežapdrošināšanas noformēšana Eiropas Ekonomikas zonas valstīm.",
     },
     contacts: {
@@ -68,11 +68,11 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
     },
   en: {
     home: {
-        title: "Border insurance for carriers and individuals",
+        title: "EUROpolis - insurance for entering EU countries",
         description: "Cross-border MTPL insurance for international transport: Green Card, border insurance, coverage for travel to the EU.",
     },
     about: {
-        title: "About us — international transport insurance",
+        title: "Information about the ERGO Insurance SE insurance agent",
         description: "Latvian insurance agency for international carriers: arranging border insurance for travel within the European Economic Area.",
     },
     contacts: {
@@ -98,11 +98,11 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
     },
   uz: {
     home: {
-        title: "Yuk tashuvchilar va jismoniy shaxslar uchun border insurance",
+        title: "EUROpolis - Yevropa Ittifoqi mamlakatlariga kirish uchun sug‘urta",
         description: "Xalqaro tashuvlar uchun transchegaraviy MTPL sug‘urtasi: Green Card, border insurance, Yevropa Ittifoqiga “Yashil karta”.",
     },
     about: {
-        title: "Biz haqimizda — xalqaro yuk tashuvchilar sug‘urtasi",
+        title: "ERGO Insurance SE sug‘urta agenti haqida ma’lumot",
         description: "Xalqaro yuk tashuvchilar uchun Latviyada joylashgan sug‘urta agentligi: Yevropa iqtisodiy hududi davlatlariga chegaraviy sug‘urtani rasmiylashtirish.",
     },
     contacts: {
@@ -127,11 +127,11 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
     },
     },
   ky: { home: {
-        title: "Жүк ташуучулар жана жеке адамдар үчүн чек аралык камсыздандыруу",
+        title: "EUROpolis - ЕБ өлкөлөрүнө кирүү үчүн камсыздандыруу",
         description: "Эл аралык ташуулар үчүн трансчек аралык MTPL камсыздандыруусу: Green Card, чек аралык камсыздандыруу, Европа Биримдигине «Жашыл карта».",
     },
     about: {
-        title: "Биз жөнүндө — эл аралык жүк ташууларды камсыздандыруу",
+        title: "ERGO Insurance SE камсыздандыруу агенти жөнүндө маалымат",
         description: "Эл аралык жүк ташуучулар үчүн Латвиядагы камсыздандыруу агенттиги: Европа экономикалык аймагына чек аралык камсыздандырууну тариздөө.",
     },
     contacts: {
@@ -157,11 +157,11 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
     },
   ka: {
     home: {
-        title: "სასაზღვრო დაზღვევა გადამზიდავებისთვის და ფიზიკური პირებისთვის",
+        title: "EUROpolis - დაზღვევა ევროკავშირის ქვეყნებში შესასვლელად",
         description: "ტრანსსასაზღვრო MTPL დაზღვევა საერთაშორისო გადაზიდვებისთვის: Green Card, საზღვრის დაზღვევა, „მწვანე ბარათი“ ევროკავშირში.",
     },
     about: {
-        title: "ჩვენ შესახებ — საერთაშორისო გადაზიდვების დაზღვევა",
+        title: "ინფორმაცია ERGO Insurance SE-ის სადაზღვევო აგენტის შესახებ",
         description: "ლატვიური სადაზღვევო სააგენტო საერთაშორისო გადამზიდავებისთვის: საზღვრის დაზღვევის გაფორმება ევროპის ეკონომიკური ზონის ქვეყნებში.",
     },
     contacts: {
@@ -187,11 +187,11 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
     },
   kk: {
     home: {
-        title: "Жүк тасымалдаушылар мен жеке тұлғаларға арналған шекаралық сақтандыру",
+        title: "EUROpolis - ЕО елдеріне кіруге арналған сақтандыру",
         description: "Халықаралық тасымалдарға арналған трансшекаралық MTPL сақтандыру: Green Card, шекаралық сақтандыру, Еуропалық Одаққа «Жасыл карта».",
     },
     about: {
-        title: "Біз туралы — халықаралық тасымалдарды сақтандыру",
+        title: "ERGO Insurance SE сақтандыру агенті туралы мәліметтер",
         description: "Халықаралық жүк тасымалдаушыларға арналған латвиялық сақтандыру агенттігі: Еуропалық экономикалық аймақ елдеріне шекаралық сақтандыруды рәсімдеу.",
     },
     contacts: {
@@ -217,11 +217,11 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
     },
   tr: {
     home: {
-        title: "Taşıyıcılar ve bireyler için sınır sigortası",
+        title: "EUROpolis - AB ülkelerine giriş için sigorta",
         description: "Uluslararası taşımalar için sınır ötesi MTPL sigortası: Yeşil Kart, border insurance, AB’ye giriş için sigorta çözümleri.",
     },
     about: {
-        title: "Hakkımızda — uluslararası taşımacılık sigortası",
+        title: "ERGO Insurance SE sigorta acentesi hakkında bilgiler",
         description: "Uluslararası taşımacılar için Letonya merkezli sigorta acentesi: Avrupa Ekonomik Alanı ülkelerine giriş için sınır sigortası düzenlenmesi.",
     },
     contacts: {
@@ -247,11 +247,11 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
     },
   fa: {
     home: {
-        title: "بیمه مرزی برای شرکت‌های حمل‌ونقل و اشخاص",
+        title: "EUROpolis - بیمه برای ورود به کشورهای اتحادیه اروپا",
         description: "بیمه مسئولیت مدنی فرامرزی (MTPL) برای حمل‌ونقل بین‌المللی: گرین کارت، بیمه مرزی، پوشش برای ورود به اتحادیه اروپا.",
     },
     about: {
-        title: "درباره ما — بیمه بین‌المللی حمل‌ونقل",
+        title: "اطلاعات نماینده بیمه ERGO Insurance SE",
         description: "نمایندگی بیمه در لتونی برای شرکت‌های حمل‌ونقل بین‌المللی: صدور بیمه مرزی برای کشورهای منطقه اقتصادی اروپا.",
     },
     contacts: {
@@ -277,11 +277,11 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
     },
   mn: {
     home: {
-        title: "Олон улсын тээвэрлэгч болон хувь хүмүүст зориулсан хил дамнасан даатгал",
+        title: "EUROpolis - ЕХ-ны улс орнуудад нэвтрэх даатгал",
         description: "Олон улсын тээвэрт зориулсан хил дамнасан MTPL даатгал: Ногоон карт, border insurance, Европын Холбоо руу нэвтрэх даатгал.",
     },
     about: {
-        title: "Бидний тухай — олон улсын тээврийн даатгал",
+        title: "ERGO Insurance SE-ийн даатгалын төлөөлөгчийн мэдээлэл",
         description: "Олон улсын ачаа тээвэрлэгчдэд зориулсан Латвийн даатгалын агентлаг: Европын эдийн засгийн бүсийн улс орнуудад нэвтрэх хил дамнасан даатгалын бүрдүүлэлт.",
     },
     contacts: {
@@ -307,11 +307,11 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
     },
   hy: {
     home: {
-        title: "Սահմանային ապահովագրություն բեռնափոխադրողների և ֆիզիկական անձանց համար",
+        title: "EUROpolis - ապահովագրություն ԵՄ երկրներ մուտք գործելու համար",
         description: "Տրանսսահմանային MTPL ապահովագրություն միջազգային փոխադրումների համար՝ Green Card, սահմանային ապահովագրություն, «Կանաչ քարտ» դեպի Եվրոպական միություն։",
     },
     about: {
-        title: "Մեր մասին — միջազգային ապահովագրություն բեռնափոխադրումների համար",
+        title: "Տվյալներ ERGO Insurance SE-ի ապահովագրական գործակալի մասին",
         description: "Լատվիական ապահովագրական գործակալություն միջազգային բեռնափոխադրողների համար՝ սահմանային ապահովագրության ձևակերպում Եվրոպական տնտեսական տարածքի երկրներ։",
     },
     contacts: {

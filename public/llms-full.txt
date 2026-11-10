@@ -1,0 +1,246 @@
+# EUROpolis — expanded website reference
+
+> Public reference for the EUROpolis website at https://euro-polis.com. The information below summarizes the site's published service and identifies the pages containing its product, agent and legal information. Policy-specific documents and insurer terms govern the insurance contract.
+
+## Identity and contact details
+
+- Website: https://euro-polis.com
+- Website brand: EUROpolis.
+- Insurance agent: Rižova Ludmila.
+- Country of operation stated on the website: Latvia.
+- Telephone: +371-207-702-44 (international dialing format: +37120770244).
+- Email: ludmila.rizova@ergo.lv.
+- Insurer named on the website: ERGO Insurance SE Latvijas filiāle, the Latvian branch of ERGO Insurance SE.
+- Insurer registration number published on the website: 40103599913.
+- Agent and insurer details: https://euro-polis.com/en/about
+- Contact page: https://euro-polis.com/en/contacts
+
+Rižova Ludmila is the insurance intermediary described on this website. EUROpolis is a website brand; it is not presented here as a separate insurer. The published insurer information concerns ERGO Insurance SE Latvijas filiāle.
+
+## Working hours and time zone
+
+The fixed source schedule is Europe/Minsk (UTC+03:00):
+
+- Monday: 09:00–17:30.
+- Tuesday: 09:00–17:30.
+- Wednesday: 09:00–17:30.
+- Thursday: 09:00–17:30.
+- Friday: 09:00–16:30.
+- Saturday: closed.
+- Sunday: closed.
+
+The Contacts page displays the current week's working intervals in the visitor's browser time zone as well as the fixed Minsk schedule. The conversion accounts for daylight-saving changes in the visitor's time zone. Local calendar dates can differ from the source dates when an interval crosses midnight. The Minsk time reference defines the schedule and does not identify an office address or change the agent's stated country of operation.
+
+## Service and product
+
+The website offers an online application process for border motor third-party liability insurance for foreign-registered vehicles travelling to European Union countries. The Latvian product is referred to as Robežpolise / OCTA. The website describes its use for foreign vehicles without a valid Green Card accepted for their intended travel.
+
+Border insurance and Green Card are distinct products. The applicable option depends on the vehicle's country of registration, existing insurance and intended route. The reference to Europe in the website headings does not mean that every European country is automatically covered. The country list and territorial scope on the individual policy must be checked before travel.
+
+This product concerns liability to third parties. It is not a promise of coverage for damage to the policyholder's own vehicle and is not a substitute for CASCO. The product information page describes coverage, exclusions and conditions. Insurance terms and the individual policy determine limits, eligibility, territorial validity and claims handling; this reference does not establish independent contract terms.
+
+The website includes a calculator, vehicle details form and application process for individuals and businesses. Vehicle categories and available periods must be checked in the current calculator and confirmed when the policy is prepared. The calculator amount is an estimate until the application and conditions are confirmed.
+
+Sources:
+- https://euro-polis.com/en
+- https://euro-polis.com/en/product-info
+- https://euro-polis.com/en/rules
+
+## Application process
+
+1. Use the calculator and provide the intended period and vehicle category.
+2. Submit contact and vehicle information, country of registration, intended start date and the requested documents through the website form.
+3. Confirm the applicable policy conditions and payment instructions with the agent.
+4. Receive the policy PDF after issuance and payment confirmation, as described on the website.
+
+Availability for a particular registration country, route or start date should be confirmed with the agent. The website's contact details are the source for current operational questions. This reference does not guarantee an issuance deadline, a specific payment method or automatic acceptance of every application.
+
+## Verification and claims
+
+The main page links to official motor-insurance verification services for Latvia, Lithuania and Poland. The scope of each database and the registration country it supports should be checked on that service. Inclusion of those links is not a guarantee that every foreign policy can be checked in every database.
+
+Claims, coverage disputes, exclusions and insurer decisions are governed by the insurer's terms and applicable policy. The website's Terms and Product information pages contain the relevant published explanations and contact routes.
+
+## Privacy and website terms
+
+- Terms and conditions: https://euro-polis.com/en/rules
+- Product information: https://euro-polis.com/en/product-info
+- Privacy Policy: https://euro-polis.com/en/privacy
+- Cookie Policy: https://euro-polis.com/en/cookiepolicy
+
+These pages describe website services, the application process, data processing and cookies. Only public website information is included in this reference. Customer documents and individual application or policy records are not part of it.
+
+## Краткая справка на русском
+
+EUROpolis — сайт страхового агента Rižova Ludmila. На сайте представлены сведения о страховых услугах с участием ERGO Insurance SE Latvijas filiāle. Основное направление сайта — пограничное страхование гражданской ответственности для иностранных автомобилей, направляющихся в страны ЕС.
+
+Пограничное страхование и «Зелёная карта» — разные продукты. Применимость полиса к конкретному автомобилю и маршруту, территорию покрытия, срок и дату начала необходимо уточнить при оформлении. Страхование ответственности не означает страхование собственного автомобиля от повреждения.
+
+Телефон: +371-207-702-44. Электронная почта: ludmila.rizova@ergo.lv. Рабочее время по Минску: понедельник–четверг 09:00–17:30, пятница 09:00–16:30; суббота и воскресенье — выходные. На страницах контактов расписание также показывается в часовом поясе посетителя.
+
+## Localized pages
+
+All 11 languages have their own homepage, agent information, contacts, product information, terms, privacy and cookie pages. The language codes are ru, lv, en, uz, ky, ka, kk, tr, fa, mn and hy. The Kyrgyz and Kazakh codes are ky and kk; legacy /kg and /kz URLs redirect to the corresponding current language paths.
+
+### Русский (ru)
+
+Homepage: Пограничное страхование в Европу (EUROpolis) для иностранных автомобилей
+
+About: Аккредитованный страховой агент страховой компании Ergo Insurance SE
+
+- [Insurance, calculator and application](https://euro-polis.com/ru)
+- [Insurance agent information](https://euro-polis.com/ru/about)
+- [Contacts and opening hours](https://euro-polis.com/ru/contacts)
+- [Product information](https://euro-polis.com/ru/product-info)
+- [Terms and conditions](https://euro-polis.com/ru/rules)
+- [Privacy Policy](https://euro-polis.com/ru/privacy)
+- [Cookie Policy](https://euro-polis.com/ru/cookiepolicy)
+
+### Latviešu (lv)
+
+Homepage: Robežapdrošināšana iebraukšanai Eiropā (EUROpolis) ārvalstīs reģistrētiem transportlīdzekļiem
+
+About: Apdrošināšanas sabiedrības ERGO Insurance SE akreditēts apdrošināšanas aģents
+
+- [Insurance, calculator and application](https://euro-polis.com/lv)
+- [Insurance agent information](https://euro-polis.com/lv/about)
+- [Contacts and opening hours](https://euro-polis.com/lv/contacts)
+- [Product information](https://euro-polis.com/lv/product-info)
+- [Terms and conditions](https://euro-polis.com/lv/rules)
+- [Privacy Policy](https://euro-polis.com/lv/privacy)
+- [Cookie Policy](https://euro-polis.com/lv/cookiepolicy)
+
+### English (en)
+
+Homepage: Border insurance for Europe (EUROpolis) for foreign-registered vehicles
+
+About: Accredited insurance agent of ERGO Insurance SE
+
+- [Insurance, calculator and application](https://euro-polis.com/en)
+- [Insurance agent information](https://euro-polis.com/en/about)
+- [Contacts and opening hours](https://euro-polis.com/en/contacts)
+- [Product information](https://euro-polis.com/en/product-info)
+- [Terms and conditions](https://euro-polis.com/en/rules)
+- [Privacy Policy](https://euro-polis.com/en/privacy)
+- [Cookie Policy](https://euro-polis.com/en/cookiepolicy)
+
+### O‘zbek (uz)
+
+Homepage: Xorijda ro‘yxatdan o‘tgan avtomobillar uchun Yevropaga kirishda chegaraviy sug‘urta (EUROpolis)
+
+About: ERGO Insurance SE sug‘urta kompaniyasining akkreditatsiyadan o‘tgan sug‘urta agenti
+
+- [Insurance, calculator and application](https://euro-polis.com/uz)
+- [Insurance agent information](https://euro-polis.com/uz/about)
+- [Contacts and opening hours](https://euro-polis.com/uz/contacts)
+- [Product information](https://euro-polis.com/uz/product-info)
+- [Terms and conditions](https://euro-polis.com/uz/rules)
+- [Privacy Policy](https://euro-polis.com/uz/privacy)
+- [Cookie Policy](https://euro-polis.com/uz/cookiepolicy)
+
+### Кыргызча (ky)
+
+Homepage: Чет өлкөдө катталган автоунаалар үчүн Европага кирүүдө чек ара камсыздандыруусу (EUROpolis)
+
+About: ERGO Insurance SE камсыздандыруу компаниясынын аккредитацияланган камсыздандыруу агенти
+
+- [Insurance, calculator and application](https://euro-polis.com/ky)
+- [Insurance agent information](https://euro-polis.com/ky/about)
+- [Contacts and opening hours](https://euro-polis.com/ky/contacts)
+- [Product information](https://euro-polis.com/ky/product-info)
+- [Terms and conditions](https://euro-polis.com/ky/rules)
+- [Privacy Policy](https://euro-polis.com/ky/privacy)
+- [Cookie Policy](https://euro-polis.com/ky/cookiepolicy)
+
+### ქართული (ka)
+
+Homepage: ევროპაში შესასვლელი სასაზღვრო დაზღვევა (EUROpolis) უცხოეთში რეგისტრირებული ავტომობილებისთვის
+
+About: სადაზღვევო კომპანია ERGO Insurance SE-ის აკრედიტებული სადაზღვევო აგენტი
+
+- [Insurance, calculator and application](https://euro-polis.com/ka)
+- [Insurance agent information](https://euro-polis.com/ka/about)
+- [Contacts and opening hours](https://euro-polis.com/ka/contacts)
+- [Product information](https://euro-polis.com/ka/product-info)
+- [Terms and conditions](https://euro-polis.com/ka/rules)
+- [Privacy Policy](https://euro-polis.com/ka/privacy)
+- [Cookie Policy](https://euro-polis.com/ka/cookiepolicy)
+
+### Қазақша (kk)
+
+Homepage: Шетелде тіркелген автокөліктер үшін Еуропаға кіруге арналған шекаралық сақтандыру (EUROpolis)
+
+About: ERGO Insurance SE сақтандыру компаниясының аккредиттелген сақтандыру агенті
+
+- [Insurance, calculator and application](https://euro-polis.com/kk)
+- [Insurance agent information](https://euro-polis.com/kk/about)
+- [Contacts and opening hours](https://euro-polis.com/kk/contacts)
+- [Product information](https://euro-polis.com/kk/product-info)
+- [Terms and conditions](https://euro-polis.com/kk/rules)
+- [Privacy Policy](https://euro-polis.com/kk/privacy)
+- [Cookie Policy](https://euro-polis.com/kk/cookiepolicy)
+
+### Türkçe (tr)
+
+Homepage: Yabancı plakalı araçlar için Avrupa'ya girişte sınır sigortası (EUROpolis)
+
+About: ERGO Insurance SE sigorta şirketinin akredite sigorta acentesi
+
+- [Insurance, calculator and application](https://euro-polis.com/tr)
+- [Insurance agent information](https://euro-polis.com/tr/about)
+- [Contacts and opening hours](https://euro-polis.com/tr/contacts)
+- [Product information](https://euro-polis.com/tr/product-info)
+- [Terms and conditions](https://euro-polis.com/tr/rules)
+- [Privacy Policy](https://euro-polis.com/tr/privacy)
+- [Cookie Policy](https://euro-polis.com/tr/cookiepolicy)
+
+### فارسی (fa)
+
+Homepage: بیمه مرزی ورود به اروپا (EUROpolis) برای خودروهای با پلاک خارجی
+
+About: نماینده بیمه مورد تأیید شرکت بیمه ERGO Insurance SE
+
+- [Insurance, calculator and application](https://euro-polis.com/fa)
+- [Insurance agent information](https://euro-polis.com/fa/about)
+- [Contacts and opening hours](https://euro-polis.com/fa/contacts)
+- [Product information](https://euro-polis.com/fa/product-info)
+- [Terms and conditions](https://euro-polis.com/fa/rules)
+- [Privacy Policy](https://euro-polis.com/fa/privacy)
+- [Cookie Policy](https://euro-polis.com/fa/cookiepolicy)
+
+### Монгол (mn)
+
+Homepage: Гадаад улсын бүртгэлтэй автомашинд зориулсан Европ руу нэвтрэх хилийн даатгал (EUROpolis)
+
+About: ERGO Insurance SE даатгалын компанийн итгэмжлэгдсэн даатгалын төлөөлөгч
+
+- [Insurance, calculator and application](https://euro-polis.com/mn)
+- [Insurance agent information](https://euro-polis.com/mn/about)
+- [Contacts and opening hours](https://euro-polis.com/mn/contacts)
+- [Product information](https://euro-polis.com/mn/product-info)
+- [Terms and conditions](https://euro-polis.com/mn/rules)
+- [Privacy Policy](https://euro-polis.com/mn/privacy)
+- [Cookie Policy](https://euro-polis.com/mn/cookiepolicy)
+
+### Հայերեն (hy)
+
+Homepage: Եվրոպա մուտքի սահմանային ապահովագրություն (EUROpolis)՝ արտասահմանում գրանցված ավտոմեքենաների համար
+
+About: ERGO Insurance SE ապահովագրական ընկերության հավատարմագրված ապահովագրական գործակալ
+
+- [Insurance, calculator and application](https://euro-polis.com/hy)
+- [Insurance agent information](https://euro-polis.com/hy/about)
+- [Contacts and opening hours](https://euro-polis.com/hy/contacts)
+- [Product information](https://euro-polis.com/hy/product-info)
+- [Terms and conditions](https://euro-polis.com/hy/rules)
+- [Privacy Policy](https://euro-polis.com/hy/privacy)
+- [Cookie Policy](https://euro-polis.com/hy/cookiepolicy)
+
+## Machine-readable resources
+
+- Compact reference: https://euro-polis.com/llms.txt
+- Expanded reference: https://euro-polis.com/llms-full.txt
+- XML sitemap: https://euro-polis.com/sitemap.xml
+- Crawler directives: https://euro-polis.com/robots.txt
+
+For current product terms and operating details, use the linked website pages and confirm policy-specific questions with the agent.

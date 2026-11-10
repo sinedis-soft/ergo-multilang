@@ -74,7 +74,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
   ru: {
     hero: {
       kicker: "Онлайн-оформление",
-      title: "Договор трансграничного страхования (EUROpolis) — быстро и без лишних шагов",
+      title: "Пограничное страхование в Европу (EUROpolis) для иностранных автомобилей",
       lead:
         "Рассчитайте стоимость, заполните заявку и получите PDF. Для авто из стран зарегистрированных за пределами ЕС — полис легко проверить по базе страхования Латвийской Республики.",
       meta: ["PDF после оформления", "Поддержка в мессенджерах", "Понятные условия"],
@@ -224,7 +224,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
   lv: {
     hero: {
       kicker: "Tiešsaistes noformēšana",
-      title: "Pārrobežu apdrošināšanas līgums (EUROpolis) — ātri un bez liekām darbībām",
+      title: "Robežapdrošināšana iebraukšanai Eiropā (EUROpolis) ārvalstīs reģistrētiem transportlīdzekļiem",
       lead:
         "Aprēķiniet izmaksas, aizpildiet pieteikumu un saņemiet PDF. Transportlīdzekļiem, kas reģistrēti ārpus ES, polisi var viegli pārbaudīt Latvijas Republikas apdrošināšanas datubāzē.",
       meta: ["PDF pēc noformēšanas", "Atbalsts ziņapmaiņas lietotnēs", "Saprotami nosacījumi"],
@@ -374,7 +374,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
   en: {
     hero: {
       kicker: "Online issuance",
-      title: "Cross-border insurance policy (EUROpolis) — fast and straightforward",
+      title: "Border insurance for Europe (EUROpolis) for foreign-registered vehicles",
       lead:
         "Calculate the price, submit your details, and receive your PDF policy. For vehicles registered outside the EU, the policy can be easily verified in the Latvian insurance database.",
       meta: ["PDF after issuance", "Messenger support", "Clear terms"],
@@ -545,7 +545,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
   uz: {
     hero: {
       kicker: "Onlayn rasmiylashtirish",
-      title: "Transchegaraviy sug‘urta shartnomasi (EUROpolis) — tez va ortiqcha bosqichlarsiz",
+      title: "Xorijda ro‘yxatdan o‘tgan avtomobillar uchun Yevropaga kirishda chegaraviy sug‘urta (EUROpolis)",
       lead:
         "Narxni hisoblang, arizani to‘ldiring va PDF oling. Yevropa Ittifoqidan tashqarida ro‘yxatdan o‘tgan avtomobillar uchun polisni Latviya Respublikasi sug‘urta bazasi orqali oson tekshirish mumkin.",
       meta: ["Rasmiylashtirgandan keyin PDF", "Messendjerlarda qo‘llab-quvvatlash", "Tushunarli shartlar"],
@@ -695,7 +695,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
   ky: {
     hero: {
       kicker: "Онлайн тариздөө",
-      title: "Трансчек аралык камсыздандыруу келишими (EUROpolis) — тез жана ашыкча кадамдарсыз",
+      title: "Чет өлкөдө катталган автоунаалар үчүн Европага кирүүдө чек ара камсыздандыруусу (EUROpolis)",
       lead:
         "Баасын эсептеп, өтүнмөнү толтуруп, PDF алыңыз. ЕБ аймагынан тышкары катталган автоунаалар үчүн полисти Латвия Республикасынын камсыздандыруу базасы аркылуу оңой текшерсе болот.",
       meta: ["Тариздөөдөн кийин PDF", "Мессенджерлер аркылуу колдоо", "Түшүнүктүү шарттар"],
@@ -845,7 +845,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
   ka: {
     hero: {
       kicker: "ონლაინ გაფორმება",
-      title: "ტრანსსასაზღვრო დაზღვევის ხელშეკრულება (EUROpolis) — სწრაფად და ზედმეტი ნაბიჯების გარეშე",
+      title: "ევროპაში შესასვლელი სასაზღვრო დაზღვევა (EUROpolis) უცხოეთში რეგისტრირებული ავტომობილებისთვის",
       lead:
         "დაანგარიშეთ ღირებულება, შეავსეთ განაცხადი და მიიღეთ PDF. ევროკავშირის გარეთ რეგისტრირებული ავტომობილებისთვის — პოლისი მარტივად მოწმდება ლატვიის სადაზღვევო ბაზაში.",
       meta: ["PDF გაფორმების შემდეგ", "მხარდაჭერა მესენჯერებში", "გასაგები პირობები"],
@@ -995,7 +995,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
   kk: {
     hero: {
       kicker: "Онлайн рәсімдеу",
-      title: "Трансшекаралық сақтандыру шарты (EUROpolis) — жылдам әрі артық қадамсыз",
+      title: "Шетелде тіркелген автокөліктер үшін Еуропаға кіруге арналған шекаралық сақтандыру (EUROpolis)",
       lead:
         "Құнын есептеп, өтінімді толтырыңыз және PDF алыңыз. ЕО-дан тыс елдерде тіркелген көліктер үшін полисті Латвия Республикасының сақтандыру базасы арқылы оңай тексеруге болады.",
       meta: ["Рәсімдегеннен кейін PDF", "Мессенджерлер арқылы қолдау", "Түсінікті шарттар"],
@@ -1145,7 +1145,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
   tr: {
     hero: {
       kicker: "Online başvuru",
-      title: "Sınır ötesi sigorta sözleşmesi (EUROpolis) — hızlı ve gereksiz adımlar olmadan",
+      title: "Yabancı plakalı araçlar için Avrupa'ya girişte sınır sigortası (EUROpolis)",
       lead:
         "Fiyatı hesaplayın, başvuruyu doldurun ve PDF alın. AB dışındaki ülkelerde kayıtlı araçlar için poliçe, Letonya Cumhuriyeti sigorta veritabanından kolayca doğrulanabilir.",
       meta: ["Başvuru sonrası PDF", "Mesajlaşma uygulamalarında destek", "Açık ve anlaşılır koşullar"],
@@ -1295,7 +1295,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
   fa: {
     hero: {
       kicker: "صدور آنلاین",
-      title: "قرارداد بیمه فرامرزی (EUROpolis) — سریع و بدون مراحل اضافی",
+      title: "بیمه مرزی ورود به اروپا (EUROpolis) برای خودروهای با پلاک خارجی",
       lead:
         "هزینه را محاسبه کنید، فرم را تکمیل کنید و فایل PDF را دریافت کنید. برای خودروهایی که خارج از اتحادیه اروپا ثبت شده‌اند، اعتبار بیمه‌نامه به‌راحتی از طریق پایگاه بیمه جمهوری لتونی قابل بررسی است.",
       meta: ["دریافت PDF پس از صدور", "پشتیبانی در پیام‌رسان‌ها", "شرایط شفاف"],
@@ -1445,7 +1445,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
   mn: {
     hero: {
       kicker: "Онлайнаар бүрдүүлэх",
-      title: "Хил дамнасан даатгалын гэрээ (EUROpolis) — хурдан, илүү алхамгүй",
+      title: "Гадаад улсын бүртгэлтэй автомашинд зориулсан Европ руу нэвтрэх хилийн даатгал (EUROpolis)",
       lead:
         "Үнийг тооцоолж, хүсэлт бөглөөд PDF авна уу. ЕХ-ноос гадна бүртгэлтэй автомашины хувьд полисыг Латвийн Бүгд Найрамдах Улсын даатгалын сангаар хялбар шалгах боломжтой.",
       meta: ["Бүрдүүлсний дараа PDF", "Мессенжерээр дэмжлэг", "Ойлгомжтой нөхцөл"],
@@ -1595,7 +1595,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
   hy: {
     hero: {
       kicker: "Առցանց ձևակերպում",
-      title: "Տրանսսահմանային ապահովագրության պայմանագիր (EUROpolis) — արագ և առանց ավելորդ քայլերի",
+      title: "Եվրոպա մուտքի սահմանային ապահովագրություն (EUROpolis)՝ արտասահմանում գրանցված ավտոմեքենաների համար",
       lead:
         "Հաշվեք արժեքը, լրացրեք հայտը և ստացեք PDF։ ԵՄ-ից դուրս գրանցված ավտոմեքենաների համար պոլիսը հեշտությամբ կարելի է ստուգել Լատվիայի Հանրապետության ապահովագրական բազայում։",
       meta: ["PDF ձևակերպումից հետո", "Աջակցություն մեսենջերներով", "Հասկանալի պայմաններ"],

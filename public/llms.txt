@@ -1,0 +1,37 @@
+# EUROpolis
+
+> Border insurance for foreign-registered vehicles travelling to European Union countries. EUROpolis is the website of insurance agent Rižova Ludmila in Latvia, presenting services involving ERGO Insurance SE Latvijas filiāle.
+
+The product described on this website is border motor third-party liability insurance (Robežpolise / OCTA). It is distinct from an international Green Card and from own-damage insurance. Eligibility, territorial scope, start date, term and exclusions must be confirmed for the specific policy and route using the product information and insurer's terms.
+
+Contact: Rižova Ludmila; telephone +371-207-702-44; email ludmila.rizova@ergo.lv.
+Working hours are fixed to Europe/Minsk (UTC+03:00): Monday–Thursday 09:00–17:30, Friday 09:00–16:30; Saturday and Sunday closed. The Contacts pages also show this schedule in the visitor's browser time zone.
+
+## Main pages
+
+- [Insurance, calculator and application](https://euro-polis.com/en): Product overview, estimated price, application process and common questions.
+- [About the insurance agent](https://euro-polis.com/en/about): Agent identity and published insurer information.
+- [Contacts and opening hours](https://euro-polis.com/en/contacts): Current contact details and time-zone-aware schedule.
+- [Product information](https://euro-polis.com/en/product-info): Scope of cover, exclusions and product documents.
+- [Terms and conditions](https://euro-polis.com/en/rules): Website service and application terms.
+- [Privacy Policy](https://euro-polis.com/en/privacy): Personal-data processing information.
+- [Cookie Policy](https://euro-polis.com/en/cookiepolicy): Information about cookies.
+
+## Language versions
+
+- [Русский](https://euro-polis.com/ru): Пограничное страхование в Европу (EUROpolis) для иностранных автомобилей.
+- [Latviešu](https://euro-polis.com/lv): Robežapdrošināšana iebraukšanai Eiropā (EUROpolis) ārvalstīs reģistrētiem transportlīdzekļiem.
+- [English](https://euro-polis.com/en): Border insurance for Europe (EUROpolis) for foreign-registered vehicles.
+- [O‘zbek](https://euro-polis.com/uz): Xorijda ro‘yxatdan o‘tgan avtomobillar uchun Yevropaga kirishda chegaraviy sug‘urta (EUROpolis).
+- [Кыргызча](https://euro-polis.com/ky): Чет өлкөдө катталган автоунаалар үчүн Европага кирүүдө чек ара камсыздандыруусу (EUROpolis).
+- [ქართული](https://euro-polis.com/ka): ევროპაში შესასვლელი სასაზღვრო დაზღვევა (EUROpolis) უცხოეთში რეგისტრირებული ავტომობილებისთვის.
+- [Қазақша](https://euro-polis.com/kk): Шетелде тіркелген автокөліктер үшін Еуропаға кіруге арналған шекаралық сақтандыру (EUROpolis).
+- [Türkçe](https://euro-polis.com/tr): Yabancı plakalı araçlar için Avrupa'ya girişte sınır sigortası (EUROpolis).
+- [فارسی](https://euro-polis.com/fa): بیمه مرزی ورود به اروپا (EUROpolis) برای خودروهای با پلاک خارجی.
+- [Монгол](https://euro-polis.com/mn): Гадаад улсын бүртгэлтэй автомашинд зориулсан Европ руу нэвтрэх хилийн даатгал (EUROpolis).
+- [Հայերեն](https://euro-polis.com/hy): Եվրոպա մուտքի սահմանային ապահովագրություն (EUROpolis)՝ արտասահմանում գրանցված ավտոմեքենաների համար.
+
+## Additional resources
+
+- [Expanded website reference](https://euro-polis.com/llms-full.txt): Detailed service description, contact details and all localized page links.
+- [XML sitemap](https://euro-polis.com/sitemap.xml): Public localized URLs.

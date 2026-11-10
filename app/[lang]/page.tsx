@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   return {
     alternates: pageAlternates(lang, ""),
-    title: seo.home.title,
+    title: { absolute: seo.home.title },
     description: seo.home.description,
   };
 }

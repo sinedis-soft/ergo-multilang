@@ -29,7 +29,7 @@ export async function generateMetadata({
 
   return {
     alternates: pageAlternates(lang, "/about"),
-    title: seo.about.title,
+    title: { absolute: seo.about.title },
     description: seo.about.description,
   };
 }
