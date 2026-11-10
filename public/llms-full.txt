@@ -29,7 +29,7 @@ The fixed source schedule is Europe/Minsk (UTC+03:00):
 - Saturday: closed.
 - Sunday: closed.
 
-The Contacts page displays the current week's working intervals in the visitor's browser time zone as well as the fixed Minsk schedule. The conversion accounts for daylight-saving changes in the visitor's time zone. Local calendar dates can differ from the source dates when an interval crosses midnight. The Minsk time reference defines the schedule and does not identify an office address or change the agent's stated country of operation.
+The Contacts page displays the current week's working intervals in the visitor's browser time zone only. The conversion accounts for daylight-saving changes in the visitor's time zone. Local calendar dates can differ from the source dates when an interval crosses midnight. The Minsk time reference defines the schedule and does not identify an office address or change the agent's stated country of operation.
 
 ## Service and product
 
