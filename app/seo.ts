@@ -18,20 +18,18 @@ const REGIONAL_HREFLANG_MAP: Record<string, Lang> = {
   // English
   "en-US": "en",
   "en-GB": "en",
-  "en-EU": "en", // допустимо оставить как кастом, но лучше убрать
-  "en": "en",
-
+  // The language-only "en" entry is the global English fallback.
   // Uzbek
   "uz-UZ": "uz",
 
   // Kyrgyz
-  "kg-KG": "kg",
+  "ky-KG": "ky",
 
   // Georgian
   "ka-GE": "ka",
 
   // Kazakh
-  "kz-KZ": "kz",
+  "kk-KZ": "kk",
 
   // Turkish
   "tr-TR": "tr",

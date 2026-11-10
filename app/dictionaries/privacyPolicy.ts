@@ -620,7 +620,7 @@ const uz: CookiesPolicyDictionary = {
   ],
 };
 
-const kg: CookiesPolicyDictionary = {
+const ky: CookiesPolicyDictionary = {
   pageTitle: "EURO Polis купуялуулук саясаты",
   updatedLabel: "Жаңыртылган күнү",
   updatedAt: "05.05.2026",
@@ -1008,7 +1008,7 @@ const ka: CookiesPolicyDictionary = {
   ]
 };
 
-const kz: CookiesPolicyDictionary = {
+const kk: CookiesPolicyDictionary = {
   pageTitle: "EURO Polis құпиялылық саясаты",
   updatedLabel: "Жаңартылған күні",
   updatedAt: "05.05.2026",
@@ -1782,9 +1782,9 @@ const dictionaries: Partial<Record<Lang, CookiesPolicyDictionary>> = {
   en,
   lv,
   uz,
-  kg,
+  ky,
   ka,
-  kz,
+  kk,
   tr,
   fa,
   mn,

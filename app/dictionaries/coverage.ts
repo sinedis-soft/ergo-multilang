@@ -99,7 +99,7 @@ const DICT: Record<Lang, CoverageDict> = {
     ],
   },
 
-  kg: {
+  ky: {
     title: "Камтуу аймагы жана шарттары",
     mapAlt: "Трансчек аралык камсыздандыруу келишиминин колдонуу аймагы",
     mapCaption: " ",
@@ -139,7 +139,7 @@ const DICT: Record<Lang, CoverageDict> = {
       },
     ],
   },
-  kz: {
+  kk: {
     title: "Қамту аймағы және шарттар",
     mapAlt: "Трансшекаралық сақтандыру шартының қолданылу елдері",
     mapCaption: " ",

@@ -421,7 +421,7 @@ const uz: CookiesPolicyDictionary = {
   ],
 };
 
-const kg: CookiesPolicyDictionary = {
+const ky: CookiesPolicyDictionary = {
   pageTitle: "Продукт тууралуу маалымат",
   sections: [
     { title: "Robežpolise (чек аралык OCTA)" },
@@ -683,7 +683,7 @@ const ka: CookiesPolicyDictionary = {
   ]
 };
 
-const kz: CookiesPolicyDictionary = {
+const kk: CookiesPolicyDictionary = {
   pageTitle: "Өнім туралы ақпарат",
   sections: [
     { title: "Robežpolise (шекаралық OCTA)" },
@@ -1303,9 +1303,9 @@ const dictionaries: Partial<Record<Lang, CookiesPolicyDictionary>> = {
   en,
   lv,
   uz,
-  kg,
+  ky,
   ka,
-  kz,
+  kk,
   tr,
   fa,
   mn,

@@ -65,7 +65,7 @@ const uz: ContactFeedbackFormDictionary = {
   error: "Formani yuborib bo‘lmadi. Keyinroq urinib ko‘ring.",
 };
 
-const kg: ContactFeedbackFormDictionary = {
+const ky: ContactFeedbackFormDictionary = {
   title: "Кайтарым байланыш формасы",
   firstName: "Аты",
   lastName: "Фамилиясы",
@@ -91,7 +91,7 @@ const ka: ContactFeedbackFormDictionary = {
   error: "ფორმის გაგზავნა ვერ მოხერხდა. სცადეთ მოგვიანებით.",
 };
 
-const kz: ContactFeedbackFormDictionary = {
+const kk: ContactFeedbackFormDictionary = {
   title: "Кері байланыс формасы",
   firstName: "Аты",
   lastName: "Тегі",
@@ -161,9 +161,9 @@ const dictionaries: Partial<Record<Lang, ContactFeedbackFormDictionary>> = {
   lv,
   en,
   uz,
-  kg,
+  ky,
   ka,
-  kz,
+  kk,
   tr,
   fa,
   mn,

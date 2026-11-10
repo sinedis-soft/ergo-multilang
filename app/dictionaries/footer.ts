@@ -67,7 +67,7 @@ const uz: FooterDictionary = {
   privacyPolicy: "Maxfiylik siyosati",
 };
 
-const kg: FooterDictionary = {
+const ky: FooterDictionary = {
   company: "ERGO компаниясы жөнүндө",
   about: "Биз жөнүндө",
   contacts: "Байланыштар",
@@ -93,7 +93,7 @@ const ka: FooterDictionary = {
   privacyPolicy: "კონფიდენციალურობის პოლიტიკა",
 };
 
-const kz: FooterDictionary = {
+const kk: FooterDictionary = {
   company: "ERGO компаниясы туралы",
   about: "Біз туралы",
   contacts: "Байланыс",
@@ -163,9 +163,9 @@ const dictionaries: Record<Lang, FooterDictionary> = {
   lv,
   en,
   uz,
-  kg,
+  ky,
   ka,
-  kz,
+  kk,
   tr,
   fa,
   mn,

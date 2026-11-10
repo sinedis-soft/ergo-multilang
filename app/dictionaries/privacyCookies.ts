@@ -773,7 +773,7 @@ const uz: CookiesPolicyDictionary = {
   ],
 };
 
-const kg: CookiesPolicyDictionary = {
+const ky: CookiesPolicyDictionary = {
   pageTitle: "Cookie-файлдарды колдонуу саясаты",
   sections: [
     {
@@ -1151,7 +1151,7 @@ const ka: CookiesPolicyDictionary = {
   ],
 };
 
-const kz: CookiesPolicyDictionary = {
+const kk: CookiesPolicyDictionary = {
   pageTitle: "Cookie файлдарын пайдалану саясаты",
   sections: [
     {
@@ -2101,9 +2101,9 @@ const dictionaries: Record<Lang, CookiesPolicyDictionary> = {
   en,
   lv,
   uz,
-  kg,
+  ky,
   ka,
-  kz,
+  kk,
   tr,
   fa,
   mn,

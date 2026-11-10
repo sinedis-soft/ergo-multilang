@@ -126,7 +126,7 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
         description: "Saytda foydalaniladigan cookie fayllar va analitika haqida ma’lumot.",
     },
     },
-  kg: { home: {
+  ky: { home: {
         title: "Жүк ташуучулар жана жеке адамдар үчүн чек аралык камсыздандыруу",
         description: "Эл аралык ташуулар үчүн трансчек аралык MTPL камсыздандыруусу: Green Card, чек аралык камсыздандыруу, Европа Биримдигине «Жашыл карта».",
     },
@@ -185,7 +185,7 @@ export const seoDictionary: Record<Lang, SeoDictionary> = {
         description: "ინფორმაცია cookie ფაილებისა და ანალიტიკის შესახებ ტრანსსასაზღვრო დაზღვევის ვებგვერდზე.",
     },
     },
-  kz: {
+  kk: {
     home: {
         title: "Жүк тасымалдаушылар мен жеке тұлғаларға арналған шекаралық сақтандыру",
         description: "Халықаралық тасымалдарға арналған трансшекаралық MTPL сақтандыру: Green Card, шекаралық сақтандыру, Еуропалық Одаққа «Жасыл карта».",
