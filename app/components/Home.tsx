@@ -183,7 +183,7 @@ export default function Home({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      <section className="sectio
+
 
       
     </main>
