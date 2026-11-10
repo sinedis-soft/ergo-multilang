@@ -1,37 +1,37 @@
 {
   "": {
-    "sourceHash": "336853edcf613440f9d6d2d7d2657267da1da0fb5475d39972beb2b08c204df8",
-    "lastModified": "2026-11-10T11:04:14+03:00",
-    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+    "sourceHash": "ffa398f07c5d1821e302a069be1c61146d0e097d438445377fe1ea5dc16005d0",
+    "lastModified": "2026-11-10T11:44:33+03:00",
+    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
   },
   "/about": {
-    "sourceHash": "0c2abac9c9f8bcadab6702f768a509a5974a86f26c36870d582ce5ee32b22a4f",
-    "lastModified": "2026-11-10T11:04:14+03:00",
-    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+    "sourceHash": "efa8378334541a4b10e45780e2bd97b7e4b4186a7cc376d7034c6d2477105ff3",
+    "lastModified": "2026-11-10T11:44:33+03:00",
+    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
   },
   "/contacts": {
-    "sourceHash": "cb8f9bf81b8b498156d57ee2fe2b18b135679b9d27dfa7b69a5045f465528297",
-    "lastModified": "2026-11-10T11:04:14+03:00",
-    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+    "sourceHash": "dc255bc5c75a8b4c91f99c8b1e0532f8283ce20752ab443e24c3d21fce3abbc2",
+    "lastModified": "2026-11-10T11:44:33+03:00",
+    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
   },
   "/product-info": {
-    "sourceHash": "3981d8b61d61a7dae6fc5b12d195c02d883d424604647a82992737dda574f289",
-    "lastModified": "2026-11-10T11:04:14+03:00",
-    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+    "sourceHash": "fb3636eab02ef3f3bf79603caa95dc1e23534ad1f3505338d62fbc00ef8a1bc1",
+    "lastModified": "2026-11-10T11:44:33+03:00",
+    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
   },
   "/rules": {
-    "sourceHash": "9353d7246595e0e1e915b3047024f236891cb26194c7adff30c19abcaf86e9ee",
-    "lastModified": "2026-11-10T11:04:14+03:00",
-    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+    "sourceHash": "840f43ab642c906dda27ec84019d384cdbde75fcf5545257c5db0c957bd42a93",
+    "lastModified": "2026-11-10T11:44:33+03:00",
+    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
   },
   "/privacy": {
-    "sourceHash": "e6b6b8d4eba4f8be7ecf9f112632128f6c2ffc3af40189cec4ce2b68eac4d7db",
-    "lastModified": "2026-11-10T11:04:14+03:00",
-    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+    "sourceHash": "e401ac6608a15059ed3912d87c0a53eed01bae5802ff954b3c1632861150b314",
+    "lastModified": "2026-11-10T11:44:33+03:00",
+    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
   },
   "/cookiepolicy": {
-    "sourceHash": "76ff21732ed87605815825c6585fb91a9b9debc85656ea3a45ef5edd6dcdb900",
-    "lastModified": "2026-11-10T11:04:14+03:00",
-    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+    "sourceHash": "b293bb91ca3c015d355b6d74b3b11465ed8f3eefcfe05be2c05871b276272c86",
+    "lastModified": "2026-11-10T11:44:33+03:00",
+    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
   }
 }

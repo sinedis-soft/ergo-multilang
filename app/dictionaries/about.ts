@@ -24,11 +24,11 @@ export interface AboutDictionary {
 
 const RU: AboutDictionary = {
   seo: {
-    title: "О нас — EURO polis",
+    title: "Данные о страховом агенте ERGO Insurance SE",
     description: "Информация о компании, юридические данные и форма обратной связи.",
   },
   hero: {
-    title: "Акредетованый страховой агент страховой компании Ergo Insurance SE",
+    title: "Аккредитованный страховой агент страховой компании Ergo Insurance SE",
     subtitle: "Работаем прозрачно, по правилам и с понятными условиями для клиента.",
   },
   cards: [
@@ -84,11 +84,11 @@ const RU: AboutDictionary = {
 
 const LV: AboutDictionary = {
   seo: {
-    title: "Par mums — EURO polis",
+    title: "Informācija par ERGO Insurance SE apdrošināšanas aģentu",
     description: "Informācija par uzņēmumu, juridiskie dati un saziņas forma.",
   },
   hero: {
-    title: "Akreditēts apdrošināšanas aģents apdrošināšanas sabiedrībai ERGO Insurance SE",
+    title: "Apdrošināšanas sabiedrības ERGO Insurance SE akreditēts apdrošināšanas aģents",
     subtitle: "Strādājam caurskatāmi, ievērojot normatīvos aktus un nodrošinot klientam saprotamus nosacījumus.",
   },
   cards: [
@@ -141,11 +141,11 @@ const LV: AboutDictionary = {
 
 const EN: AboutDictionary = {
   seo: {
-    title: "About Us — EURO polis",
+    title: "Information about the ERGO Insurance SE insurance agent",
     description: "Company information, legal details, and a contact form.",
   },
   hero: {
-    title: "Authorized Insurance Agent of ERGO Insurance SE",
+    title: "Accredited insurance agent of ERGO Insurance SE",
     subtitle: "We operate transparently, in full compliance with regulations, and offer clear terms for our clients.",
   },
   cards: [
@@ -198,7 +198,7 @@ const EN: AboutDictionary = {
 
 const UZ: AboutDictionary = {
   seo: {
-    title: "Biz haqimizda — EURO polis",
+    title: "ERGO Insurance SE sug‘urta agenti haqida ma’lumot",
     description: "Kompaniya haqida ma’lumot, yuridik rekvizitlar va aloqa shakli.",
   },
   hero: {
@@ -255,7 +255,7 @@ const UZ: AboutDictionary = {
 
 const KY: AboutDictionary = {
   seo: {
-    title: "Биз жөнүндө — EURO polis",
+    title: "ERGO Insurance SE камсыздандыруу агенти жөнүндө маалымат",
     description: "Компания тууралуу маалымат, юридикалык маалыматтар жана байланыш формасы.",
   },
   hero: {
@@ -312,11 +312,11 @@ const KY: AboutDictionary = {
 
 const KA: AboutDictionary = {
   seo: {
-    title: "ჩვენ შესახებ — EURO polis",
+    title: "ინფორმაცია ERGO Insurance SE-ის სადაზღვევო აგენტის შესახებ",
     description: "ინფორმაცია კომპანიის შესახებ, იურიდიული მონაცემები და უკუკავშირის ფორმა.",
   },
   hero: {
-    title: "ERGO Insurance SE-ის აკრედიტებული სადაზღვევო აგენტი",
+    title: "სადაზღვევო კომპანია ERGO Insurance SE-ის აკრედიტებული სადაზღვევო აგენტი",
     subtitle: "ვმუშაობთ გამჭვირვალედ, წესების დაცვით და კლიენტისთვის გასაგები პირობებით.",
   },
   cards: [
@@ -369,7 +369,7 @@ const KA: AboutDictionary = {
 
 const KZ: AboutDictionary = {
   seo: {
-    title: "Біз туралы — EURO polis",
+    title: "ERGO Insurance SE сақтандыру агенті туралы мәліметтер",
     description: "Компания туралы ақпарат, заңды деректер және кері байланыс нысаны.",
   },
   hero: {
@@ -426,11 +426,11 @@ const KZ: AboutDictionary = {
 
 const TR: AboutDictionary = {
   seo: {
-    title: "Hakkımızda — EURO polis",
+    title: "ERGO Insurance SE sigorta acentesi hakkında bilgiler",
     description: "Şirket hakkında bilgiler, hukuki veriler ve iletişim formu.",
   },
   hero: {
-    title: ":contentReference[oaicite:0]{index=0} sigorta şirketinin akredite sigorta acentesi",
+    title: "ERGO Insurance SE sigorta şirketinin akredite sigorta acentesi",
     subtitle: "Şeffaf şekilde, mevzuata uygun ve müşteri için açık koşullarla çalışıyoruz.",
   },
   cards: [
@@ -455,7 +455,7 @@ const TR: AboutDictionary = {
     title: "Sigorta aracısı ve sigorta şirketine ilişkin bilgiler",
     lines: [
       "Sigorta hizmetleri aşağıdaki sigorta şirketinin katılımıyla sunulmaktadır:",
-      ":contentReference[oaicite:1]{index=1} (Letonya şubesi):",
+      "ERGO Insurance SE (Letonya şubesi):",
       "",
       "ERGO Insurance SE Latvijas filiāle",
       "Tescil numarası: 40103599913",
@@ -483,11 +483,11 @@ const TR: AboutDictionary = {
 
 const FA: AboutDictionary = {
   seo: {
-    title: "درباره ما — EURO polis",
+    title: "اطلاعات نماینده بیمه ERGO Insurance SE",
     description: "اطلاعات شرکت، داده‌های حقوقی و فرم تماس.",
   },
   hero: {
-    title: "نماینده بیمه دارای مجوز از شرکت بیمه Ergo Insurance SE",
+    title: "نماینده بیمه مورد تأیید شرکت بیمه ERGO Insurance SE",
     subtitle: "ما به‌صورت شفاف، مطابق مقررات و با شرایط قابل‌درک برای مشتری فعالیت می‌کنیم.",
   },
   cards: [
@@ -540,11 +540,11 @@ const FA: AboutDictionary = {
 
 const MN: AboutDictionary = {
   seo: {
-    title: "Бидний тухай — EURO polis",
+    title: "ERGO Insurance SE-ийн даатгалын төлөөлөгчийн мэдээлэл",
     description: "Компанийн мэдээлэл, хууль эрх зүйн өгөгдөл болон буцах холбооны маягт.",
   },
   hero: {
-    title: "ERGO Insurance SE даатгалын компанийн итгэмжлэгдсэн даатгалын агент",
+    title: "ERGO Insurance SE даатгалын компанийн итгэмжлэгдсэн даатгалын төлөөлөгч",
     subtitle: "Бид ил тод, дүрмийн дагуу, харилцагчид ойлгомжтой нөхцөлөөр ажилладаг.",
   },
   cards: [
@@ -597,7 +597,7 @@ const MN: AboutDictionary = {
 
 const HY: AboutDictionary = {
   seo: {
-    title: "Մեր մասին — EURO polis",
+    title: "Տվյալներ ERGO Insurance SE-ի ապահովագրական գործակալի մասին",
     description: "Տեղեկություն ընկերության մասին, իրավական տվյալներ և հետադարձ կապի ձև։",
   },
   hero: {
