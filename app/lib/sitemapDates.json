@@ -1,37 +1,37 @@
 {
   "": {
     "sourceHash": "ffa398f07c5d1821e302a069be1c61146d0e097d438445377fe1ea5dc16005d0",
-    "lastModified": "2026-11-10T11:44:33+03:00",
-    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
+    "lastModified": "2026-11-10T11:55:21+03:00",
+    "commit": "b09f0ad9541fabcf5ee267b948ef5266a0b65382"
   },
   "/about": {
     "sourceHash": "efa8378334541a4b10e45780e2bd97b7e4b4186a7cc376d7034c6d2477105ff3",
-    "lastModified": "2026-11-10T11:44:33+03:00",
-    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
+    "lastModified": "2026-11-10T11:55:21+03:00",
+    "commit": "b09f0ad9541fabcf5ee267b948ef5266a0b65382"
   },
   "/contacts": {
-    "sourceHash": "dc255bc5c75a8b4c91f99c8b1e0532f8283ce20752ab443e24c3d21fce3abbc2",
-    "lastModified": "2026-11-10T11:44:33+03:00",
-    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
+    "sourceHash": "d6c6fd41974b4d7740066008e967177f43bbfc63f768735ae54dac20c60b8a9b",
+    "lastModified": "2026-11-10T12:03:05+03:00",
+    "commit": "ad359b1c97171856518678d090db61d50a09a99e"
   },
   "/product-info": {
     "sourceHash": "fb3636eab02ef3f3bf79603caa95dc1e23534ad1f3505338d62fbc00ef8a1bc1",
-    "lastModified": "2026-11-10T11:44:33+03:00",
-    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
+    "lastModified": "2026-11-10T11:55:21+03:00",
+    "commit": "b09f0ad9541fabcf5ee267b948ef5266a0b65382"
   },
   "/rules": {
     "sourceHash": "840f43ab642c906dda27ec84019d384cdbde75fcf5545257c5db0c957bd42a93",
-    "lastModified": "2026-11-10T11:44:33+03:00",
-    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
+    "lastModified": "2026-11-10T11:55:21+03:00",
+    "commit": "b09f0ad9541fabcf5ee267b948ef5266a0b65382"
   },
   "/privacy": {
     "sourceHash": "e401ac6608a15059ed3912d87c0a53eed01bae5802ff954b3c1632861150b314",
-    "lastModified": "2026-11-10T11:44:33+03:00",
-    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
+    "lastModified": "2026-11-10T11:55:21+03:00",
+    "commit": "b09f0ad9541fabcf5ee267b948ef5266a0b65382"
   },
   "/cookiepolicy": {
     "sourceHash": "b293bb91ca3c015d355b6d74b3b11465ed8f3eefcfe05be2c05871b276272c86",
-    "lastModified": "2026-11-10T11:44:33+03:00",
-    "commit": "2d56270d1d5712a49dc8dde6f2e794b271f865b8"
+    "lastModified": "2026-11-10T11:55:21+03:00",
+    "commit": "b09f0ad9541fabcf5ee267b948ef5266a0b65382"
   }
 }
