@@ -1,3 +1,5 @@
+import { BUSINESS_CONTACT } from "@/app/lib/business";
+import BusinessHours from "@/app/components/BusinessHours";
 import type { Lang } from "@/app/dictionaries/header";
 
 import ContactFeedbackForm from "@/app/components/ContactFeedbackForm";
@@ -64,13 +66,14 @@ export default function ContactsPage({ lang }: { lang: Lang }) {
           <div className="panel">
             <div className="panel__body">
 
-              <p className="section__desc" style={{ margin: "0 0 10px", fontWeight: 700 }}>Rižova Ludmila</p>
+              <p className="section__desc" style={{ margin: "0 0 10px", fontWeight: 700 }}>{BUSINESS_CONTACT.name}</p>
               <p className="section__desc" style={{ margin: "0 0 10px" }}>
-                {labels[lang].phone}: <a href="tel:+37122355307">+371 20 770244</a>
+                {labels[lang].phone}: <a href={`tel:${BUSINESS_CONTACT.phone}`}><bdi>{BUSINESS_CONTACT.phoneDisplay}</bdi></a>
               </p>
               <p className="section__desc" style={{ margin: 0 }}>
-                {labels[lang].email}: <a href="mailto:ludmila.rizova@ergo.lv">ludmila.rizova@ergo.lv</a>
+                {labels[lang].email}: <a href={`mailto:${BUSINESS_CONTACT.email}`}><bdi>{BUSINESS_CONTACT.email}</bdi></a>
               </p>
+              <BusinessHours lang={lang} />
 
             </div>
           </div>
