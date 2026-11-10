@@ -1,5 +1,4 @@
 // app/components/Home.tsx
-import Image from "next/image";
 import type { Lang } from "@/app/dictionaries/header";
 import { getHomeDictionary } from "@/app/dictionaries/home";
 import InfoCompare from "@/app/components/InfoCompare";
@@ -184,31 +183,7 @@ export default function Home({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      <section className="section payment-planned" aria-label={t.paymentPlanned.ariaLabel}>
-        <div className="container">
-          <div className="payment-planned__inner">
-            <p className="payment-planned__before">{t.paymentPlanned.before}</p>
-            <p className="payment-planned__after">{t.paymentPlanned.after}</p>
 
-            <div className="payment-planned__logos" aria-label={t.paymentPlanned.logosAriaLabel}>
-              <Image
-                src="/Mastercard-logo.svg.png"
-                alt={t.paymentPlanned.mastercardAlt}
-                width={160}
-                height={80}
-                className="payment-planned__logo"
-              />
-              <Image
-                src="/Visa_Inc._logo_(2021–present).svg"
-                alt={t.paymentPlanned.visaAlt}
-                width={160}
-                height={80}
-                className="payment-planned__logo"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       
     </main>
