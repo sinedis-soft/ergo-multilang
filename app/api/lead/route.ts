@@ -134,6 +134,49 @@ function getIdFromFirstItem(value: unknown): number | null {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : null;
 }
 
+function duplicateContactIds(value: unknown): number[] {
+  if (Array.isArray(value) && value.length === 0) return [];
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    throw new Error("Invalid Bitrix duplicate-search response");
+  }
+  const ids = (value as { CONTACT?: unknown }).CONTACT;
+  if (ids === undefined) return [];
+  if (!Array.isArray(ids)) throw new Error("Invalid Bitrix contact identifiers");
+  return [...new Set(ids.map(getCreatedId))];
+}
+
+function normalizeName(value: unknown): string {
+  return typeof value === "string" ? value.normalize("NFKC").trim().replace(/\s+/g, " ").toLowerCase() : "";
+}
+
+function matchingCommunication(values: unknown, expected: string, type: "email" | "phone"): boolean {
+  if (!Array.isArray(values)) return false;
+  return values.some((item) => {
+    const value = item && typeof item === "object" ? (item as { VALUE?: unknown }).VALUE : null;
+    if (typeof value !== "string") return false;
+    return type === "email" ? value.trim().toLowerCase() === expected : value.replace(/\D/g, "") === expected.replace(/\D/g, "");
+  });
+}
+
+async function findMatchingContact(firstName: string, lastName: string, phone: string, email: string, birthDate: string): Promise<number | null> {
+  const [byEmail, byPhone] = await Promise.all([
+    bx("crm.duplicate.findbycomm", { entity_type: "CONTACT", type: "EMAIL", values: [email] }),
+    bx("crm.duplicate.findbycomm", { entity_type: "CONTACT", type: "PHONE", values: [phone] }),
+  ]);
+  const emailIds = duplicateContactIds(byEmail);
+  const phoneIds = new Set(duplicateContactIds(byPhone));
+  const candidates = emailIds.filter((id) => phoneIds.has(id));
+  // Shared addresses, shared telephone numbers and ambiguous duplicates must not select another person.
+  if (candidates.length !== 1) return null;
+  const id = candidates[0];
+  const contact = await bx("crm.contact.get", { id }) as Record<string, unknown>;
+  if (!contact || Number(contact.ID) !== id) throw new Error("Invalid Bitrix contact response");
+  if (normalizeName(contact.NAME) !== normalizeName(firstName) || normalizeName(contact.LAST_NAME) !== normalizeName(lastName)) return null;
+  if (!matchingCommunication(contact.EMAIL, email, "email") || !matchingCommunication(contact.PHONE, phone, "phone")) return null;
+  if (birthDate && typeof contact.BIRTHDATE === "string" && contact.BIRTHDATE && contact.BIRTHDATE.slice(0, 10) !== birthDate) return null;
+  return id;
+}
+
 function getCreatedId(value: unknown): number {
   const parsed = Number(value);
 
@@ -151,7 +194,8 @@ export async function POST(req: Request) {
     const lang = toString(form.get("lang")) || "en";
     const firstName = toString(form.get("contact_firstNameLat"));
     const lastName = toString(form.get("contact_lastNameLat"));
-    const phone = toString(form.get("contact_phone"));
+    const rawPhone = toString(form.get("contact_phone"));
+    const phone = "+" + rawPhone.replace(/\D/g, "");
     const email = toString(form.get("contact_email")).toLowerCase();
 
     const isCompany = form.get("policyholder_isCompany") === "on";
@@ -193,7 +237,9 @@ export async function POST(req: Request) {
       .map((key) => vehiclesByIdx[key])
       .filter((vehicle) => vehicle.plate || vehicle.docs.length > 0);
 
-    if (!email || !phone || vehicles.length === 0) {
+    if (!firstName || !lastName || !/^[^\s@]+@[^\s@]+$/.test(email) ||
+        !/^\+?[0-9\s().-]+$/.test(rawPhone) || !/^\+\d{7,15}$/.test(phone) || vehicles.length === 0 ||
+        (isCompany && !companyInn)) {
       return NextResponse.json(
         { ok: false, message: "Missing required fields" },
         { status: 400 }
@@ -221,12 +267,6 @@ export async function POST(req: Request) {
       }
     }
 
-    const contactList = await bx("crm.contact.list", {
-      filter: { "=EMAIL": email },
-      select: ["ID"],
-      start: -1,
-    });
-
     const contactFields = {
       NAME: firstName,
       LAST_NAME: lastName,
@@ -236,23 +276,9 @@ export async function POST(req: Request) {
       ...(isCompany ? {} : { BIRTHDATE: birthDate, ADDRESS: address }),
     };
 
-    const existingContactId = getIdFromFirstItem(contactList);
-
-    let contactId: number;
-
-    if (existingContactId) {
-      contactId = existingContactId;
-      await bx("crm.contact.update", {
-        id: contactId,
-        fields: contactFields,
-      });
-    } else {
-      contactId = getCreatedId(
-        await bx("crm.contact.add", {
-          fields: contactFields,
-        })
-      );
-    }
+    const existingContactId = await findMatchingContact(firstName, lastName, phone, email, isCompany ? "" : birthDate);
+    // Public form submissions must never overwrite an existing person's CRM profile.
+    const contactId = existingContactId ?? getCreatedId(await bx("crm.contact.add", { fields: contactFields }));
 
     let companyId = 1817;
 
@@ -309,7 +335,7 @@ export async function POST(req: Request) {
       const dealId = getCreatedId(await bx("crm.deal.add", {
         fields: {
           TITLE: `Lead ${lastName} ${firstName} ${vehicle.plate}`.trim(),
-          CONTACT_ID: contactId,
+          CONTACT_IDS: [contactId],
           COMPANY_ID: companyId,
 
           UF_CRM_1686152306664: countryMap[vehicle.countryFrom] || "411",
