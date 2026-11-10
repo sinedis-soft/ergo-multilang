@@ -41,8 +41,8 @@ function mock(t, options = {}) {
     if (method === 'crm.deal.fields') result = options.invalidField ? {} : {
       [field]: { type: 'file', isMultiple: options.multiple !== false, isReadOnly: false },
     };
-    else if (method === 'crm.contact.list') result = [{ ID: '7' }];
-    else if (method === 'crm.contact.update') result = true;
+    else if (method === 'crm.duplicate.findbycomm') result = { CONTACT: [7] };
+    else if (method === 'crm.contact.get') result = { ID: '7', NAME: 'Test', LAST_NAME: 'Applicant', PHONE: [{ VALUE: '+10000000000' }], EMAIL: [{ VALUE: 'test@example.invalid' }] };
     else if (method === 'crm.deal.add') {
       if (options.addError) return Response.json({ error: 'ERROR_CORE', error_description: 'Attachment rejected' });
       deals.push(payload.fields); result = 100 + deals.length;
