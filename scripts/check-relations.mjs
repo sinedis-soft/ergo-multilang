@@ -15,7 +15,7 @@ for (const file of files) {
   const full = path.join(dictDir, file);
   const content = readFileSync(full, 'utf8');
 
-  const locales = ['lt', 'en', 'uz', 'kg'];
+  const locales = ['ru', 'lv', 'en', 'uz', 'ky', 'ka', 'kk', 'tr', 'fa', 'mn', 'hy'];
   const missing = locales.filter((l) =>
     content.includes(`${l}: undefined as unknown as`)
   );

@@ -692,7 +692,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       visaAlt: "Visa logotipi",
     },
   },
-  kg: {
+  ky: {
     hero: {
       kicker: "Онлайн тариздөө",
       title: "Трансчек аралык камсыздандыруу келишими (EUROpolis) — тез жана ашыкча кадамдарсыз",
@@ -992,7 +992,7 @@ export const homeDictionary: Record<Lang, HomeDictionary> = {
       visaAlt: "Visa-ს ლოგო",
     },
   },
-  kz: {
+  kk: {
     hero: {
       kicker: "Онлайн рәсімдеу",
       title: "Трансшекаралық сақтандыру шарты (EUROpolis) — жылдам әрі артық қадамсыз",

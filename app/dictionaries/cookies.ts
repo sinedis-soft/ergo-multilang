@@ -324,7 +324,7 @@ const HY: CookieDictionary = {
   closeAria: "Փակել",
 };
 
-const COOKIE_DICTIONARY: Record<Lang, CookieDictionary> = { ru: RU, en: EN, lv: LV, uz: UZ, kg: KY, ka: KA, kz:KZ, tr:TR, fa: FA, mn: MN, hy: HY };
+const COOKIE_DICTIONARY: Record<Lang, CookieDictionary> = { ru: RU, en: EN, lv: LV, uz: UZ, ky: KY, ka: KA, kk:KZ, tr:TR, fa: FA, mn: MN, hy: HY };
 
 export function getCookieDictionary(lang: Lang): CookieDictionary {
   return COOKIE_DICTIONARY[lang] ?? COOKIE_DICTIONARY.ru;

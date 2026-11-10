@@ -185,7 +185,7 @@ export const infoCompareDictionary: Record<Lang, InfoCompareDictionary> = {
       "Agar qaysi sug‘urta kerakligiga ishonchingiz komil bo‘lmasa — arizada marshrut va avtomobil ro‘yxatdan o‘tgan davlatni ko‘rsating. Biz sizga “Yashil karta” mos keladimi yoki chegaraviy sug‘urta kerakmi, aytib beramiz.",
   },
 
-  kg: {
+  ky: {
     kicker: "ТЕРМИНДЕР",
     title: "Трансчек аралык камсыздандыруу келишими ≠ «Жашыл карта»",
 
@@ -267,7 +267,7 @@ export const infoCompareDictionary: Record<Lang, InfoCompareDictionary> = {
       "თუ არ ხართ დარწმუნებული, რა გჭირდებათ — განაცხადში მიუთითეთ მარშრუტი და ავტომობილის რეგისტრაციის ქვეყანა. ჩვენ გეტყვით, საკმარისია თუ არა „მწვანე ბარათი“ ან საჭიროა საზღვრის დაზღვევა.",
   },
 
-  kz: {
+  kk: {
     kicker: "ТЕРМИНДЕР",
     title: "Трансшекаралық сақтандыру шарты ≠ «Жасыл карта»",
 

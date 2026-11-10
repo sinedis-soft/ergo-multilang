@@ -157,7 +157,7 @@ export const calculatorDictionary: Record<Lang, CalculatorDictionary> = {
     resultHint: " ",
     note: " ",
   },
-  kg: {
+  ky: {
     title: "Бааны эсептөө калькулятору",
     badge: "~ 1 мүнөт",
     intro: "Камсыздандыруу мөөнөтүн жана транспорт каражатынын түрүн тандаңыз.",
@@ -225,7 +225,7 @@ export const calculatorDictionary: Record<Lang, CalculatorDictionary> = {
     note: " ",
   },
 
-  kz: {
+  kk: {
     title: "Құн калькуляторы",
     badge: "~ 1 минут",
     intro: "Сақтандыру мерзімін және көлік құралын таңдаңыз.",

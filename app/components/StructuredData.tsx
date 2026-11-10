@@ -71,7 +71,7 @@ export function OrganizationJsonLd({ lang }: { lang: Lang }) {
         contactType: "customer support",
         telephone: "+37122355307",
         email: "ludmila.rizova@ergo.lv",
-        availableLanguage: ["ru", "lv", "en", "uz", "kg", "ka", "kz", "tr", "fa", "mn", "hy"],
+        availableLanguage: ["ru", "lv", "en", "uz", "ky", "ka", "kk", "tr", "fa", "mn", "hy"],
         areaServed: ["LV", ...TARGET_CARRIER_COUNTRIES],
       },
     ],

@@ -495,7 +495,7 @@ const uz: LeadFormDictionary = {
   },
 };
 
-const kg: LeadFormDictionary = {
+const ky: LeadFormDictionary = {
   title: "Полис сатып алуу үчүн өтүнмө",
   intro: "Маалыматтарды толтуруңуз. Биз полисти даярдап, төлөм реквизиттерин жөнөтөбүз.",
 
@@ -703,7 +703,7 @@ const ka: LeadFormDictionary = {
   },
 };
 
-const kz: LeadFormDictionary = {
+const kk: LeadFormDictionary = {
   title: "Полис сатып алуға өтінім",
   intro: "Деректерді толтырыңыз. Біз полисті дайындап, төлем реквизиттерін жібереміз.",
 
@@ -1229,9 +1229,9 @@ const dictionaries: Partial<Record<Lang, LeadFormDictionary>> = {
   lv,
   en,
   uz,
-  kg,
+  ky,
   ka,
-  kz,
+  kk,
   tr,
   fa,
   mn,

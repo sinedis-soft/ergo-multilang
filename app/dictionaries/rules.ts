@@ -858,7 +858,7 @@ const uz: RulesDictionary = {
   ],
 };
 
-const kg: RulesDictionary = {
+const ky: RulesDictionary = {
   pageTitle: "РЕГЛАМЕНТ",
   subtitle: "EURO Polis сайты аркылуу электрондук кызматтарды көрсөтүү жана камсыздандыруу келишимдерин аралыктан түзүүгө көмөк көрсөтүү тартиби",
   updatedAt: "05.05.2026",
@@ -1399,7 +1399,7 @@ const ka: RulesDictionary = {
   ],
 };
 
-const kz: RulesDictionary = {
+const kk: RulesDictionary = {
   pageTitle: "РЕГЛАМЕНТ",
   subtitle: "EURO Polis сайты арқылы электрондық қызметтер көрсету және сақтандыру шарттарын қашықтан жасасуға жәрдемдесу тәртібі",
   updatedAt: "05.05.2026",
@@ -2430,9 +2430,9 @@ const dictionaries: Record<Lang, RulesDictionary> = {
   en,
   lv,
   uz,
-  kg,
+  ky,
   ka,
-  kz,
+  kk,
   tr,
   fa,
   mn,

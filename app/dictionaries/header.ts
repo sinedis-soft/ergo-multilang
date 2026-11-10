@@ -1,6 +1,6 @@
 // app/dictionaries/header.ts
 
-export const LOCALES = ["ru", "lv", "en", "uz", "kg", "ka", "kz", "tr", "fa", "mn", "hy"] as const;
+export const LOCALES = ["ru", "lv", "en", "uz", "ky", "ka", "kk", "tr", "fa", "mn", "hy"] as const;
 export type Lang = (typeof LOCALES)[number];
 
 export const LOCALE_META: Record<Lang, { nativeName: string; region: "Europe" | "Asia" }> = {
@@ -8,9 +8,9 @@ export const LOCALE_META: Record<Lang, { nativeName: string; region: "Europe" | 
   lv: { nativeName: "Latviešu", region: "Europe" },
   en: { nativeName: "English", region: "Europe" },
   uz: { nativeName: "O‘zbek", region: "Asia" },
-  kg: { nativeName: "Кыргызча", region: "Asia" },
+  ky: { nativeName: "Кыргызча", region: "Asia" },
   ka: { nativeName: "ქართული", region: "Asia" },
-  kz: { nativeName: "Қазақша", region: "Asia" },
+  kk: { nativeName: "Қазақша", region: "Asia" },
   tr: { nativeName: "Türkçe", region: "Asia" },
   fa: { nativeName: "فارسی", region: "Asia" },
   mn: { nativeName: "Монгол", region: "Asia" },
@@ -107,7 +107,7 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     languageDialogClose: "Yopish",
   },
 
-  kg: {
+  ky: {
     brandTitle: "EURO polis",
     brandSub: "Жеке адамдар жана бизнес үчүн камсыздандыруу",
     topContacts: "Байланыш",
@@ -139,7 +139,7 @@ export const headerDictionary: Record<Lang, HeaderDictionary> = {
     languageDialogTitle: "აირჩიეთ ენა",
     languageDialogClose: "დახურვა",
   },
-  kz: {
+  kk: {
     brandTitle: "EURO polis",
     brandSub: "Жеке тұлғалар мен бизнеске арналған сақтандыру",
     topContacts: "Байланыс",
