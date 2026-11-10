@@ -1,6 +1,8 @@
+import { BUSINESS_CONTACT, OPENING_HOURS_SPECIFICATION } from "@/app/lib/business";
+import { LOCALES } from "@/app/dictionaries/header";
 import type { Lang } from "@/app/dictionaries/header";
 import { getHomeDictionary } from "@/app/dictionaries/home";
-import { SITE_URL, toAbsolute } from "@/app/seo";
+import { toAbsolute } from "@/app/seo";
 
 type JsonLdProps = { data: Record<string, unknown> | Array<Record<string, unknown>> };
 
@@ -16,33 +18,6 @@ const TARGET_CARRIER_COUNTRIES = [
   "TM",
 ] as const;
 
-const COMPANY_ADDRESS = {
-  "@type": "PostalAddress",
-  addressCountry: "LV",
-  addressLocality: "Riga",
-  postalCode: "LV-1013",
-};
-
-const OPENING_HOURS = [
-  {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-    ],
-    opens: "09:00",
-    closes: "18:00",
-  },
-];
-
-const OFFICIAL_PROFILES = [
-  toAbsolute("/ru/contacts"),
-  toAbsolute("/en/contacts"),
-];
-
 function JsonLd({ data }: JsonLdProps) {
   return (
     <script
@@ -56,22 +31,20 @@ export function OrganizationJsonLd({ lang }: { lang: Lang }) {
   const data = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": toAbsolute(`/${lang}#organization`),
-    name: "Rižova Ludmila",
-    url: SITE_URL,
-    email: "ludmila.rizova@ergo.lv",
-    telephone: "+37122355307",
-    address: COMPANY_ADDRESS,
-    openingHoursSpecification: OPENING_HOURS,
-    sameAs: OFFICIAL_PROFILES,
+    "@id": toAbsolute("/#organization"),
+    name: BUSINESS_CONTACT.name,
+    url: toAbsolute(`/${lang}`),
+    email: BUSINESS_CONTACT.email,
+    telephone: BUSINESS_CONTACT.phone,
     areaServed: ["LV", ...TARGET_CARRIER_COUNTRIES],
     contactPoint: [
       {
         "@type": "ContactPoint",
         contactType: "customer support",
-        telephone: "+37122355307",
-        email: "ludmila.rizova@ergo.lv",
-        availableLanguage: ["ru", "lv", "en", "uz", "ky", "ka", "kk", "tr", "fa", "mn", "hy"],
+        hoursAvailable: OPENING_HOURS_SPECIFICATION,
+        telephone: BUSINESS_CONTACT.phone,
+        email: BUSINESS_CONTACT.email,
+        availableLanguage: LOCALES,
         areaServed: ["LV", ...TARGET_CARRIER_COUNTRIES],
       },
     ],
@@ -84,15 +57,15 @@ export function InsuranceAgencyJsonLd({ lang }: { lang: Lang }) {
   const data = {
     "@context": "https://schema.org",
     "@type": "InsuranceAgency",
-    "@id": toAbsolute(`/${lang}#insurance-agency`),
-    name: "Rižova Ludmila",
+    "@id": toAbsolute("/#insurance-agency"),
+    name: BUSINESS_CONTACT.name,
     url: toAbsolute(`/${lang}`),
+    telephone: BUSINESS_CONTACT.phone,
+    email: BUSINESS_CONTACT.email,
     parentOrganization: {
-      "@id": toAbsolute(`/${lang}#organization`),
+      "@id": toAbsolute("/#organization"),
     },
-    address: COMPANY_ADDRESS,
-    openingHoursSpecification: OPENING_HOURS,
-    sameAs: OFFICIAL_PROFILES,
+    openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
     areaServed: ["LV", ...TARGET_CARRIER_COUNTRIES],
     serviceType: "EEA cross-border motor third-party liability insurance",
     hasOfferCatalog: {
