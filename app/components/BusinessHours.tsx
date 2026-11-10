@@ -3,7 +3,7 @@
 import { useSyncExternalStore } from "react";
 import type { Lang } from "@/app/dictionaries/header";
 import { businessHoursDictionary } from "@/app/dictionaries/businessHours";
-import { BUSINESS_HOURS, BUSINESS_TIME_ZONE } from "@/app/lib/business";
+import { BUSINESS_TIME_ZONE } from "@/app/lib/business";
 import { formatInterval, sourceWeekStart, weeklyIntervals } from "@/app/lib/businessHours";
 
 function subscribe(onChange: () => void) {
@@ -19,8 +19,6 @@ export default function BusinessHours({ lang }: { lang: Lang }) {
   const current = useSyncExternalStore(subscribe, snapshot, serverSnapshot);
   const t = businessHoursDictionary[lang];
   const [zone, monday] = current.split("|");
-  const weekday = new Intl.DateTimeFormat(lang, { weekday: "long", timeZone: "UTC" });
-  const dayName = (day: number) => weekday.format(new Date(Date.UTC(2026, 0, 4 + day)));
 
   return (
     <section aria-labelledby="business-hours-title" style={{ marginTop: 24 }}>
@@ -39,16 +37,6 @@ export default function BusinessHours({ lang }: { lang: Lang }) {
           </dl>
         </div>
       )}
-      <div>
-        <p>{t.source}: <bdi>{BUSINESS_TIME_ZONE} (UTC+03:00)</bdi></p>
-        <dl>
-          {BUSINESS_HOURS.map((hours) => <div key={hours.closes} style={{ marginBottom: 8 }}>
-            <dt>{dayName(hours.days[0])}{hours.days.length > 1 ? ` – ${dayName(hours.days[hours.days.length - 1])}` : ""}</dt>
-            <dd style={{ marginInlineStart: 0 }}><bdi>{hours.opens} – {hours.closes}</bdi></dd>
-          </div>)}
-          <div><dt>{dayName(6)} – {dayName(0)}</dt><dd style={{ marginInlineStart: 0 }}>{t.closed}</dd></div>
-        </dl>
-      </div>
     </section>
   );
 }
