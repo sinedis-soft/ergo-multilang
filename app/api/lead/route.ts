@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
-const BITRIX_WEBHOOK = process.env.BITRIX_WEBHOOK_URL;
+const BITRIX_WEBHOOK = process.env.BITRIX_WEBHOOK_URL?.trim().replace(/\/+$/, "");
+const DOCUMENT_FIELD = "UF_CRM_1686154280439";
+type BitrixFileUpload = { fileData: [string, string] };
 
 type VehicleInput = {
   countryFrom: string;
@@ -110,6 +112,16 @@ async function fileToBase64(file: File): Promise<string> {
   return Buffer.from(await file.arrayBuffer()).toString("base64");
 }
 
+function storedFileCount(value: unknown): number {
+  const values = Array.isArray(value) ? value : [value];
+  return values.filter((item) => {
+    const id = item && typeof item === "object"
+      ? (item as { id?: unknown; ID?: unknown }).id ?? (item as { ID?: unknown }).ID
+      : item;
+    return (typeof id === "number" || typeof id === "string") && Number(id) > 0;
+  }).length;
+}
+
 function getIdFromFirstItem(value: unknown): number | null {
   if (!Array.isArray(value)) return null;
 
@@ -188,6 +200,27 @@ export async function POST(req: Request) {
       );
     }
 
+    let documentFieldIsMultiple = true;
+    if (vehicles.some((vehicle) => vehicle.docs.length > 0)) {
+      const fields = await bx("crm.deal.fields", {}) as Record<string, {
+        type?: string; isMultiple?: boolean; isReadOnly?: boolean;
+      }>;
+      const field = fields?.[DOCUMENT_FIELD];
+      if (!field || field.type !== "file" || field.isReadOnly) {
+        throw new Error(`Bitrix document field ${DOCUMENT_FIELD} is missing, is not a file field, or is read-only`);
+      }
+      if (typeof field.isMultiple !== "boolean") {
+        throw new Error(`Bitrix document field ${DOCUMENT_FIELD} has no multiplicity information`);
+      }
+      documentFieldIsMultiple = field.isMultiple;
+      if (!documentFieldIsMultiple && vehicles.some((vehicle) => vehicle.docs.length > 1)) {
+        return NextResponse.json(
+          { ok: false, message: "The Bitrix document field accepts only one file per vehicle. Enable multiple files in Bitrix or attach one file." },
+          { status: 400 }
+        );
+      }
+    }
+
     const contactList = await bx("crm.contact.list", {
       filter: { "=EMAIL": email },
       select: ["ID"],
@@ -259,18 +292,21 @@ export async function POST(req: Request) {
     let hasFileProcessingIssue = false;
 
     for (const vehicle of vehicles) {
-      const docs: Array<[string, string | null]> = [];
+      const docs: BitrixFileUpload[] = [];
 
       for (const file of vehicle.docs) {
         try {
-          docs.push([file.name, await fileToBase64(file)]);
+          if (!file.name || file.size === 0) {
+            hasFileProcessingIssue = true;
+            continue;
+          }
+          docs.push({ fileData: [file.name, await fileToBase64(file)] });
         } catch {
-          docs.push([file.name, null]);
           hasFileProcessingIssue = true;
         }
       }
 
-      await bx("crm.deal.add", {
+      const dealId = getCreatedId(await bx("crm.deal.add", {
         fields: {
           TITLE: `Lead ${lastName} ${firstName} ${vehicle.plate}`.trim(),
           CONTACT_ID: contactId,
@@ -281,7 +317,7 @@ export async function POST(req: Request) {
           UF_CRM_1686152209741: periodMap[vehicle.period] || "115",
           UF_CRM_1686152149204: vehicle.startDate,
           UF_CRM_1686152485641: vehicle.plate,
-          UF_CRM_1686154280439: docs,
+          ...(docs.length ? { [DOCUMENT_FIELD]: documentFieldIsMultiple ? docs : docs[0] } : {}),
 
           COMMENTS: vehicle.comment,
 
@@ -291,7 +327,22 @@ export async function POST(req: Request) {
           UF_CRM_1700656576088: "1095",
           UF_CRM_1686683031442: "941",
         },
-      });
+      }));
+
+      if (docs.length > 0) {
+        try {
+          const savedDeal = await bx("crm.deal.get", { id: dealId }) as Record<string, unknown>;
+          const savedCount = storedFileCount(savedDeal?.[DOCUMENT_FIELD]);
+          if (savedCount !== docs.length) {
+            hasFileProcessingIssue = true;
+            console.error("[lead] Attachment count mismatch", { dealId, expected: docs.length, saved: savedCount });
+          }
+        } catch {
+          // The deal already exists: use the partial-success response to avoid a duplicate retry.
+          hasFileProcessingIssue = true;
+          console.error("[lead] Could not verify saved attachments", { dealId });
+        }
+      }
     }
 
     return NextResponse.json({ ok: true, fileProcessingIssue: hasFileProcessingIssue });
