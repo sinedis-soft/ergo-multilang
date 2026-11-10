@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "check:relations": "node scripts/check-relations.mjs"
+    "check:relations": "node scripts/check-relations.mjs",
+    "seo:dates": "node scripts/generate-sitemap-dates.mjs",
+    "prebuild": "npm run seo:dates",
+    "predev": "npm run seo:dates",
+    "test:seo": "node --test scripts/generate-sitemap-dates.test.mjs"
   },
   "dependencies": {
     "next": "16.1.6",

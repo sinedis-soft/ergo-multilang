@@ -1,0 +1,37 @@
+{
+  "": {
+    "sourceHash": "336853edcf613440f9d6d2d7d2657267da1da0fb5475d39972beb2b08c204df8",
+    "lastModified": "2026-11-10T11:04:14+03:00",
+    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+  },
+  "/about": {
+    "sourceHash": "0c2abac9c9f8bcadab6702f768a509a5974a86f26c36870d582ce5ee32b22a4f",
+    "lastModified": "2026-11-10T11:04:14+03:00",
+    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+  },
+  "/contacts": {
+    "sourceHash": "cb8f9bf81b8b498156d57ee2fe2b18b135679b9d27dfa7b69a5045f465528297",
+    "lastModified": "2026-11-10T11:04:14+03:00",
+    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+  },
+  "/product-info": {
+    "sourceHash": "3981d8b61d61a7dae6fc5b12d195c02d883d424604647a82992737dda574f289",
+    "lastModified": "2026-11-10T11:04:14+03:00",
+    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+  },
+  "/rules": {
+    "sourceHash": "9353d7246595e0e1e915b3047024f236891cb26194c7adff30c19abcaf86e9ee",
+    "lastModified": "2026-11-10T11:04:14+03:00",
+    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+  },
+  "/privacy": {
+    "sourceHash": "e6b6b8d4eba4f8be7ecf9f112632128f6c2ffc3af40189cec4ce2b68eac4d7db",
+    "lastModified": "2026-11-10T11:04:14+03:00",
+    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+  },
+  "/cookiepolicy": {
+    "sourceHash": "76ff21732ed87605815825c6585fb91a9b9debc85656ea3a45ef5edd6dcdb900",
+    "lastModified": "2026-11-10T11:04:14+03:00",
+    "commit": "ccdd73ac45e506c0ebe74a7ede4d407a199e334a"
+  }
+}
