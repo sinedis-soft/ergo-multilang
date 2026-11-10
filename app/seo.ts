@@ -67,9 +67,9 @@ export function languageAlternates(route: string): Record<string, string> {
   };
 }
 
-export function pageAlternates(lang: Lang, route: string) {
+export function pageAlternates(_lang: Lang, route: string) {
   return {
-    canonical: localePath(lang, route),
+    canonical: localePath("en", route),
     languages: languageAlternates(route),
   };
 }

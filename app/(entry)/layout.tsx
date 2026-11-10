@@ -1,8 +1,11 @@
 // app/layout.tsx
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
+import { SITE_URL } from "@/app/seo";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/en" },
   title: "Страховой агент Людмила Рыжова",
   description: "Официальные страховые услуги и сопровождение.",
 };
@@ -13,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru">
+    <html lang="en" dir="ltr">
       <body className="min-h-dvh">{children}</body>
     </html>
   );

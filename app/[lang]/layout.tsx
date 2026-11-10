@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import CookieConsent from "@/app/components/CookieConsent";
@@ -28,18 +29,21 @@ export default async function LangLayout({
   const isRtl = lang === "fa";
 
   return (
-    
-    <div
-      dir={isRtl ? "rtl" : "ltr"}
-      className={`min-h-dvh flex flex-col ${isRtl ? "text-right" : "text-left"}`}
-    >
-      <OrganizationJsonLd lang={lang} />
-      <InsuranceAgencyJsonLd lang={lang} />
-      <Header lang={lang} />
-      {children}
-      <Footer lang={lang} />
-      <CookieConsent lang={lang} />
-    </div>
+    <html lang={lang} dir={isRtl ? "rtl" : "ltr"}>
+      <body className="min-h-dvh">
+        <div
+          dir={isRtl ? "rtl" : "ltr"}
+          className={`min-h-dvh flex flex-col ${isRtl ? "text-right" : "text-left"}`}
+        >
+          <OrganizationJsonLd lang={lang} />
+          <InsuranceAgencyJsonLd lang={lang} />
+          <Header lang={lang} />
+          {children}
+          <Footer lang={lang} />
+          <CookieConsent lang={lang} />
+        </div>
+      </body>
+    </html>
   );
 }
 
@@ -57,7 +61,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     description:seo.home.description,
     alternates: {
-      canonical: `/${lang}`,
+      canonical: "/en",
     },
     openGraph: {
       type: "website",
